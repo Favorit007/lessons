@@ -1,0 +1,102 @@
+
+header {
+color: rgb(243, 0, 113);
+}
+.header a,h2{
+color: rgb(228, 6, 6);
+}
+.header a{
+color: darkblue;
+}
+.wrapper__title p {
+color: rgb(15, 170, 28);
+}
+.wrapper__icons-image .icon4{
+color: chocolate;
+}
+.icon1 + a{
+color:black ;
+}
+.icon2 ~ a {
+color: chartreuse;
+}
+.icon4 + a{
+color: cornflowerblue;
+}
+.icon5 ~ a {
+color: blueviolet;
+}
+.icon6 + a {
+color: darkorange;
+}
+.icon7 ~ a {
+color: red;
+}
+.icon8 + a {
+color: rgb(250, 246, 7);
+}
+.icon9 + a{
+color: blue;
+}
+.wrapp__list-title > p{
+color: rgb(9, 201, 73);
+}
+.wrapp__list-title h3 {
+color: crimson;
+}
+.wrapp__list-subtitle {
+color: darkorchid;
+}
+span{
+color: gold;
+}
+div li{
+color: firebrick;
+}
+#pl-1{
+color: blue;
+}
+[class*=list1] {
+color: rgb(146, 146, 11);
+}
+div h3,h4{
+color: crimson;
+}
+#pl-2{
+color: green
+}
+.wrapp__item-list2-thumb,
+.wrapp__item-list3-thumb{
+color: limegreen;
+}
+.wrapp__item-list4 {
+color: red;
+}
+[class*=list2-text]{
+color: aqua;
+}
+.wrapp__item-list5 * {
+color: blue;
+}
+#pl-5{
+color: chartreuse;
+}
+div.wrapp__item-list6-text{
+color: deeppink;
+}
+.wrapp__item-list6-thumb {
+color: rgb(7, 252, 88);
+}
+.wrapp__item-list7-text,
+.wrapp__item-list7-thumb {
+color: crimson;
+}
+[class*=list8-thumb]{
+color: darkturquoise;
+}
+.wrapp__item-list9-text {
+color: rgb(196, 88, 163);
+}
+.end .link{
+color: rgb(98, 80, 255);
+}
