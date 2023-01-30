@@ -1,0 +1,144 @@
+
+@font-face {
+font-family: 'Bitter';
+src: url('../fonts/Bitter-Bold.woff2') format('woff2'),
+    url('../fonts/Bitter-Bold.woff') format('woff');
+font-weight: 300;
+font-style: normal;
+font-display: swap;
+}
+
+@font-face {
+font-family: 'Bitter';
+src: url('../fonts/Bitter-BoldItalic.woff2') format('woff2'),
+    url('../fonts/Bitter-BoldItalic.woff') format('woff');
+font-weight: bold;
+font-style: italic;
+font-display: swap;
+}
+
+@font-face {
+font-family: 'Bitter';
+src: url('../fonts/Bitter-Light.woff2') format('woff2'),
+    url('../fonts/Bitter-Light.woff') format('woff');
+font-weight: bold;
+font-style: normal;
+font-display: swap;
+}
+
+@font-face {
+font-family: 'Bitter';
+src: url('../fonts/Bitter-Medium.woff2') format('woff2'),
+    url('../fonts/Bitter-Medium.woff') format('woff');
+font-weight: 500;
+font-style: normal;
+font-display: swap;
+}
+
+@font-face {
+font-family: 'Bitter';
+src: url('../fonts/Bitter-Regular.woff2') format('woff2'),
+    url('../fonts/Bitter-Regular.woff') format('woff');
+font-weight: normal;
+font-style: normal;
+font-display: swap;
+}
+body{
+font-family: "Spectral+SC", sans-serif;
+}
+.header {
+text-align: center;
+}
+.wrapper__title {
+font-family: "Bitter", sans-serif;
+font-weight: 500;
+font-size: 30px;
+text-decoration: underline;
+text-shadow: 2px 2px 2px rgb(120, 115, 126);
+line-height: 2;
+}
+.item{ 
+line-height: 4;
+font-size: 12px;
+color: grey;
+text-indent: 20px;
+}
+.wrapper__subtitle {
+line-height: 1.2;
+text-align: left;
+font-weight: 600;
+}
+.wrapp__title p {
+text-indent: 10px;
+color: rgb(41, 38, 38);
+text-align: center;
+line-height: 1.2;
+}
+.caption {
+font-family: "Bitter", sans-serif;
+font-weight: 300;
+font-size: 20px;
+text-transform: uppercase;
+text-indent: 20px;
+line-height: 2;
+text-decoration: underline;
+}
+.tagline {
+text-indent: 30px;
+font-size: 18px;
+line-height: 2;
+font-style: italic;
+color: rgb(199, 15, 116);
+text-shadow: 1px 2px 2px rgb(199, 241, 10);
+}
+.caption + p{
+font-family: "Bitter",serif; 
+text-align: justify;
+font-style: italic;
+text-shadow: 3px 3px 5px rgb(102, 34, 68);
+text-align: left;
+line-height: 1.6;
+}
+.wrap__subtitle p {
+text-align: right;
+letter-spacing: 3px;
+text-shadow: 0 0 0 white;
+}
+.wrap__subtitle h2{
+text-align: center;
+}
+.text {
+font-family: "Bitter",serif;
+font-weight: 300;
+text-align: center;
+white-space: nowrap;
+word-spacing: 5px;
+}
+.text h2{
+color: brown;
+line-height: 3;
+}
+.text p{
+text-transform: capitalize;
+font-style: italic;
+text-align: center;
+}
+span{
+color: rgb(25, 105, 105);
+font-style: italic;
+}
+.link p{
+text-align: center;
+text-decoration:overline;
+line-height: 5;
+font-size: 24px;
+color: red;
+}
+.list {
+color: blue;
+text-transform: lowercase;
+text-decoration: line-through;
+}
+footer{
+text-indent: 30px;
+}
