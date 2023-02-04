@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,300italic,regular,italic,700,700italic&display=swap");
+body{
+font-family: "Poppins", serif;
+font-weight: 300;
+}
+[class*="__wrap"]{
+max-width: 846px;
+margin: 0 auto;
+padding: 0 15px;
+}
+[class*="__title"]{
+font-size: 25px;
+font-weight: 700;
+color: #212529;
+line-height: 1.6; 
+margin-bottom: 40px;
+}
+.header__container,
+.header__wrap,
+.main__wrap,
+.main__container{
+margin-bottom: 80px;
+}
+.header__title {
+max-width: 400px;
+}
+.header__subtitle,
+.main__subtitle,
+.footer__subtitle{
+line-height: 1.8;
+color: #6C757D;
+}
+.header__subtitle p{
+margin-bottom: 40px;
+}
+.header__image img {
+max-width: 100%;
+display: block;
+margin: 0 auto;
+}
+.main__title {
+max-width: 605px;
+}
+.main__image {
+max-width: 1270px;
+display:block;
+margin: 0 auto;
+padding-left: 15px;
+}
+.main__image > img{
+max-width: 100%;
+}
+.picture{
+max-width: 100%; 
+margin-right: 30px;
+}
+.footer {
+margin-bottom: 60px;
+}
+
+
+
+.aside__box{
+margin-bottom: 50px;
+}
+.aside__list {
+margin-bottom: 40px;
+}
+.aside__list-li {  
+margin: 0 auto;
+max-height: 300px;
+max-width: 300px;
+}
+.item{
+font-size: 24px;
+text-align: center;
+}
+.item1{
+margin: 0 0 10px 50px;
+max-width: 200px;
+padding: 20px;
+height: 80px;
+border: 5px solid rgb(63, 206, 6);
+}
+.item2{
+margin: 0 0 10px 25px;
+max-width: 250px;
+padding: 20px;
+height: 80px;
+border: 5px solid rgb(251, 7, 7);
+}
+.item3{
+overflow: scroll;
+padding: 20px;
+height: 80px;
+border: 5px solid black;
+}
+.aside__list-image img {
+display: block;
+margin: 0 auto;
+}
+.aside__list-logo{
+margin-bottom: 40px;
+}
+.box{
+display: inline-block;
+margin-left: 20px;
+border: 3px solid grey;
+margin-top: 20px;
+padding: 50px 0 0 90px;
+height: 112px;
+min-width: 180px;
+}
+.box1 {
+display: inline-block;
+margin-left: 20px;
+border: 3px solid grey;
+padding: 50px 0 0 90px;
+height: 112px;
+min-width: 180px;
+}
+.box2 {
+display: inline-block;
+margin-left: 20px;
+border: 3px solid grey;
+padding: 50px 0 0 90px;
+height: 112px;
+min-width: 180px;
+}
+.box3 {
+display: inline-block;
+margin-left: 20px;
+border: 3px solid grey;
+padding: 50px 0 0 90px;
+height: 112px;
+min-width: 180px;
+}
+
+
+.aside__list-row{
+max-width: 1200px;
+}
+.column { 
+display: inline-block;
+}
+.col{
+display: inline-block;
+margin: 20px 0 0 20px;
+border: 3px solid grey;
+padding: 50px 0 0 90px;
+height: 112px;
+min-width: 180px;
+}
+
