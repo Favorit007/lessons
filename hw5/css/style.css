@@ -1,12 +1,12 @@
-@import url("https://fonts.googleapis.com/css?family=Poppins:300,300italic,regular,italic,700,700italic&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,700&display=swap");
 body{
 font-family: "Poppins", serif;
 font-weight: 300;
+padding: 0 15px;
 }
 [class*="__wrap"]{
 max-width: 846px;
 margin: 0 auto;
-padding: 0 15px;
 }
 [class*="__title"]{
 font-size: 25px;
@@ -15,10 +15,10 @@ color: #212529;
 line-height: 1.6; 
 margin-bottom: 40px;
 }
-.header__container,
+.header,
 .header__wrap,
-.main__wrap,
-.main__container{
+.main,
+.main__wrap{
 margin-bottom: 80px;
 }
 .header__title {
@@ -30,7 +30,8 @@ max-width: 400px;
 line-height: 1.8;
 color: #6C757D;
 }
-.header__subtitle p{
+.header__subtitle p,
+.main__subtitle p{
 margin-bottom: 40px;
 }
 .header__image img {
