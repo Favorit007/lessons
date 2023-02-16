@@ -10,11 +10,15 @@ color: #637381;
 background: url("../img/01.jpg") 50% / cover no-repeat rgba(0, 3, 15, 0.79) ;
 min-height: 600px;
 padding-top: 330px;
+padding-bottom: 100px;
 }
 [class*="__container"]{
 max-width: 1270px;
 margin: 0 auto;
 padding: 0 15px;
+}
+.header__title{
+max-width: 605px;
 }
 .data,
 .text {
@@ -29,7 +33,6 @@ margin-bottom: 15px;
 .header__title h1{
 font-family: "Poppins";
 font-weight: 700;
-max-width: 605px;
 margin-bottom: 15px;
 font-size: 25px;
 line-height: 1.6;
