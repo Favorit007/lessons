@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,700&display=swap");
+body{
+font-family: "Inter", sans-serif;
+font-weight: 700;
+line-height: 1;
+color: #637381;
+}
+.header {
+background: url("../img/01.jpg") 50% / cover no-repeat rgba(24, 1, 55, 0.818);
+padding-top: 330px;
+padding-bottom: 100px; 
+}
+[class*="__container"]{
+max-width: 1270px;
+margin: 0 auto;
+padding: 0 15px;
+}
+.header__title {
+max-width: 605px;
+font-family: "Poppins";
+}
+.header__title > *:not(:last-child){
+margin-bottom: 15px;
+}
+.header__data{
+display: inline-block;
+}
+.header__title h1{
+font-weight: 700;
+font-size: 25px;
+line-height: 1.6;
+color: #F8F9FA;
+}
+.header__data,
+.header__subtitle{
+font-weight: 300;
+font-size: 12px;
+line-height: 1.67;
+color: #E5E5E5;
+}
+.main {
+background: linear-gradient(300deg, rgba(0,0,0,0) 0%, rgba(48,86,211,0.08) 39%, rgba(0,0,0,0) 39%), linear-gradient(300deg, rgba(0,0,0,0) 0%, rgba(48,86,211,0.08) 45%, rgba(0,0,0,0) 45%) #F4F7FF;
+padding: 145px 0;
+}
+.main__title {
+max-width: 570px;
+display: inline-block;
+margin-right: 180px;
+padding-bottom: 30px;
+}
+.main__price {
+font-weight: 600;
+font-size: 18px;
+line-height: 1.33;
+color: #3056D3;
+margin-bottom: 13px;
+display: inline-block;
+}
+.main__price:hover{
+color: red;
+text-decoration: underline;
+}
+.main__title h2{
+font-size: 36px;
+line-height: 1.25;
+color: #212B36;
+margin-bottom: 15px;
+}
+.main__subtitle {
+font-weight: 500;
+line-height: 1.5;
+margin-bottom: 35px;
+}
+.main__button {
+padding: 10px 30px;
+background-color: #3056D3;
+border-radius: 30px;
+display: inline-block;
+color: #FFFFFF;
+line-height: 1.5;
+font-weight: 600;
+}
+.main__button:hover{
+color: black;
+background-color: yellowgreen;
+box-shadow: 3px 3px 3px 3px rgb(32, 30, 30);
+}
+.footer {
+padding-top: 150px;
+padding-bottom: 50px;
+background:  linear-gradient(90deg, #000000,#6b6b6b,#ffffff) rgba(18, 17, 17, 0.75);
+}
+.footer__title span{
+display: inline-block;
+font-weight: 400;
+font-size: 26px;
+line-height: 1.07;
+color: #212B36;
+margin-bottom: 45px;
+}
+.footer__title span:hover{
+color: gold;
+text-transform: uppercase;
+}
+[class*="__column"]:not(:last-child){
+margin-bottom: 68px;
+}
+ul > li:not(:last-of-type){
+margin-bottom: 18px;
+}
+.footer__column1{
+line-height: 0.94;
+}
+.footer__column1 li{
+margin-left: 18px;
+}
+.footer__column1 li::before{
+content: "";
+display: inline-block;
+background: url(../img/04.svg) 0 0  no-repeat;
+width: 8px;
+height: 8px;
+margin-right: 10px;
+margin-left: -18px;
+}
+.footer__column1 li:hover{
+color: #920707;
+text-align: center;
+}
+.footer__column2 li{
+margin-left: 36px;
+}
+.footer__column2 li::before{
+content: "";
+display: inline-block;
+background: url(../img/03.svg) 0 0  no-repeat;
+width: 20px;
+height: 20px;
+margin-right: 16px;
+margin-left: -36px;
+vertical-align: middle;
+}
+.footer__column2 li:hover{
+color: #219207;
+text-shadow: 1px 1px 5px rgb(108, 3, 3);
+}
+.footer__column3 li{
+margin-left: 36px;
+}
+.footer__column3 li::before{
+content: "";
+display: inline-block;
+background: url(../img/02.svg) 0 0  no-repeat;
+width: 20px;
+height: 20px;
+margin-right: 16px;
+margin-left: -36px;
+vertical-align: middle;
+}
+.footer__column3 li:hover{
+color: gold;
+text-shadow: 1px 1px 5px rgb(15, 0, 0);
+opacity: 0.1;
+text-transform: uppercase;
+}
+.footer__column4 li{
+margin-left: 36px;
+}
+.footer__column4 li::before{
+content: "";
+display: inline-block;
+background: url(../img/06.svg) 0 0  no-repeat;
+width: 20px;
+height: 20px;
+margin-right: 16px;
+margin-left: -36px;
+vertical-align: middle;
+}
+.footer__column5 li{
+margin-left: 36px;
+}
+.footer__column5 li::before{
+content: "";
+display: inline-block;
+background: url(../img/01.svg) 0 0  no-repeat;
+width: 20px;
+height: 20px;
+margin-right: 16px;
+margin-left: -36px;
+vertical-align: middle;
+}
+.footer__column5 li:hover::before{
+border-radius: 70%;
+box-shadow: 0 0 20px #ff0000;
+}
+.footer__column6 li{
+margin-left: 36px;
+}
+.footer__column6 li::before{
+content: "";
+display: inline-block;
+background: url(../img/05.svg) 0 0  no-repeat;
+width: 20px;
+height: 20px;
+margin-right: 16px;
+margin-left: -36px;
+vertical-align: middle;
+}
