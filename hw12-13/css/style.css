@@ -25,7 +25,6 @@ text-shadow: 2px 2px 2px white;
 margin-bottom: 50px;
 }
 [class*="__box"] {
-/* display: inline-block; */
 width: 130px;
 height: 130px;   
 padding: 50px 0;  
@@ -150,9 +149,10 @@ box-shadow: 3px 1px 5px 2px yellow;
 }
 
 .main{
-height:100%;
+/* height:100%; */
 position: relative;
 width: 100%;
+animation: fone 2s linear infinite;
 }
 @keyframes fone{
     100%{
@@ -191,15 +191,14 @@ top: 0;
 left: 0;
 width: 100%;
 height: 100%;
-/* animation: car-drive 5s linear infinite;     */
 }
-
 .main__auto{
-/* animation: car-drive 5s linear infinite; */
+animation: car-drive 5s linear infinite;
+position: relative;
 }
 .main__cabin {
 position: absolute;
-bottom: 9%;
+bottom: 100px;
 left: 33%;
 z-index: 2;
 width: 300px;
@@ -254,7 +253,7 @@ background-color: transparent;
 }
 .main__pipe {
 position: absolute;
-bottom: 29%;
+bottom: 300px;
 left: 47%;
 z-index: 0;
 width: 19px;
@@ -264,7 +263,7 @@ background-color: rgb(109, 23, 23);
 }
 .main__rack1{
 position: absolute;
-bottom: 27%;
+bottom: 280px;
 left: 22%;
 z-index: 0;
 width: 5px;
@@ -273,7 +272,7 @@ background-color: black;
 }
 .main__rack2{
 position: absolute;
-bottom: 27%;
+bottom: 280px;
 left: 42%;
 z-index: 0;
 width: 5px;
@@ -282,7 +281,7 @@ background-color: black;
 }
 .main__covering{
 position: absolute;
-top: 44%;
+bottom: 520px;
 left: 19%;
 z-index: 1;
 width: 350px;
@@ -345,7 +344,7 @@ left: 92%;
 }            
 .main__headlight {
 position: absolute;
-bottom: 21%;
+bottom: 216px;
 left: 55%;
 z-index: 0;
 width: 18px;
@@ -362,13 +361,13 @@ box-shadow: 12px 5px 32px #f00000;
 width: 180px;
 height: 180px;
 position: absolute;
-top: 51%;
+top: -490px;
 left: 25%;
 z-index: 1;
 }
 .main__wheel1 {
 position: absolute;
-bottom: 6%;
+bottom: 65px;
 left: 19%;
 z-index: 3;
 width: 250px;
@@ -402,7 +401,7 @@ background-color: black;
 }
 .main__exhaust{
 position: absolute;
-bottom: 14%;
+bottom: 130px;
 left: 18%;
 z-index: 1;
 width: 43px;
@@ -416,7 +415,7 @@ background-color: rgb(54, 30, 30);
 }
 .main__wheel2 {
 position: absolute;
-bottom: 5.5%;
+bottom: 65px;
 right: 41.5%;
 z-index: 2;
 width: 130px;
@@ -443,7 +442,7 @@ height: 60px;
 clip-path: polygon(11% 0, 90% 0, 60% 100%, 43% 100%);
 background-color: rgb(231, 151, 3);
 position: absolute;
-bottom: 13.5%;
+bottom: 144px;
 right: 44%;
 z-index: 2;
 border: 2px solid black;
@@ -453,7 +452,7 @@ width: 27px;
 height: 5px;
 background-color: rgb(8, 6, 0);
 position: absolute;
-bottom: 19.5%;
+bottom: 203px;
 right: 45.5%;
 z-index: 2;
 border: 2px solid black;
@@ -471,13 +470,13 @@ border-radius: 50%;
 }
 .main__picture{
 position: absolute;
-bottom: 3%;
+bottom: 40px;
 right: -12%;
 z-index: 0;
 }
 .main__massage{
 position: absolute;
-bottom: 38%;
+bottom: 350px;
 right: 10%;
 z-index: 0;
 width: 200px;
@@ -489,7 +488,7 @@ clip-path: polygon(0 24%, 100% 24%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0 74%)
 position: absolute;
 width: 150px;
 height: 50px;
-bottom: 48%;
+bottom: 440px;
 right: 11%;
 z-index: 0;
 color: blue;
