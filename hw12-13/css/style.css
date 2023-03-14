@@ -152,7 +152,7 @@ box-shadow: 3px 1px 5px 2px yellow;
 /* height:100%; */
 position: relative;
 width: 100%;
-animation: fone 2s linear infinite;
+/* animation: fone 2s linear infinite; */
 }
 @keyframes fone{
     100%{
@@ -194,7 +194,6 @@ height: 100%;
 }
 .main__auto{
 animation: car-drive 5s linear infinite;
-position: relative;
 }
 .main__cabin {
 position: absolute;
