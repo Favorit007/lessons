@@ -1,0 +1,498 @@
+
+.wrapper{
+overflow: clip;
+min-height: 100%;
+}
+body{
+font-family: Impact,'Arial Narrow Bold', sans-serif;  
+}
+.header {
+background-color: #96368e;
+}
+.header__container {
+max-width: 1100px;
+margin: 0 auto;
+padding: 50px 15px;
+}
+.header__wrap{
+text-align: center;
+}
+.header__title {
+font-size: 38px;
+line-height: 1.2;
+text-align: center;
+text-shadow: 2px 2px 2px white;
+margin-bottom: 50px;
+}
+[class*="__box"] {
+/* display: inline-block; */
+width: 130px;
+height: 130px;   
+padding: 50px 0;  
+text-align: center;
+font-size: 20px;
+color: #fcfcfd;
+background-color: #6d6060;  
+text-shadow: 2px 2px 2px rgb(7, 0, 0);
+transition: all 0.8s ease 0s;
+}
+[class*="__list"]{
+display: inline-block;
+margin-right: 50px;
+margin-bottom: 50px;
+}
+.header__list,
+.header__list-3d{
+background-color: rgb(31, 31, 1);
+}
+.header__box1:hover{
+transform: translateX(40px);  
+background-color: #47c72e;
+box-shadow: 1px 2px 5px 2px yellow;
+}
+.header__box2:hover{
+transform: translateY(-40px);  
+background-color: #47c72e;
+box-shadow: 3px 1px 5px 2px yellow;       
+}
+.header__box3:hover {
+transform: scaleX(-1);  
+background-color: #47c72e;
+box-shadow: 3px 1px 5px 2px yellow;    
+}
+.header__box4:hover {
+transform: scale(1.5, 1.3);  
+background-color: #47c72e;
+box-shadow: 3px 1px 5px 2px yellow;  
+}
+.header__list:hover .header__box5 {
+transform: rotateX(180deg);  
+background-color: #47c72e;
+color: black;
+text-shadow: 2px 2px 2px rgb(253, 252, 252);
+}
+.header__box6:hover {
+transform: rotate(360deg);  
+background-color: #47c72e;
+box-shadow: 3px 1px 5px 2px yellow;  
+}
+.header__box7:hover {
+transform: skewX(40deg);  
+background-color: #47c72e;
+box-shadow: 3px 1px 5px 2px yellow;   
+}
+.header__box8:hover {
+transform: skewY(-60deg);  
+background-color: #47c72e;
+box-shadow: 3px 1px 5px 2px yellow;  
+}
+.header__list:hover .header__box9 {
+transform: matrix(0.4,0.7,1.3,0.8,3.4,1);  
+background-color: #47c72e;
+box-shadow: 3px 1px 5px 2px yellow;  
+}
+.header__box10:hover {
+transform: translate(50px, 50px) scale(0.3) rotate(45deg);
+background-color: #47c72e;
+box-shadow: 3px 1px 5px 2px yellow;  
+}
+.header__box11:hover {
+transform-origin: -40px 100px;
+background-color: #47c72e;
+box-shadow: 3px 1px 5px 2px yellow;  
+transform: rotate(30deg)
+}
+.header__wrap .header__list-3d{
+perspective-origin: right;
+perspective: 80px;
+}
+.header__box12:hover {
+background-color: #47c72e;
+box-shadow: 3px 1px 5px 2px yellow;  
+transform: translateX(-30px) rotateX(40deg);
+}
+.header__box13:hover {
+transform: translate3d(20px,-30px,20px); 
+background-color: #47c72e;
+box-shadow: 1px 2px 5px 2px yellow; 
+}
+.header__box14:hover {
+transform: scale3d(2,-1,2);  
+background-color: #47c72e;
+box-shadow: 3px 1px 5px 2px yellow;     
+}
+.header__box15:hover {
+transform: rotate3d(-1, 1, -2, -100deg);  
+background-color: #47c72e;
+box-shadow: 3px 1px 5px 2px yellow;   
+}
+.header__list-3d:nth-last-child(2){
+margin-bottom: 0;
+}
+.header__box16:hover {
+transform: rotate3d(0,-1,1, 20deg) translate3d(-10px,20px,-40px);
+background-color: #47c72e;
+box-shadow: 3px 1px 5px 2px yellow;  
+}
+.header__box17{
+padding-top: 30px;
+}
+.header__list-3d-style{
+perspective: 300px;
+transform-style: preserve-3d;
+background-color:rgba(7, 7, 7, 0.171);
+margin: 0;
+}
+.header__list-3d-style:hover .header__box17{
+transform: rotateX(50deg);
+background-color: #47c72e;
+box-shadow: 3px 1px 5px 2px yellow; 
+}
+
+.main{
+height:100%;
+position: relative;
+width: 100%;
+}
+@keyframes fone{
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes car-wheels {
+   30% {
+transform: rotate(120deg);
+   }
+100%{
+    transform: rotate(360deg);
+}
+}
+
+@keyframes car-drive{
+    0%{
+transform: translate(-100%, 0px);
+    }
+    30%{
+transform: translate(0,0);
+    }
+    50%{
+transform: translate(0%, 0px);
+opacity: 1;
+    }
+    100%{
+        transform: translate(100%, 0px);
+        opacity: 0;
+    }
+}
+.main__car img{
+position: relative;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+/* animation: car-drive 5s linear infinite;     */
+}
+
+.main__auto{
+/* animation: car-drive 5s linear infinite; */
+}
+.main__cabin {
+position: absolute;
+bottom: 9%;
+left: 33%;
+z-index: 2;
+width: 300px;
+height: 200px;
+clip-path: polygon(79% 0, 100% 25%, 100% 46%, 82% 46%, 66% 83%, 0 83%, 0 0);
+background-color: rgb(231, 151, 3);
+}
+[class*="__engine"]{
+width: 30px;
+height: 100px;
+background-color: transparent;
+position: absolute;
+border: 4px solid brown;
+}
+.main__engine1 {
+top: 10%;
+left: 16%;
+z-index: 0;
+}
+.main__engine2 {
+top: 10%;
+left: 25%;
+z-index: 0;
+}
+.main__engine3 {
+top: 10%;
+left: 34%;
+z-index: 0;
+}
+.main__engine4 {
+width: 120px;
+top: 10%;
+left: 43%;
+z-index: 0;
+border-bottom: none;
+}
+.main__gas{
+background-color: #0a0000;
+width: 35px;
+height: 35px;
+z-index: 0;
+position: absolute;
+bottom: 28%;
+right: 35%;
+border-radius: 0 0 0 20px;
+border: 4px solid brown;
+transition-duration: 0.5s;
+}
+.main__gas:hover{
+transform: translate(5px); 
+background-color: transparent;
+}
+.main__pipe {
+position: absolute;
+bottom: 29%;
+left: 47%;
+z-index: 0;
+width: 19px;
+height: 100px;
+border-radius: 0 10px 0 0;
+background-color: rgb(109, 23, 23);
+}
+.main__rack1{
+position: absolute;
+bottom: 27%;
+left: 22%;
+z-index: 0;
+width: 5px;
+height: 252px;
+background-color: black;
+}
+.main__rack2{
+position: absolute;
+bottom: 27%;
+left: 42%;
+z-index: 0;
+width: 5px;
+height: 252px;
+background-color: black;
+}
+.main__covering{
+position: absolute;
+top: 44%;
+left: 19%;
+z-index: 1;
+width: 350px;
+height: 30px;
+background-color:#e20a81;
+border-radius: 10px 10px 0 0;
+}
+[class*="__covering-item"]{
+position: absolute;
+background-color: #e20a81;
+width: 25px;
+height: 20px;
+border-radius: 0 0 10px 10px;
+bottom: -38%;
+z-index: 1;
+}
+.main__covering-item{  
+left: 0;
+}
+.main__covering-item:nth-child(2){
+left: 7%;
+}
+.main__covering-item:nth-child(3){
+left: 14%;
+}
+.main__covering-item:nth-child(4){
+left: 21%;
+}
+.main__covering-item:nth-child(5){
+left: 28%;
+}
+.main__covering-item:nth-child(6){
+left: 35%;
+}
+.main__covering-item:nth-child(7){
+left: 42%;
+}
+.main__covering-item:nth-child(8){
+left: 49%;
+}
+.main__covering-item:nth-child(9){
+left: 56%;
+}
+.main__covering-item:nth-child(10){
+left: 63%;
+}
+.main__covering-item:nth-child(11){
+left: 70%;
+}
+.main__covering-item:nth-child(12){
+left: 77%;
+}
+.main__covering-item:nth-child(13){
+width: 28px;
+left: 84%;
+}
+.main__covering-item:nth-child(14){
+width: 28px;
+left: 92%;
+}            
+.main__headlight {
+position: absolute;
+bottom: 21%;
+left: 55%;
+z-index: 0;
+width: 18px;
+height: 28px;
+background-color: #ebe848;
+border-radius: 0 15px 15px 0;
+transition: all 0.4s;
+}
+.main__headlight:hover{
+background-color: red;
+box-shadow: 12px 5px 32px #f00000;
+}
+.main__image img {
+width: 180px;
+height: 180px;
+position: absolute;
+top: 51%;
+left: 25%;
+z-index: 1;
+}
+.main__wheel1 {
+position: absolute;
+bottom: 6%;
+left: 19%;
+z-index: 3;
+width: 250px;
+height: 250px;
+background-color: #fd0404;
+border-radius: 50%;
+border: 15px solid black;
+animation: car-wheels 5s linear infinite;
+}
+.main__disk1 {
+position: relative;
+background: url(../img/mercedes-benz.svg) 0 0 / 100% no-repeat;
+top: 90px;
+left: 90px;
+z-index: 3;
+width: 40px;
+height: 40px;
+background-color: rgb(51, 14, 1);
+border-radius: 50%;
+}
+.main__disk1::before{
+content: "";
+position: absolute;
+bottom: -60%;
+left: -70px;
+z-index: 1;
+width: 20px;
+height: 20px;
+border-radius: 50%;
+background-color: black;
+}
+.main__exhaust{
+position: absolute;
+bottom: 14%;
+left: 18%;
+z-index: 1;
+width: 43px;
+height: 20px;
+border-radius: 47px 0 0 55px;
+background-color:  rgb(109, 23, 23);
+transition: all 0.3s;
+}
+.main__exhaust:hover{
+background-color: rgb(54, 30, 30);
+}
+.main__wheel2 {
+position: absolute;
+bottom: 5.5%;
+right: 41.5%;
+z-index: 2;
+width: 130px;
+height: 130px;
+background-color: #fd0404;
+border-radius: 50%;
+border: 12px solid black;
+animation: car-wheels 5s linear infinite;
+}
+.main__disk2::before{
+content: "";
+position: absolute;
+bottom: 10%;
+left: 39px;
+z-index: 1;
+width: 13px;
+height: 13px;
+border-radius: 50%;
+background-color: black;
+}
+.main__brake{
+width: 70px;
+height: 60px;
+clip-path: polygon(11% 0, 90% 0, 60% 100%, 43% 100%);
+background-color: rgb(231, 151, 3);
+position: absolute;
+bottom: 13.5%;
+right: 44%;
+z-index: 2;
+border: 2px solid black;
+}
+.main__lining{
+width: 27px;
+height: 5px;
+background-color: rgb(8, 6, 0);
+position: absolute;
+bottom: 19.5%;
+right: 45.5%;
+z-index: 2;
+border: 2px solid black;
+}
+.main__disk2{
+position: relative;
+background: url(../img/mercedes-benz.svg) 0 0 / 100% no-repeat;
+top: 41px;
+left: 43px;
+z-index: 0;
+width: 20px;
+height: 20px;
+background-color:rgb(51, 14, 1);
+border-radius: 50%;
+}
+.main__picture{
+position: absolute;
+bottom: 3%;
+right: -12%;
+z-index: 0;
+}
+.main__massage{
+position: absolute;
+bottom: 38%;
+right: 10%;
+z-index: 0;
+width: 200px;
+height: 200px;
+background-color: white;
+clip-path: polygon(0 24%, 100% 24%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0 74%);
+}
+.main__text {
+position: absolute;
+width: 150px;
+height: 50px;
+bottom: 48%;
+right: 11%;
+z-index: 0;
+color: blue;
+font-size: 24px;
+line-height: 1.3; 
+}
