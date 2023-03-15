@@ -147,28 +147,10 @@ transform: rotateX(50deg);
 background-color: #47c72e;
 box-shadow: 3px 1px 5px 2px yellow; 
 }
-
-.main{
-/* height:100%; */
+.main__auto{
+animation: car-drive 7s linear infinite;
 position: relative;
-width: 100%;
-/* animation: fone 2s linear infinite; */
 }
-@keyframes fone{
-    100%{
-        transform: translateX(-100%);
-    }
-}
-
-@keyframes car-wheels {
-   30% {
-transform: rotate(120deg);
-   }
-100%{
-    transform: rotate(360deg);
-}
-}
-
 @keyframes car-drive{
     0%{
 transform: translate(-100%, 0px);
@@ -176,7 +158,7 @@ transform: translate(-100%, 0px);
     30%{
 transform: translate(0,0);
     }
-    50%{
+    80%{
 transform: translate(0%, 0px);
 opacity: 1;
     }
@@ -184,16 +166,6 @@ opacity: 1;
         transform: translate(100%, 0px);
         opacity: 0;
     }
-}
-.main__car img{
-position: relative;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-}
-.main__auto{
-animation: car-drive 5s linear infinite;
 }
 .main__cabin {
 position: absolute;
@@ -351,10 +323,18 @@ height: 28px;
 background-color: #ebe848;
 border-radius: 0 15px 15px 0;
 transition: all 0.4s;
+animation: headlight 6s infinite;
 }
-.main__headlight:hover{
-background-color: red;
+
+@keyframes headlight{
+0%,80%{
+background-color:#ebe848;
+}
+90%,100%{
+background-color: red;  
 box-shadow: 12px 5px 32px #f00000;
+}
+
 }
 .main__image img {
 width: 180px;
@@ -363,6 +343,19 @@ position: absolute;
 top: -490px;
 left: 25%;
 z-index: 1;
+}
+
+@keyframes car-wheel1 {
+    30% {
+transform: rotate(260deg);
+    }
+    80%{
+        transform: rotate(-1220deg);
+    }
+100%{
+    transform: rotate(620deg);
+}
+
 }
 .main__wheel1 {
 position: absolute;
@@ -374,7 +367,7 @@ height: 250px;
 background-color: #fd0404;
 border-radius: 50%;
 border: 15px solid black;
-animation: car-wheels 5s linear infinite;
+animation: car-wheel1 6s linear infinite;
 }
 .main__disk1 {
 position: relative;
@@ -409,8 +402,39 @@ border-radius: 47px 0 0 55px;
 background-color:  rgb(109, 23, 23);
 transition: all 0.3s;
 }
+@keyframes exhaust{
+    0%,70%{
+    opacity: 0;
+    }
+    90%,100%{
+        opacity: 1;
+    }
+}
+.main__exhaust::before{
+content: "";
+position: absolute;
+top: 15px;
+left: -170px;
+z-index: 15;
+width: 150px;
+height: 70px;
+background-color: rgb(39, 22, 22);
+opacity: 1;
+border-radius:32% 34% 69% 29% / 79% 20% 74% 27%;
+box-shadow: 1px 5px 15px 20px rgb(39, 22, 22);
+animation: exhaust 6s linear infinite;
+}
 .main__exhaust:hover{
 background-color: rgb(54, 30, 30);
+}
+
+@keyframes car-wheel2 {
+30% {
+transform: rotate(260deg);
+}
+100%{
+    transform: rotate(720deg);
+}
 }
 .main__wheel2 {
 position: absolute;
@@ -422,7 +446,7 @@ height: 130px;
 background-color: #fd0404;
 border-radius: 50%;
 border: 12px solid black;
-animation: car-wheels 5s linear infinite;
+animation: car-wheel2 6s linear infinite;
 }
 .main__disk2::before{
 content: "";
@@ -482,6 +506,15 @@ width: 200px;
 height: 200px;
 background-color: white;
 clip-path: polygon(0 24%, 100% 24%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0 74%);
+animation: message 6s linear infinite;
+}
+@keyframes message{
+    0%,70%{
+    opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 .main__text {
 position: absolute;
@@ -493,4 +526,5 @@ z-index: 0;
 color: blue;
 font-size: 24px;
 line-height: 1.3; 
+animation: message 6s linear infinite;
 }
