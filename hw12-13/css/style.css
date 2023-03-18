@@ -147,6 +147,11 @@ transform: rotateX(50deg);
 background-color: #47c72e;
 box-shadow: 3px 1px 5px 2px yellow; 
 }
+
+.main__car{
+max-width: 1400px;
+margin: 0 auto;
+}
 .main__auto{
 animation: car-drive 7s linear infinite;
 position: relative;
@@ -170,7 +175,7 @@ opacity: 1;
 .main__cabin {
 position: absolute;
 bottom: 100px;
-left: 33%;
+left: 32%;
 z-index: 2;
 width: 300px;
 height: 200px;
@@ -225,7 +230,7 @@ background-color: transparent;
 .main__pipe {
 position: absolute;
 bottom: 300px;
-left: 47%;
+left: 45%;
 z-index: 0;
 width: 19px;
 height: 100px;
@@ -244,7 +249,7 @@ background-color: black;
 .main__rack2{
 position: absolute;
 bottom: 280px;
-left: 42%;
+left: 40%;
 z-index: 0;
 width: 5px;
 height: 252px;
@@ -315,10 +320,10 @@ left: 92%;
 }            
 .main__headlight {
 position: absolute;
-bottom: 216px;
-left: 55%;
+bottom: 215px;
+right: 45%;
 z-index: 0;
-width: 18px;
+width: 53px;
 height: 28px;
 background-color: #ebe848;
 border-radius: 0 15px 15px 0;
@@ -439,7 +444,7 @@ transform: rotate(260deg);
 .main__wheel2 {
 position: absolute;
 bottom: 65px;
-right: 41.5%;
+right: 42.5%;
 z-index: 2;
 width: 130px;
 height: 130px;
@@ -466,7 +471,7 @@ clip-path: polygon(11% 0, 90% 0, 60% 100%, 43% 100%);
 background-color: rgb(231, 151, 3);
 position: absolute;
 bottom: 144px;
-right: 44%;
+right: 45%;
 z-index: 2;
 border: 2px solid black;
 }
@@ -476,7 +481,7 @@ height: 5px;
 background-color: rgb(8, 6, 0);
 position: absolute;
 bottom: 203px;
-right: 45.5%;
+right: 46.5%;
 z-index: 2;
 border: 2px solid black;
 }
