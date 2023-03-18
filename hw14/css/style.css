@@ -57,10 +57,6 @@ padding: 0 15px;
 flex: 0 0 33.333%;
 }
 .card__title {
-font-weight: 700;
-font-size: 8px;
-line-height: 2.5; 
-color: #F8F9FA;
 margin-bottom: 30px;
 position: relative;
 }
@@ -86,7 +82,11 @@ text-align: center;
 border-radius: 3px;
 padding: 3px 17px;
 background: rgba(33, 37, 41, 0.3);
-display: inline-block;    
+display: inline-block;  
+font-weight: 700;
+font-size: 8px;
+line-height: 2.5; 
+color: #F8F9FA;  
 }
 .card__subtitle{
 display: flex;
