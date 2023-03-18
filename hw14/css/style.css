@@ -73,6 +73,9 @@ transform: scale(1.05);
 .card__creative {
 display: inline-block;
 }
+.card__creative:hover .card__link-creative{
+color: rgb(5, 0, 0);
+}
 .card__link-creative {
 position: absolute;
 top: 30px;
@@ -105,10 +108,9 @@ border-bottom: 1px solid #E5E5E5;
 .card__author{
 display: inline-block;
 transition: transform 0.6s; 
-
 }
 .card__author:hover{
-transform: scale(1.1);
+transform: scale(1.08);
 color: black;
 text-decoration: underline;
 }
