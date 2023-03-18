@@ -1,0 +1,131 @@
+body{
+font-family: "Poppins", sans-serif;
+font-weight: 300;
+font-size: 12px;
+line-height: 1.6;
+color: #495057;
+}
+.wrapper{
+min-height: 100%;
+overflow: clip;
+
+display: flex;
+flex-direction: column;
+flex-grow: 1;
+}
+.header {
+padding-top: 20px;
+font-weight: 500;
+line-height: 2.01;
+margin-bottom: 44px;
+}
+[class*="__container"] {
+max-width: 1270px;
+margin: 0 auto;
+padding-left: 15px;
+padding-right: 15px;
+}
+.header__caption{
+display: flex;
+justify-content: space-between;  
+gap: 20px;
+}
+.header__title::after {
+content: "+";
+width: 9px;
+height: 25px;
+padding-left: 7px;
+}
+.header__subtitle {
+display: flex;
+column-gap: 20px;
+flex-wrap: wrap;
+}
+.main{
+padding-bottom: 80px;
+}
+.card {
+display: flex;
+flex-wrap: wrap;
+margin: 0 -15px 60px;
+row-gap: 45px;
+}
+.card__items{
+display: flex;
+flex-wrap: wrap;
+padding: 0 15px;
+flex: 0 0 33.333%;
+}
+.card__title {
+font-weight: 700;
+font-size: 8px;
+line-height: 2.5; 
+color: #F8F9FA;
+margin-bottom: 30px;
+position: relative;
+}
+.card__image{
+overflow: hidden;
+}
+.card__image img{
+max-width: 100%;
+transition: transform 0.8s;
+}
+.card__image img:hover{
+transform: scale(1.05);    
+}
+.card__creative {
+display: inline-block;
+}
+.card__link-creative {
+position: absolute;
+top: 30px;
+right: 30px;
+z-index: 0;
+text-align: center;
+border-radius: 3px;
+padding: 3px 17px;
+background: rgba(33, 37, 41, 0.3);
+display: inline-block;    
+}
+.card__subtitle{
+display: flex;
+flex-wrap: wrap;
+row-gap: 15px;
+}
+.card__text {
+font-weight: 700;
+font-size: 25px;
+color: #212529;
+}
+.card__subtext {
+padding-bottom: 15px;
+border-bottom: 1px solid #E5E5E5;   
+}
+.card__author{
+display: inline-block;
+transition: transform 0.6s; 
+
+}
+.card__author:hover{
+transform: scale(1.1);
+color: black;
+text-decoration: underline;
+}
+.main__button {
+display: flex;
+justify-content: center;
+}
+.main__link {
+font-weight: 500;
+line-height: 2.08;
+text-align: center;
+color: #F8F9FA;
+border-radius: 3px;
+background-color:#212529;
+padding: 7px 50px 8px 49px;
+transition: transform 0.6s
+}
+.main__link:hover{
+transform: scale(0.9);
+}
