@@ -52,11 +52,14 @@ row-gap: 45px;
 }
 .card__items{
 padding: 0 15px;
-flex: 0 0 33.333%;
+flex: 1 1 33.333%;
+display: flex;
+flex-direction: column;
 }
 .card__title {
 margin-bottom: 30px;
 position: relative;
+
 }
 .card__image{
 overflow: hidden;
@@ -87,8 +90,10 @@ color: #F8F9FA;
 }
 .card__subtitle{
 display: flex;
-flex-wrap: wrap;
+flex-direction: column;
 row-gap: 15px;
+flex: 1 1 auto;
+align-items: flex-start;
 }
 .card__text {
 font-weight: 700;
@@ -97,7 +102,8 @@ color: #212529;
 }
 .card__subtext {
 padding-bottom: 15px;
-border-bottom: 1px solid #E5E5E5;   
+border-bottom: 1px solid #E5E5E5;  
+flex: 1 1 auto;
 }
 .card__author{
 display: inline-block;
