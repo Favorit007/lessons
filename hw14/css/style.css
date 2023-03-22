@@ -30,16 +30,18 @@ display: flex;
 justify-content: space-between;  
 gap: 20px;
 }
+.header__title{
+display: flex;
+column-gap: 7px;
+}
 .header__title::after {
 content: "+";
 width: 9px;
 height: 25px;
-padding-left: 7px;
 }
 .header__subtitle {
 display: flex;
 column-gap: 20px;
-flex-wrap: wrap;
 }
 .main{
 padding-bottom: 80px;
@@ -59,7 +61,6 @@ flex-direction: column;
 .card__title {
 margin-bottom: 30px;
 position: relative;
-
 }
 .card__image{
 overflow: hidden;
