@@ -19,11 +19,13 @@ max-width: 1230px;
 margin: 0 auto;
 padding: 0 15px;
 }
+.main__page{
+margin-bottom: 112px;
+}
 .dananz {
 display: flex;
 justify-content: space-between;
 align-items: center;
-margin-bottom: 112px;
 }
 .dananz__link {
 display: inline-block;
@@ -42,11 +44,29 @@ gap: 20px 74px;
 flex-wrap: wrap;
 }
 .dananz__link-list{
-transition: all 0.5s;
+font-weight: 400;
+line-height: 1.5;
+color: #333333;
+transition: text-shadow 0.5s;
+position: relative;
+display: inline-block;
 }
 .dananz__sublist:hover .dananz__link-list{
-color: rgb(53, 12, 165);
 text-shadow: 1px 1px 1px #000;
+}
+.dananz__link-list::before{
+content: "";
+position: absolute;
+bottom: 0;
+left: 0;
+height: 2px;
+width: 0;
+transition: width 0.5s;
+border-radius: 2px;
+background-color: rgb(31, 1, 112);
+}
+.dananz__sublist:hover .dananz__link-list::before{
+width: 100%;
 }
 .dananz__link-button {
 display: inline-block;
@@ -62,13 +82,13 @@ white-space: nowrap;
 }
 .dananz__link-button:hover{
 background-color: aqua;
-transform: scale(0.9);
+transform: scale(0.9) translateX(10px);
 color: #000;
 }
 .gallery{
 margin-bottom: 100px;
 }
-.list {
+.gallery__list-list {
 max-width: 518px;
 margin: 0 auto 53px;
 }
@@ -95,7 +115,7 @@ transition: transform 0.9s;
 .gallery__list-image img:hover{
 transform: scale(0.96);
 }
-.content {
+.gallery__list-content {
 display: flex;
 gap: 32px;
 margin-bottom: 82px;
@@ -209,11 +229,10 @@ max-width: 100%;
 transition: transform 1s;
 }
 .services__title {
-padding-left: 120px;
-display: flex;
-flex-direction: column;
-flex: 1 0 27.83%;
-row-gap: 20px;
+padding-left: 120px; 
+}
+.services__title h2{
+margin-bottom: 20px;
 }
 .services__title-text {
 font-weight: 600;
