@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Inter:500,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Lesson16</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__container">
+                <div class="header__list">
+                    <h2 class="header__title">Checkout</h2>
+                    <div class="header__subtitle">There are 3 products in your cart</div>
+                    <h4 class="header__item">Billing Details</h4>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <div class="main__container">
+                <form action="https://jsonplaceholder.typicode.com/posts" method="post" class="main__details details">
+                    <div class="details__items">
+                        <div class="details__list">
+                            <input class="details__input" type="text" name="first-name" placeholder="First name*"
+                                autocomplete="off" required>
+                        </div>
+                        <div class="details__list">
+                            <input class="details__input" type="text" name="last-name" placeholder="Last name*"
+                                autocomplete="off" required>
+                        </div>
+                        <div class="details__list">
+                            <input class="details__input" type="text" name="adress" placeholder="Adress*"
+                                autocomplete="off" required>
+                        </div>
+                        <div class="details__list">
+                            <input class="details__input" type="text" name="adress" placeholder="Adress line 2"
+                                autocomplete="off">
+                        </div>
+                        <select class="details__input-select" name="country" id="country">
+                            <option value selected disabled>Country*</option>
+                            <option value="Ukraine">Ukraine</option>
+                            <option value="USA">USA</option>
+                            <option value="Zanzibar">Zanzibar</option>
+                            <option value="Sweden">Sweden</option>
+                            <option value="Brazil">Brazil</option>
+                        </select>
+                        <div class="details__list">
+                            <input class="details__input" type="text" name="city town" placeholder="City/Town*"
+                                autocomplete="off" required>
+                        </div>
+                        <div class="details__list">
+                            <input class="details__input" type="text" name="postcode zip" placeholder="Postcode/Zip*"
+                                autocomplete="off" required>
+                        </div>
+                        <div class="details__list">
+                            <input class="details__input" type="tel" name="phone" placeholder="Phone*"
+                                autocomplete="off" required>
+                        </div>
+                        <div class="details__list">
+                            <input class="details__input" type="text" name="postcode zip" placeholder="Postcode/Zip*"
+                                autocomplete="off" required>
+                        </div>
+                        <div class="details__list">
+                            <input class="details__input" type="tel" name="phone" placeholder="Phone*"
+                                autocomplete="off" required>
+                        </div>
+                        <textarea class="details__textarea" type="text" name="additional information"
+                            placeholder="Additional information"></textarea>
+                    </div>
+                    <div class="details__checkbox checkbox">
+                        <div class="checkbox__items">
+                            <input id="account-01" class="checkbox__account" checked type="checkbox" name="account"
+                                required autocomplete="off">
+                            <label class="checkbox__label" for="account-01">Create Account</label>
+                        </div>
+                        <div class="checkbox__items">
+                            <input id="adress-01" class="checkbox__adress" type="checkbox" name="adress" required
+                                autocomplete="off">
+                            <label class="checkbox__label" for="adress-01">Ship to a different address?</label>
+                        </div>
+                    </div>
+                    <div class="details__discount discount">
+                        <h2 class="discount__title">Apply Coupon to get discount!</h2>
+                        <div class="discount__items items-title">
+                            <div class="items-title__item">
+                                <input class="items-title__input" type="text" name="coupon code"
+                                    placeholder="Coupon code" autocomplete="off">
+                            </div>
+                            <button type="submit" class="items-title__button">Apply Code</button>
+                        </div>
+                    </div>
+                </form>
+                <div class="main__container-adress crisp">
+                    <div class="crisp__title">Shipping Address</div>
+                    <form action="https://jsonplaceholder.typicode.com/posts" method="post"
+                        class="crisp__adress adress">
+                        <div class="adress__items">
+                            <div class="adress__item">
+                                <div class="adress__list">
+                                    <label class="adress__label-mail" for="email-01">Email Address</label>
+                                    <input class="adress__tub" required id="email-01" autocomplete="off" name="mail"
+                                        placeholder="roni_cost@example.com" type="email">
+                                </div>
+                                <div class="adress__list ">
+                                    <label class="adress__label" for="pass-01">Password</label>
+                                    <input class="adress__tub" required id="pass-01" autocomplete="off" name="pass"
+                                        placeholder="***********" type="password">
+                                </div>
+                                <div class="adress__list ">
+                                    <label class="adress__label" for="post-01">Zip/Postal Code</label>
+                                    <input class="adress__tub" id="post-01" autocomplete="off" name="postcode zip"
+                                        placeholder="" type="text">
+                                </div>
+                            </div>
+                            <div class="adress__text">You already have an account with us. Sign in or continue as
+                                guest.</div>
+                            <div class="adress__button button">
+                                <button class="button__btn" type="submit">login</button>
+                                <div class="button__text">Forgot Your Password?</div>
+                            </div>
+                        </div>
+                    </form>
+                    <form action="https://jsonplaceholder.typicode.com/posts" method="get"
+                        class="crisp__methods method">
+                        <div class="method__items">
+                            <div class="method__item">
+                                <div class="method__list">
+                                    <label class="method__label" for="name-01">First Name</label>
+                                    <input class="method__tub" required id="name-01" autocomplete="off"
+                                        name="first name" type="text">
+                                </div>
+                                <div class="method__list">
+                                    <label class="method__label" for="name-02">Last Name</label>
+                                    <input class="method__tub" required id="name-02" autocomplete="off" name="last name"
+                                        type="text">
+                                </div>
+                                <div class="method__list">
+                                    <label class="method__label-company" for="firm-01">Company</label>
+                                    <input class="method__tub" id="firm-01" autocomplete="off" name="company"
+                                        type="text">
+                                </div>
+                                <div class="method__list">
+                                    <label class="method__label" for="street-01">Street Adress</label>
+                                    <div class="method__boks adress-card">
+                                        <input class="method__tub-adress" required id="street-01" autocomplete="off"
+                                            name="street adress" type="text">
+                                        <input class="method__tub-adress" id="street-01" autocomplete="off"
+                                            name="street adress" type="text">
+                                        <input class="method__tub-adress" id="street-01" autocomplete="off"
+                                            name="street adress" type="text">
+                                    </div>
+                                </div>
+                                <div class="method__list">
+                                    <label class="method__label" for="count-02">Country</label>
+                                    <input class="method__tub" required id="count-02" autocomplete="off" name="country"
+                                        type="text">
+                                </div>
+                                <div class="method__list">
+                                    <label class="method__label" for="state-01">State/Province</label>
+                                    <select class="method__list-selected" name="state province" id="state-01">
+                                        <option value selected disabled>Please select a region, state or province
+                                        </option>
+                                        <option value="Turin">Turin</option>
+                                        <option value="Salerno">Salerno</option>
+                                        <option value="Bergamo">Bergamo</option>
+                                        <option value="Trentino">Trentino</option>
+                                        <option value="Fermo">Fermo</option>
+                                        <option value="Potenza">Potenza</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="crisp__title">Shipping Methods</div>
+                        <div class="method__inner inner">
+                            <div class="inner__chek">
+                                <input id="chek-01" class="inner__chek-account" checked type="radio" name="price"
+                                    autocomplete="off">
+                                <label class="inner__chek-label" for="chek-01">$5.00</label>
+                            </div>
+                            <div class="inner__fix">Fixed</div>
+                            <div class="inner__flat">Flat Rate</div>
+                        </div>
+                        <div class="method__inner inner method-second">
+                            <div class="inner__chek">
+                                <input id="chek-02" class="inner__chek-account" type="radio" name="price"
+                                    autocomplete="off">
+                                <label class="inner__chek-label" for="chek-02">$10.00</label>
+                            </div>
+                            <div class="inner__fix">Table Rate</div>
+                            <div class="inner__flat">Best Way</div>
+                        </div>
+                        <div class="method__button">
+                            <button type="submit" class="method__button-btn">next</button>
+                            <button type="reset" class="method__button-batn">Back</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+
+
+body{
+font-family: "Inter", sans-serif;
+font-weight: 500;
+line-height: 1.5;
+color: #637381;
+}
+.wrapper{
+min-height: 100%;
+overflow: clip;
+
+display: flex;
+flex-direction: column;
+}
+.wrapper > main {
+flex-grow: 1;
+}
+.header {
+padding-top: 100px;
+margin-bottom: 30px;
+}
+[class*="__container"] {
+max-width: 730px;
+margin: 0 auto;
+padding-left: 15px;
+padding-right: 15px;
+}
+.header__title,
+.header__item {
+font-weight: 700;
+line-height: 1.25;
+color: #212B36;    
+}
+.header__title{
+font-size: 44px;
+margin-bottom: 8px;
+}
+.header__subtitle {
+margin-bottom: 50px;
+}
+.header__item {
+font-size: 24px;
+}
+.main{
+padding-bottom: 80px;
+}
+.main__details {
+margin-bottom: 100px;    
+}
+.details__items {
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+row-gap: 30px;
+margin-bottom: 35px;
+column-gap: 10px;
+}
+.details__input:focus,
+.details__textarea:focus,
+.items-title__input:focus{
+background-color: rgba(106, 140, 170, 0.1);
+}
+[class*="__input"] {
+border: 1px solid #E7E7E7;
+border-radius: 7px;
+padding: 15px 25px;
+transition: background-color 0.5s;
+min-width: 175px;
+width: 100%;
+}
+.details__list,
+.details__input-select{
+flex: 0 1 48%;
+}
+.details__input-select{
+font-family: "Inter";
+font-size: 16px;
+font-weight: 500;
+line-height: 1.5;
+color: #637381;
+}
+.details__textarea{
+flex: 0 1 100%;
+border: 1px solid #E7E7E7;
+border-radius: 7px;
+padding: 25px;
+min-width: 175px;
+height: 180px;
+resize: vertical;
+transition: background-color 0.5s;
+}
+.details__checkbox {
+margin-bottom: 55px;
+}
+.checkbox__items{
+position: relative;
+display: flex;
+flex-direction: column;
+}
+.checkbox__items:not(:last-child){
+margin-bottom: 25px;
+}
+.checkbox__account,
+.checkbox__adress,
+.inner__chek-account{
+position: absolute;
+top: 0;
+left: 0;
+width: 0;
+height: 0;
+opacity: 0;
+}
+.checkbox__account:checked + .checkbox__label::before{
+background: url(../img/01.svg) 50% no-repeat;
+}
+.checkbox__adress:checked + .checkbox__label::before{
+background: url(../img/01.svg) 50% no-repeat;
+}
+.checkbox__label{
+cursor: pointer;  
+display: inline-flex;
+align-items: center;
+gap: 14px;  
+}
+.checkbox__label::before{
+content: "";
+flex: 0 0 22px;
+width: 22px;
+height: 22px;
+border-radius: 4px;
+border: 1px solid #E7E7E7;
+}
+.discount__title {
+font-weight: 600;
+font-size: 20px;
+line-height: 1.3;
+color: #212B36;
+margin-bottom: 25px;
+}
+.discount__items {
+display: inline-flex;
+flex-wrap: wrap;
+gap: 20px;
+}
+.items-title__input {
+transition: background-color 0.5s;
+}
+.items-title__button {
+font-weight: 600;
+color: #FFFFFF;
+background: #212B36;
+border-radius: 5px;
+padding: 12px 22px;
+transition: transform 0.5s, box-shadow 0.5s;
+}
+.items-title__button:hover{
+transform: scale(0.95);
+box-shadow: 3px 3px 3px 3px, 4px 4px 4px 4px rgb(165, 150, 150);
+}
+.items-title__button:active{
+color: gold;
+}
+.main__container-adress{
+max-width: 636px;
+}
+.crisp__title {
+font-family: "Oswald";
+font-weight: 400;
+font-size: 24px;
+line-height: 1.83;
+color: #000000;
+margin-bottom: 34px;
+}
+.crisp__adress{
+margin-bottom: 40px;
+}
+.adress__items,
+.method__items{
+font-family: "Roboto";
+font-weight: 400;
+font-size: 16px;
+line-height: 1.25;
+color: #3F3F3F;
+}
+.adress__item,
+.method__item{
+display: flex;
+flex-direction: column;
+gap: 27px;
+}
+.adress__item{
+margin-bottom: 12px;
+}
+.adress__list,
+.method__list{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+gap: 10px;
+}
+.adress__label-mail::after{
+content: "*";
+position: relative;
+top: 0;
+left: 5px;
+color: #EB5757;
+}
+.adress__label {
+flex: 0 1 19.5%;
+}
+.adress__tub,
+.method__tub,
+.method__tub-adress,
+.method__list-selected{
+background: #FFFFFF; 
+border: 1px solid #C4C4C4;
+padding: 10px 16px;
+flex: 0 1 70.91%;
+}
+.adress__text {
+font-size: 14px;
+line-height: 1.43;
+color: #828282;
+margin-bottom: 14px;
+}
+.adress__button {
+display: flex;
+flex-wrap: wrap;
+gap: 25px;
+border-bottom: 1px solid #C4C4C4;
+padding-bottom: 36px;
+}
+.button__btn,
+.method__button-btn{
+font-family: "Oswald";
+font-weight: 500;
+font-size: 14px;
+line-height: 1.5;
+text-align: center;
+text-transform: uppercase;
+color: #FFFFFF;
+align-items: center;
+background-color: black;
+letter-spacing: 0.5px;
+flex: 0 1 18.86%;
+min-height: 50px;
+transition: background-color 0.5s;
+}
+.button__btn:hover,
+.method__button-btn:hover{
+background-color: rgb(182, 25, 148);
+}
+.button__text {
+position: relative;
+font-family: "Roboto";
+font-weight: 400;
+font-size: 14px;
+line-height: 1.43;
+color: #0F6DB1;
+flex: 0 1 24%;
+align-self: center;
+cursor: pointer;
+}
+.method__items {
+margin-bottom: 46px;
+}
+.method__label::after {
+position: relative;
+content: "*";
+top: 0;
+left: 5px;
+color: #EB5757;
+}
+.method__label,
+.method__label-company{
+flex: 0 1 24.37%;
+}
+.adress-card > :not(:last-child){
+margin-bottom: 13px;
+}
+.method__boks{
+flex: 0 1 70.91%;
+}
+.method__tub-adress{
+width: 100%;
+}
+.method__list-selected{
+font-family: 'Roboto';
+font-weight: 400;
+font-size: 16px;
+line-height: 1.25;
+color: #3F3F3F;
+}
+.method__inner {
+font-family: "Roboto";
+font-weight: 400;
+font-size: 14px;
+line-height: 1.43;
+border-top: 2px solid #C4C4C4;
+color: #3F3F3F;
+display: flex;
+position: relative;
+gap: 75px;
+align-items: center;
+}
+.method-second{
+margin-bottom: 24px;
+}
+.method-second{
+border: none;
+}
+.method-second::after{
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 443px;
+border: 1px solid #C4C4C4;
+}
+.inner__chek {
+position: relative;
+display: flex;
+gap: 10px;
+}
+.inner__chek-label{
+flex: 0 0 81px;
+min-width: 65px;
+min-height: 44px;
+cursor: pointer;  
+display: inline-flex;
+align-items: center;
+gap: 14px;  
+}
+.inner__chek-label::before {
+content: "";
+flex: 0 0 10px;
+width: 10px;
+height: 10px;
+border-radius: 50%;
+border: 1px solid #E7E7E7;    
+}
+.inner__chek-account:checked + .inner__chek-label::before{
+border: 3px solid black;
+}
+.inner__fix {
+flex: 0 0 81px;
+text-align: center;
+}
+.inner__flat {
+flex: 0 0 81px;
+text-align: center;
+}
+.method__button {
+display: flex;
+justify-content: space-between;
+gap: 15px;
+flex-wrap: wrap;
+}
