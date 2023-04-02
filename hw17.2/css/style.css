@@ -45,6 +45,9 @@ margin-bottom: 50px;
 font-size: 24px;
 }
 @media (max-width:720px) {
+    .header{
+        padding-top: 40px;
+    }
     .header__list{
         text-align: center;
     }
@@ -317,6 +320,16 @@ flex: 0 1 24%;
 align-self: center;
 cursor: pointer;
 }
+@media (max-width:662px) {
+    .button__text{
+        flex: 0 1 40%;
+    }
+}
+@media (max-width:420px) {
+.adress__button{
+    justify-content: space-between;
+}
+}
 .method__items {
 margin-bottom: 46px;
 }
@@ -358,6 +371,11 @@ display: flex;
 position: relative;
 gap: 75px;
 align-items: center;
+}
+@media (max-width:374px) {
+    .method__inner{
+     justify-content: space-around;
+    }
 }
 .method-second{
 margin-bottom: 24px;
