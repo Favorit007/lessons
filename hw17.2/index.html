@@ -12,7 +12,7 @@
 
 <body>
     <div class="wrapper">
-        <header class="header">
+        <header class="header block-header">
             <div class="header__container">
                 <div class="header__list">
                     <h2 class="header__title">Checkout</h2>
@@ -41,7 +41,7 @@
                             <input class="details__input" type="text" name="adress" placeholder="Adress line 2"
                                 autocomplete="off">
                         </div>
-                        <select class="details__input-select" name="country" id="country">
+                        <select class="details__input-select" required name="country" id="country">
                             <option value selected disabled>Country*</option>
                             <option value="Ukraine">Ukraine</option>
                             <option value="USA">USA</option>
@@ -161,7 +161,7 @@
                                 </div>
                                 <div class="method__list">
                                     <label class="method__label" for="state-01">State/Province</label>
-                                    <select class="method__list-selected" name="state province" id="state-01">
+                                    <select class="method__list-selected" required name="state province" id="state-01">
                                         <option value selected disabled>Please select a region, state or province
                                         </option>
                                         <option value="Turin">Turin</option>
