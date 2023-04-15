@@ -518,6 +518,7 @@ font-size: 10px;
     .rightside-block__image img{
     width: 100%;
     transition: transform 0.5s;
+    border-radius: 3px;
     }
     .rightside-block__image img:hover{
     transform: scale(1.05);
