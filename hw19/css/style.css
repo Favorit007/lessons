@@ -264,6 +264,12 @@ transition: all 0.5s;
         font-size: 20px;
     } 
 }
+@media (max-width:767px) {
+    .card-list__components{
+        opacity: 1;
+        height: 80%;
+    }
+}
 @media (max-width:735px) {
     .card-list__title{
         font-size: 16px;
