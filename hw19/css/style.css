@@ -269,6 +269,9 @@ transition: all 0.5s;
         opacity: 1;
         height: 80%;
     }
+    .action-block{
+    padding: 12px;
+    }
 }
 @media (max-width:735px) {
     .card-list__title{
