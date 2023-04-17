@@ -382,9 +382,6 @@ padding: 12px 12px 25px 12px;
 border: 1px solid #E7E7E7;
 border-radius: 12px;
 }
-.card-inner__item {
-display: block;
-}
 .card-inner__image {
     position: relative;
     padding-bottom: 66.47%;
