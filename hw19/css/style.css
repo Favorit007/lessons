@@ -763,11 +763,14 @@ height: 77px;
     display: block;
     transition: color 0.4s ease 0s;
 }
-.raiting__label:hover,
+
+@media (any-hover: hover) {
+   .raiting__label:hover,
 .raiting__label:hover ~ .raiting__label,
 .raiting__label:checked ~ .raiting__label:hover{
     color: #ccc9c9;
 }
+   }
 .main-devices__page {
     display: grid;
     justify-content: center;
@@ -910,7 +913,7 @@ padding: 6px;
         }
         .main-devices__footer{
             grid-template-rows: repeat(2, 1fr);
-            grid-template-columns: 125px 1fr;
+            grid-template-columns: 130px 1fr;
             row-gap: 0;
         }
         .footer-block__price{
@@ -921,12 +924,12 @@ padding: 6px;
             right: 70px;
             height: 92px;
             }
-        .footer-block__inner{
-            line-height: 1;
-        }
         .footer-block__reviews{
         grid-row: 2 / 3;
         grid-column: -3 / -2;
+        }
+        .footer-block__inner{
+            font-size: 26px;
         }
     }
 @media (max-width:340px) {
