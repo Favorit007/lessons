@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap');
+
 body{
     font-family: "Inter", sans-serif;
     font-weight: 500;
@@ -1031,4 +1033,94 @@ transition: transform 0.5s;
         border: 0;
         padding-bottom: 0;
     }
+}
+
+.lust-block {
+   
+}
+.lust-block__content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 32px;
+    margin-bottom: 82px;
+}
+.lust-block__item {
+}
+.lust-block__header:not(:last-child){
+    margin-bottom: 60px;
+}
+.lust-block__title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.4;
+    color: #333333;
+}
+.lust-block__subtitle:nth-child(2){
+    margin-bottom: 30px;
+}
+.lust-block__title:not(:last-child){
+    margin-bottom: 24px;
+}
+.lust-block__subtitle,
+.lust-block__footer {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #9C9C9C;
+}
+.lust-block__footer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.footer-dananz__link {
+    transition: all 0.5s;
+}
+.footer-dananz__link:hover{
+    color: #3056D3;
+    text-decoration: underline;
+}
+.lust-block__gallary {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(565px, 1fr));
+    gap: 20px;
+    grid-template-rows: repeat(3, 513px);
+    margin-bottom: 100px;
+}
+.lust-block__gallary .lust-block__image,
+.lust-block__gallary .lust-block__image-big{
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+ display: inline-block;
+}
+.lust-block__gallary .lust-block__image{
+    padding-bottom: 87.84%;
+}
+.lust-block__gallary .lust-block__image-big{
+    padding-bottom: 68.75%;
+}
+.lust-block__gallary .lust-block__image img{
+   position: absolute;
+   width: 100%;
+   height: 100%; 
+   top: 0;
+   left: 0;
+   object-fit: cover;
+   transition: transform 0.5s;
+}
+.lust-block__gallary:hover .lust-block__image img{
+    transform: scale(1.05);
+}
+.lust-block__image:nth-child(4) {
+    grid-column: -3 / -2;
+    grid-row: 3 / 4;
+}
+.lust-block__image:nth-child(5) {
+    grid-column: -2 / -1;
+    grid-row: 3 / 4;
+}
+.lust-block__image:nth-child(3) {
+    grid-row: span 2;
 }
