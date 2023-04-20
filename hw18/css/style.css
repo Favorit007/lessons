@@ -358,8 +358,11 @@ font-size: 10px;
         max-width: 350px;
         margin: 0 auto;
         }
+        .main-post__name{
+            font-size: 16px;
+        }
     .main-post__title{
-        font-size: 16px;
+        font-size: 20px;
         }
 }
  @media (max-width:580px) {
@@ -372,7 +375,7 @@ font-size: 10px;
         padding: 80px 0;
         }
         .main-post__name{
-        font-size: 12px;
+        font-size: 14px;
         }
         .main-post__name:not(:last-child){
         margin-bottom: 0px;
@@ -382,7 +385,7 @@ font-size: 10px;
         margin: 0 auto;
         }
         .main-post__title{
-        font-size: 14px;
+        font-size: 18px;
         }
     }
     @media (max-width:440px) {
@@ -441,13 +444,8 @@ font-size: 10px;
     left: 0;
     }
     .leftside-block__search {
-    color: rgba(73, 80, 87, 0.5);
     background: url("../img/01.svg") left  no-repeat;
     padding-left: 20px;
-    transition: color 0.5s;
-    }
-    .leftside-block__search:hover{
-    color: rgb(112, 67, 155);
     }
     @media (max-width: 822px) {
         .leftside-block{
@@ -461,9 +459,10 @@ font-size: 10px;
         flex-wrap: wrap;
         justify-content: center;
         }
+        .leftside-block__list{
+            font-size: 14px;
+        }
         .leftside-block__search{
-        display: flex;
-        justify-content: flex-end;
         border-bottom: 1px solid #000;
         font-size: 16px;
         }
@@ -489,17 +488,6 @@ font-size: 10px;
    gap: 0;
     }
 }
-@media (max-width: 425px) {
-    main{
-        margin-bottom: 20px;
-    }
-    .leftside-block__title{
-   font-size: 14px;
-    }
-    .leftside-block__item{
-        font-size: 10px;
-        }
-}
     .topics-block__rightside {
     display: flex;
     flex-direction: column;
@@ -513,12 +501,12 @@ font-size: 10px;
     }
     .rightside-block__image{
     overflow: hidden;
+    border-radius: 3px;
     flex: 0 0 47.43%;
     }
     .rightside-block__image img{
     width: 100%;
     transition: transform 0.5s;
-    border-radius: 3px;
     }
     .rightside-block__image img:hover{
     transform: scale(1.05);
@@ -560,7 +548,7 @@ font-size: 10px;
     color: #6C757D;
     align-items: center;
     }
-      @media (max-width: 822px) {
+    @media (max-width: 822px) {
         .topics-block__rightside {
         flex-direction: row;
         flex-wrap: wrap;
@@ -577,9 +565,19 @@ font-size: 10px;
         }
         .rightside-block__image {
         width: 100%;
+        margin-bottom: 15px;
         }
         .rightside-block__inner {
         padding-left: 0;
+        }
+        .card-inner__data,
+        .card-inner__text,
+        .footer-card__item,
+        .footer-card__number{
+            font-size: 14px;
+        }
+        .card-inner__author{
+            font-size: 18px;
         }
     }
     @media (max-width: 533px) {
@@ -592,22 +590,13 @@ font-size: 10px;
         }
         .rightside-block__image {
         width: 100%;
-         margin-bottom: 10px;
+        margin-bottom: 10px;
         }
     }
     @media (max-width: 506px) {
         .rightside-block__inner{
             gap: 5px;
         }
-      .card-inner__author{
-font-size: 14px;
-      }
-    }
-    @media (max-width: 374px) {
-      .card-inner__data,
-       .card-inner__text{
-    font-size: 10px;
-      }
     }
     .footer-card__item,
     .footer-card__number{
@@ -646,11 +635,15 @@ font-size: 14px;
     .footer-end__link:hover{
     color: #495057;
     }
-  
     @media (max-width: 822px) {
         .footer-end {
-       flex: 0 0 100%;
-   text-align: center;
+        flex: 0 0 100%;
+        text-align: center;
+        }
+    }
+    @media (max-width: 533px) {
+        .topics-block__footer{
+        display: none;
         }
     }
     .footer {
@@ -695,9 +688,6 @@ font-size: 14px;
     .list-footer{
         flex-direction: row;
     }
-    .item-footer{
-    font-size: 12px;
-    }
 }
 @media (max-width:763px) {
     .footer__inner{
@@ -731,30 +721,32 @@ font-size: 14px;
     line-height: 1.3;
   }
     .link-footer{
-    font-size: 10px;
+    font-size: 12px;
     }
     .list-footer{
         gap: 10px;
         column-gap: 5px;
     }
     .block-finish{
-        font-size: 10px;
+        font-size: 12px;
     }
 }
 @media (max-width:409px) {
     .footer{
         min-height: 80px;
         }
-  .footer__logo{
-    font-size: 10px;
-  }
-    .link-footer{
-    font-size: 8px;
-    }
+        .footer__logo{
+        align-self: flex-start;
+        }
+        .footer__inner{
+        row-gap: 5px;
+        flex-direction: column;
+        align-items: flex-start;
+        }
     .list-footer{
         gap: 5px;
     }
-    .block-finish{
-        font-size: 8px;
+    .footer__finish{
+        flex-direction: column;
     }
 }
