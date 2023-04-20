@@ -461,6 +461,10 @@ border-radius: 12px;
     grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
     gap: 30px;
 }
+.main-selling__items{
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
 .main-selling__image {
     display: block;
     margin-bottom: 20px;
@@ -520,6 +524,7 @@ align-items: center;
 padding: 8px 20px;
 border: 1px solid #212B36;
 border-radius: 4px;
+align-self: end;
 transition: all 0.5s;
 }
 .main-selling__button:hover{
