@@ -1,0 +1,236 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+html,
+body {
+  height: 100%;
+  line-height: 1;
+}
+
+textarea,
+button,
+input {
+  font-weight: inherit;
+  font-size: inherit;
+  color: inherit;
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+  background-color: inherit;
+}
+
+body {
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #000000;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: clip;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.wrapper > main {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+[class*=__container] {
+  max-width: 1908px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.page {
+  padding-top: 20px;
+}
+
+.block-header__inner {
+  border: 2px solid #c4c4c4;
+  padding: 25px 32px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  -webkit-column-gap: 30px;
+     -moz-column-gap: 30px;
+          column-gap: 30px;
+  row-gap: 15px;
+  justify-items: center;
+  margin-bottom: 30px;
+}
+.block-header__title {
+  padding: 0 10px;
+  font-weight: 400;
+  font-size: 24px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.block-header__link {
+  display: block;
+  padding: 55px 20px;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.block-header__link:nth-child(4), .block-header__link:nth-child(5) {
+  padding: 50px 30px;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+.block-header__link:hover {
+  background-color: #f0f2f2;
+}
+.block-header__image {
+  display: block;
+}
+
+.page__wallpaper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(610px, 1fr));
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.block-wallpaper__item {
+  min-height: 500px;
+  position: relative;
+}
+.block-wallpaper__item:nth-child(2) {
+  grid-row: span 2;
+}
+.block-wallpaper__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+.block-wallpaper__content-left {
+  padding: 8.87% 6.92% 8.98% 53.13%;
+}
+.block-wallpaper__title {
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 7px;
+}
+.block-wallpaper__title-left, .block-wallpaper__title-lust {
+  font-size: 48px;
+  line-height: 1.29;
+}
+.block-wallpaper__subtitle {
+  font-family: "Roboto", sans-serif;
+  font-size: 22px;
+  line-height: 1.68;
+  letter-spacing: 0.01em;
+  margin-bottom: 51px;
+}
+.block-wallpaper__link {
+  display: inline-block;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 15px 45px;
+  border: 2px solid #000000;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.block-wallpaper__link:hover {
+  background-color: #000000;
+  color: #f0f2f2;
+}
+.block-wallpaper__image {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+}
+.block-wallpaper__image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  -o-transition: transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+.block-wallpaper__image img:hover {
+  -webkit-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+          transform: scale(1.05);
+}
+.block-wallpaper__content-big {
+  padding: 47.88% 51.67% 11.46% 9.57%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  justify-items: flex-end;
+}
+.block-wallpaper__title-big {
+  font-size: 96px;
+  line-height: 1.15;
+  color: #131313;
+}
+.block-wallpaper__content-lust {
+  padding: 6.49% 46.22% 6.49% 11.65%;
+}

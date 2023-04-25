@@ -1,0 +1,179 @@
+@import "_reset.scss";
+
+body {
+    font-family: "Oswald", sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #000000;
+}
+.wrapper {
+    min-height: 100%;
+    overflow: clip;
+
+    display: flex;
+    flex-direction: column;
+}
+.wrapper > main {
+    flex-grow: 1;
+}
+[class*="__container"] {
+    max-width: 1908px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.page {
+    padding-top: 20px;
+    // .page__container
+}
+.block-header {
+    // .block-header__inner
+
+    &__inner {
+        border: 2px solid #c4c4c4;
+        padding: 25px 32px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+        align-items: end;
+        column-gap: 30px;
+        row-gap: 15px;
+        justify-items: center;
+        margin-bottom: 30px;
+    }
+    // .block-header__title
+    &__title {
+        padding: 0 10px;
+        font-weight: 400;
+        font-size: 24px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    &__link {
+        &:nth-child(4),
+        &:nth-child(5) {
+            padding: 50px 30px;
+            align-self: center;
+        }
+        display: block;
+        padding: 55px 20px;
+        transition: all 0.5s;
+        &:hover {
+            background-color: #f0f2f2;
+        }
+    }
+    // .block-header__image
+    &__image {
+        display: block;
+    }
+}
+
+.page {
+    // .page__wallpaper
+    &__wallpaper {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(610px, 1fr));
+        gap: 30px;
+        margin-bottom: 30px;
+    }
+}
+.block-wallpaper {
+    // .block-wallpaper__item
+    &__item {
+        min-height: 500px;
+        position: relative;
+        &:nth-child(2) {
+            grid-row: span 2;
+        }
+    }
+    // .block-wallpaper__content
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        position: relative;
+        z-index: 1;
+    }
+    // .block-wallpaper__content-left
+    &__content-left {
+        padding: 8.87% 6.92% 8.98% 53.13%;
+    }
+    // .block-wallpaper__title
+    &__title {
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: 7px;
+    }
+    // .block-wallpaper__title-left
+    &__title-left,
+    &__title-lust {
+        font-size: 48px;
+        line-height: 1.29;
+    }
+    // .block-wallpaper__subtitle
+    &__subtitle {
+        font-family: "Roboto", sans-serif;
+        font-size: 22px;
+        line-height: 1.68;
+        letter-spacing: 0.01em;
+        margin-bottom: 51px;
+    }
+    // .block-wallpaper__link
+    &__link {
+        display: inline-block;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        padding: 15px 45px;
+        border: 2px solid #000000;
+        align-self: flex-start;
+        transition: all 0.5s;
+        &:hover {
+            background-color: #000000;
+            color: #f0f2f2;
+        }
+    }
+    // .block-wallpaper__image
+    &__image {
+        display: block;
+        // position: absolute;
+        // top: 0;
+        // left: 0;
+        // width: 100%;
+        // height: 100%;
+        overflow: hidden;
+        cursor: pointer;
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+    // .block-wallpaper__content-big
+    &__content-big {
+        padding: 47.88% 51.67% 11.46% 9.57%;
+        justify-content: flex-end;
+        justify-items: flex-end;
+    }
+    // .block-wallpaper__title-big
+    &__title-big {
+        font-size: 96px;
+        line-height: 1.15;
+        color: #131313;
+    }
+    // .block-wallpaper__content-lust
+    &__content-lust {
+        padding: 6.49% 46.22% 6.49% 11.65%;
+    }
+}
+// .block-wallpaper__title-lust
