@@ -25,6 +25,7 @@ body {
 }
 .page {
     padding-top: 20px;
+    padding-bottom: 20px;
     // .page__container
 }
 .block-header {
@@ -710,6 +711,9 @@ body {
     // .page__explore
     &__explore {
         margin-bottom: 82px;
+        @media (max-width: 768px) {
+            margin-bottom: 50px;
+        }
     }
 }
 .block-explore {
@@ -868,5 +872,93 @@ body {
             align-self: stretch;
             text-align: center;
         }
+    }
+}
+.page {
+    // .page__blog
+    &__blog {
+        background-color: #f8f9fb;
+    }
+}
+.blog-box {
+    // .blog-box__header
+    &__header {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 2.83;
+        padding-top: 36px;
+        padding-bottom: 10px;
+    }
+    // .blog-box__items
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 30px;
+        @media (max-width: 480px) {
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        }
+    }
+    // .blog-box__item
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 24px 24px 0 24px;
+        background-color: #fff;
+        cursor: pointer;
+        transition: transform 0.5s;
+        @media (any-hover: hover) {
+            &:hover {
+                transform: scale(1.03);
+            }
+        }
+    }
+
+    // .blog-box__content
+    &__content {
+        display: flex;
+        flex-direction: column;
+    }
+    // .blog-box__link
+    &__link {
+        align-self: flex-start;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #bdbdbd;
+        transition: all 0.5s;
+        &:not(:last-child) {
+            margin-bottom: 21px;
+        }
+        &:hover {
+            color: #4c37a7;
+        }
+    }
+    // .blog-box__title
+    &__title {
+        font-weight: 400;
+        font-size: 26px;
+        &:not(:last-child) {
+            margin-bottom: 32px;
+        }
+    }
+    // .blog-box__text
+    &__text {
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.01em;
+        padding-bottom: 69px;
+    }
+    // .blog-box__footer
+    &__footer {
+        border-top: 3px solid #000000;
+    }
+    // .blog-box__data
+    &__data {
+        font-weight: 300;
+        font-size: 13px;
+        line-height: 2.85;
+        color: #4f4f4f;
     }
 }
