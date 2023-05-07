@@ -28,6 +28,7 @@ body {
     padding-bottom: 20px;
     // .page__container
 }
+
 .block-header {
     // .block-header__inner
     &__inner {
@@ -46,9 +47,6 @@ body {
         }
         @media (max-width: 597px) {
             padding: 10px 22px 20px;
-        }
-        @media (max-width: 402px) {
-            row-gap: 0;
         }
     }
     // .block-header__title
