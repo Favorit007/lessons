@@ -85,10 +85,10 @@ body {
 		}
 	}
 		&__search {
-			flex: 0 0 rem(22);
-	align-self: stretch;
-	transform: translate(-5px, 0px);
-	background: url("../img/02.svg") 5% no-repeat;
+			// flex: 0 0 rem(22);
+	// align-self: stretch;
+	// transform: translate(-5px, 0px);
+	// background: url("../img/02.svg") 5% no-repeat;
 	padding-left: rem(30);
 	@media (max-width: em(660)) {
 		transform: translate(0, 0);
