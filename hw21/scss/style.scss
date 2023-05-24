@@ -85,10 +85,12 @@ body {
 		}
 	}
 		&__search {
-			// flex: 0 0 rem(22);
-	// align-self: stretch;
-	// transform: translate(-5px, 0px);
-	// background: url("../img/02.svg") 5% no-repeat;
+			@media (min-width: em(660)){
+						flex: 0 0 rem(22);
+	align-self: stretch;
+	transform: translate(-5px, 0px);
+	background: url("../img/02.svg") 5% no-repeat;
+			}
 	background-color: transparent;
 	padding-left: rem(30);
 	// @media (max-width: em(660)) {
@@ -260,7 +262,7 @@ body {
 	}
 }
 @media (max-width: em(335)) {
-	transform: translate(-25%, 0);
+	transform: translate(-50%, 0);
 }
 }
 @media (max-width: em(660)) {
