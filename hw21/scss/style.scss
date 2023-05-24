@@ -85,21 +85,28 @@ body {
 		}
 	}
 		&__search {
-			@media (min-width: em(660)){
-						flex: 0 0 rem(22);
-	align-self: stretch;
+			@media (min-width: em(660.01)){
+				flex: 0 0 rem(22);
+	background-position: center;
 	transform: translate(-5px, 0px);
-	background: url("../img/02.svg") 5% no-repeat;
-			}
+			background-size: 100%;
 	background-color: transparent;
 	padding-left: rem(30);
-	// @media (max-width: em(660)) {
-	// 	transform: translate(0, 0);
-	// 	background-position: 95% 95%;
-	// 	padding-left: rem(10);
-	// 	padding-right: rem(30);
-	// 	background-size: 10%;
-	// }
+			}
+
+	@media (min-width: em(426)) and (max-width: em(660)) {
+		transform: translate(0, 0);
+		
+		padding-left: rem(10);
+		padding-right: rem(30);
+		
+		align-self: stretch;
+		background-color: transparent;
+		background: url("../img/02.svg") 95% center / 10% no-repeat;
+	}
+	@media (max-width: em(425)){
+		background-color: transparent;
+	}
 		}
 }
 
