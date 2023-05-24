@@ -126,6 +126,11 @@ body {
   content: ".";
   color: #ddbea9;
 }
+@media (max-width: 21.5625em) {
+  .header__logo {
+    padding-right: 0.75rem;
+  }
+}
 .header__navigation {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 auto;
@@ -193,6 +198,8 @@ body {
 @media (max-width: 26.5625em) {
   .header__search {
     background-image: none;
+    -ms-flex-item-align: center;
+        align-self: center;
   }
 }
 
@@ -379,9 +386,9 @@ body {
 }
 @media (max-width: 20.9375em) {
   .menu-icon {
-    -webkit-transform: translate(-50%, 0);
-        -ms-transform: translate(-50%, 0);
-            transform: translate(-50%, 0);
+    -webkit-transform: translate(-20px, 0);
+        -ms-transform: translate(-20px, 0);
+            transform: translate(-20px, 0);
   }
 }
 

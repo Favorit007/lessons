@@ -56,6 +56,9 @@ body {
 				content: ".";
             	color: #ddbea9;
 			}
+			@media (max-width: em(345)){
+				padding-right: rem(12);
+			}
 		}
 
 		&__navigation {
@@ -99,6 +102,7 @@ body {
 	}
 	@media (max-width: em(425)){
 		background-image: none;
+		align-self: center;
 	}
 		}
 }
@@ -262,7 +266,7 @@ body {
 	}
 }
 @media (max-width: em(335)) {
-	transform: translate(-50%, 0);
+	transform: translate(-20px, 0);
 }
 }
 @media (max-width: em(660)) {
