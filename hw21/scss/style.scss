@@ -92,10 +92,10 @@ body {
 	padding-left: rem(30);
 	@media (max-width: em(660)) {
 		transform: translate(0, 0);
-		background-position: 95% 90%;
+		background-position: 95% 95%;
 		padding-left: rem(10);
 		padding-right: rem(30);
-		background-size: 11%;
+		background-size: 10%;
 	}
 		}
 }
@@ -257,6 +257,9 @@ body {
 		top: 50%;
 		margin-top: -0.5px;
 	}
+}
+@media (max-width: em(335)) {
+	transform: translate(-25%, 0);
 }
 }
 @media (max-width: em(660)) {

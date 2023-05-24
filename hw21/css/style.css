@@ -184,10 +184,10 @@ body {
     -webkit-transform: translate(0, 0);
         -ms-transform: translate(0, 0);
             transform: translate(0, 0);
-    background-position: 95% 90%;
+    background-position: 95% 95%;
     padding-left: 0.625rem;
     padding-right: 1.875rem;
-    background-size: 11%;
+    background-size: 10%;
   }
 }
 
@@ -370,6 +370,13 @@ body {
   .menu-icon span {
     top: 50%;
     margin-top: -0.5px;
+  }
+}
+@media (max-width: 20.9375em) {
+  .menu-icon {
+    -webkit-transform: translate(-25%, 0);
+        -ms-transform: translate(-25%, 0);
+            transform: translate(-25%, 0);
   }
 }
 
