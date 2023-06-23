@@ -583,6 +583,17 @@ h6 {
   display: inline-block;
   left: 18.125rem;
   bottom: -1.25rem;
+  cursor: pointer;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.services__phone:hover {
+  -webkit-transform: scale(1.085);
+      -ms-transform: scale(1.085);
+          transform: scale(1.085);
 }
 
 .services__phone img {
@@ -660,9 +671,9 @@ h6 {
 
 .portfolio__slide {
   opacity: 0;
-  -webkit-transform: translateY(100%);
-      -ms-transform: translateY(100%);
-          transform: translateY(100%);
+  -webkit-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
 }
 
 .portfolio__slide:nth-child(1) {
@@ -736,7 +747,31 @@ h6 {
 }
 
 .team__item {
+  opacity: 0;
+  -webkit-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
   position: relative;
+}
+
+.team__item:nth-child(1) {
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+}
+
+.team__item:nth-child(2) {
+  -webkit-transition: all 1.1s;
+  transition: all 1.1s;
+}
+
+.team__item:nth-child(3) {
+  -webkit-transition: all 1.4s;
+  transition: all 1.4s;
+}
+
+.team__item:nth-child(4) {
+  -webkit-transition: all 1.7s;
+  transition: all 1.7s;
 }
 
 .team__item .item-team__content {
@@ -747,6 +782,13 @@ h6 {
 .team__item:hover .item-team__content {
   opacity: 1;
   height: 23%;
+}
+
+._watcher-view.team__item {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
 }
 
 .item-team__image {
@@ -874,7 +916,7 @@ h6 {
 .details__textarea {
   margin-bottom: 1.125rem;
   height: 12.8125rem;
-  resize: vertical;
+  resize: horizontal;
 }
 
 .details__button {
@@ -975,6 +1017,16 @@ h6 {
 
 .content__email-icon span {
   padding-left: 1.25rem;
+}
+
+.content span {
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+  cursor: pointer;
+}
+
+.content span:hover {
+  color: #100c46;
 }
 
 .content__phone-tel {
@@ -1940,12 +1992,9 @@ button.swiper-pagination-bullet {
 }
 
 @media (max-width: 37em) {
-  .item-team__image {
-    padding-bottom: 100%;
-  }
-
   .item-team__content {
     padding: 0.75rem 0.8125rem 0.75rem 1.125rem;
+    height: 18%;
   }
 
   .item-team__social {
@@ -2237,28 +2286,11 @@ button.swiper-pagination-bullet {
   }
 }
 
-@media (max-width: 39.4375em) {
-  .item-team__image img {
-    -o-object-fit: fill;
-       object-fit: fill;
-  }
-}
-
 @media (max-width: 39.5em) {
   .item-team__social {
     -webkit-column-gap: 0.5rem;
        -moz-column-gap: 0.5rem;
             column-gap: 0.5rem;
-  }
-}
-
-@media (max-width: 32.4375em) {
-  .item-team__name {
-    line-height: 1.6;
-  }
-
-  .item-team__profession {
-    line-height: 1.6;
   }
 }
 
