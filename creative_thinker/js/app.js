@@ -3388,6 +3388,7 @@
             spaceBetween: 100,
             autoHeight: true,
             speed: 800,
+            loop: true,
             effect: "fade",
             autoplay: {
                 delay: 2e3,
