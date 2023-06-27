@@ -567,6 +567,8 @@ body::after {
       -ms-flex: 0 0 40.5%;
           flex: 0 0 40.5%;
   overflow: hidden;
+  border-radius: 0.375rem;
+  border: 1px solid #000;
 }
 
 .creative__image img {
@@ -770,11 +772,6 @@ body::after {
   transition: all 0.5s;
 }
 
-.touch .item-gallery__content {
-  opacity: 1;
-  visibility: visible;
-}
-
 .item-gallery__inner {
   padding: 1.4375rem 3.75rem 1.4375rem 1.6875rem;
   background-color: #fff;
@@ -802,6 +799,12 @@ body::after {
   color: var(--h1);
   font-weight: 500;
   line-height: 1.5555555556;
+  -webkit-transition: color 0.4s;
+  transition: color 0.4s;
+}
+
+.item-gallery__title:hover {
+  color: var(--jessica);
 }
 
 .item-gallery__subtitle {
@@ -2225,6 +2228,11 @@ button.swiper-pagination-bullet {
     -webkit-transform: translateY(50%);
         -ms-transform: translateY(50%);
             transform: translateY(50%);
+  }
+
+  .item-gallery__content {
+    opacity: 1;
+    visibility: visible;
   }
 
   .careers__box {
