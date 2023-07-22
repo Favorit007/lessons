@@ -1787,6 +1787,9 @@ body::after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 1.625rem;
   z-index: 10;
   position: relative;
@@ -1794,8 +1797,8 @@ body::after {
 
 .testimonials__pagination .swiper-pagination-bullet {
   cursor: pointer;
-  -webkit-transition: background-color 0.3s ease 0s;
-  transition: background-color 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
   background-color: #e5e5e5;
   width: 0.75rem;
   height: 0.75rem;
@@ -1804,6 +1807,8 @@ body::after {
 
 .testimonials__pagination .swiper-pagination-bullet-active {
   background-color: #39425d;
+  width: 1.125rem;
+  height: 1.125rem;
 }
 
 .testimonials__body {

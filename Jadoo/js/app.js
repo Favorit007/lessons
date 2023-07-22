@@ -6853,6 +6853,90 @@
             })
         });
     }
+    function create_shadow_createShadow(params, slideEl, side) {
+        const shadowClass = `swiper-slide-shadow${side ? `-${side}` : ""}`;
+        const shadowContainer = utils_getSlideTransformEl(slideEl);
+        let shadowEl = shadowContainer.querySelector(`.${shadowClass}`);
+        if (!shadowEl) {
+            shadowEl = utils_createElement("div", `swiper-slide-shadow${side ? `-${side}` : ""}`);
+            shadowContainer.append(shadowEl);
+        }
+        return shadowEl;
+    }
+    function EffectCoverflow({swiper, extendParams, on}) {
+        extendParams({
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                scale: 1,
+                modifier: 1,
+                slideShadows: true
+            }
+        });
+        const setTranslate = () => {
+            const {width: swiperWidth, height: swiperHeight, slides, slidesSizesGrid} = swiper;
+            const params = swiper.params.coverflowEffect;
+            const isHorizontal = swiper.isHorizontal();
+            const transform = swiper.translate;
+            const center = isHorizontal ? -transform + swiperWidth / 2 : -transform + swiperHeight / 2;
+            const rotate = isHorizontal ? params.rotate : -params.rotate;
+            const translate = params.depth;
+            for (let i = 0, length = slides.length; i < length; i += 1) {
+                const slideEl = slides[i];
+                const slideSize = slidesSizesGrid[i];
+                const slideOffset = slideEl.swiperSlideOffset;
+                const centerOffset = (center - slideOffset - slideSize / 2) / slideSize;
+                const offsetMultiplier = typeof params.modifier === "function" ? params.modifier(centerOffset) : centerOffset * params.modifier;
+                let rotateY = isHorizontal ? rotate * offsetMultiplier : 0;
+                let rotateX = isHorizontal ? 0 : rotate * offsetMultiplier;
+                let translateZ = -translate * Math.abs(offsetMultiplier);
+                let stretch = params.stretch;
+                if (typeof stretch === "string" && stretch.indexOf("%") !== -1) stretch = parseFloat(params.stretch) / 100 * slideSize;
+                let translateY = isHorizontal ? 0 : stretch * offsetMultiplier;
+                let translateX = isHorizontal ? stretch * offsetMultiplier : 0;
+                let scale = 1 - (1 - params.scale) * Math.abs(offsetMultiplier);
+                if (Math.abs(translateX) < .001) translateX = 0;
+                if (Math.abs(translateY) < .001) translateY = 0;
+                if (Math.abs(translateZ) < .001) translateZ = 0;
+                if (Math.abs(rotateY) < .001) rotateY = 0;
+                if (Math.abs(rotateX) < .001) rotateX = 0;
+                if (Math.abs(scale) < .001) scale = 0;
+                const slideTransform = `translate3d(${translateX}px,${translateY}px,${translateZ}px)  rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(${scale})`;
+                const targetEl = effect_target_effectTarget(params, slideEl);
+                targetEl.style.transform = slideTransform;
+                slideEl.style.zIndex = -Math.abs(Math.round(offsetMultiplier)) + 1;
+                if (params.slideShadows) {
+                    let shadowBeforeEl = isHorizontal ? slideEl.querySelector(".swiper-slide-shadow-left") : slideEl.querySelector(".swiper-slide-shadow-top");
+                    let shadowAfterEl = isHorizontal ? slideEl.querySelector(".swiper-slide-shadow-right") : slideEl.querySelector(".swiper-slide-shadow-bottom");
+                    if (!shadowBeforeEl) shadowBeforeEl = create_shadow_createShadow(params, slideEl, isHorizontal ? "left" : "top");
+                    if (!shadowAfterEl) shadowAfterEl = create_shadow_createShadow(params, slideEl, isHorizontal ? "right" : "bottom");
+                    if (shadowBeforeEl) shadowBeforeEl.style.opacity = offsetMultiplier > 0 ? offsetMultiplier : 0;
+                    if (shadowAfterEl) shadowAfterEl.style.opacity = -offsetMultiplier > 0 ? -offsetMultiplier : 0;
+                }
+            }
+        };
+        const setTransition = duration => {
+            const transformElements = swiper.slides.map((slideEl => utils_getSlideTransformEl(slideEl)));
+            transformElements.forEach((el => {
+                el.style.transitionDuration = `${duration}ms`;
+                el.querySelectorAll(".swiper-slide-shadow-top, .swiper-slide-shadow-right, .swiper-slide-shadow-bottom, .swiper-slide-shadow-left").forEach((shadowEl => {
+                    shadowEl.style.transitionDuration = `${duration}ms`;
+                }));
+            }));
+        };
+        effect_init_effectInit({
+            effect: "coverflow",
+            swiper,
+            on,
+            setTranslate,
+            setTransition,
+            perspective: () => true,
+            overwriteParams: () => ({
+                watchSlidesProgress: true
+            })
+        });
+    }
     function initSliders() {
         //!slider #1 testimonials
         if (document.querySelector(".testimonials__slider")) new core(".testimonials__slider", {
@@ -6860,13 +6944,17 @@
             observer: true,
             observeParents: true,
             slidesPerView: 1,
-            spaceBetween: 0,
-            autoHeight: false,
-            speed: 800,
+            spaceBetween: 30,
+            autoHeight: true,
+            speed: 600,
             effect: "fade",
             pagination: {
                 el: ".testimonials__pagination",
                 clickable: true
+            },
+            scrollbar: {
+                el: ".swiper-scrollbar",
+                draggable: true
             },
             navigation: {
                 prevEl: ".testimonials__arrow.swiper-button-prev",
@@ -6884,7 +6972,7 @@
         });
         //!slider #2 clients
                 if (document.querySelector(".clients__slider")) new core(".clients__slider", {
-            modules: [ Navigation, Autoplay ],
+            modules: [ Navigation, Autoplay, EffectCoverflow ],
             observer: true,
             observeParents: true,
             slidesPerView: 5,
@@ -6895,7 +6983,13 @@
             effect: "fade",
             autoplay: {
                 delay: 2e3,
-                disableOnInteraction: true
+                disableOnInteraction: false
+            },
+            effect: "coverflow",
+            coverflowEffect: {
+                rotate: 30,
+                stretch: 15,
+                slideShadows: true
             },
             pagination: {
                 el: ".testimonials__pagination",
