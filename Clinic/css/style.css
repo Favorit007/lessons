@@ -1899,6 +1899,11 @@ summary::marker {
   background: #65BDC2;
 }
 
+.clients__slide img {
+  width: 9.375rem;
+  height: 7.6875rem;
+}
+
 .swiper {
   overflow: hidden;
 }
@@ -2108,6 +2113,14 @@ summary::marker {
   .item-transformations {
     padding-right: 3.125rem;
   }
+
+  .clients {
+    padding-block: 3.75rem;
+  }
+
+  .clients__wrapper {
+    padding-left: 2.5rem;
+  }
 }
 
 @media (min-width: 89.375em) {
@@ -2286,6 +2299,14 @@ summary::marker {
 
   .item-transformations {
     padding-bottom: 0.9375rem;
+  }
+
+  .clients {
+    padding-block: 1.25rem;
+  }
+
+  .clients__wrapper {
+    padding-left: 1.25rem;
   }
 }
 
@@ -2601,6 +2622,13 @@ summary::marker {
 
   .left-side__contacts {
     display: none;
+  }
+}
+
+@media (max-width: 35.6875em) {
+  .clients__wrapper {
+    padding-left: 0rem;
+    text-align: center;
   }
 }
 
@@ -3077,6 +3105,30 @@ summary::marker {
 @supports not (padding-bottom: clamp( 0.9375rem , 0.8825549451rem  +  0.2747252747vw , 1.09375rem )) {
     .item-transformations {
       padding-bottom: calc(0.9375rem + 0.15625 * (100vw - 20rem) / 56.875);
+    }
+}
+
+@supports (padding-block: clamp( 1.25rem , 0.3708791209rem  +  4.3956043956vw , 3.75rem )) {
+    .clients {
+      padding-block: clamp( 1.25rem , 0.3708791209rem  +  4.3956043956vw , 3.75rem );
+    }
+}
+
+@supports not (padding-block: clamp( 1.25rem , 0.3708791209rem  +  4.3956043956vw , 3.75rem )) {
+    .clients {
+      padding-block: calc(1.25rem + 2.5 * (100vw - 20rem) / 56.875);
+    }
+}
+
+@supports (padding-left: clamp( 1.25rem , 0.8104395604rem  +  2.1978021978vw , 2.5rem )) {
+    .clients__wrapper {
+      padding-left: clamp( 1.25rem , 0.8104395604rem  +  2.1978021978vw , 2.5rem );
+    }
+}
+
+@supports not (padding-left: clamp( 1.25rem , 0.8104395604rem  +  2.1978021978vw , 2.5rem )) {
+    .clients__wrapper {
+      padding-left: calc(1.25rem + 1.25 * (100vw - 20rem) / 56.875);
     }
 }
 }

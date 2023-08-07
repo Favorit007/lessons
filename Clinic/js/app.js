@@ -4074,6 +4074,7 @@
         });
     }
     function initSliders() {
+        //!slider #1 main background
         if (document.querySelector(".section-main__slider")) {
             const mainSlider = new swiper_core_Swiper(".section-main__slider", {
                 modules: [ Navigation, Pagination, EffectFade, Autoplay ],
@@ -4081,10 +4082,10 @@
                 observeParents: true,
                 slidesPerView: 1,
                 spaceBetween: 0,
-                speed: 500,
+                speed: 800,
                 effect: "fade",
                 autoplay: {
-                    delay: 3e3,
+                    delay: 2e3,
                     disableOnInteraction: false
                 },
                 pagination: {
@@ -4104,6 +4105,62 @@
                 }
             }));
         }
+        //!slider #2 clients
+                if (document.querySelector(".clients__slider")) new swiper_core_Swiper(".clients__slider", {
+            modules: [ Navigation, Autoplay ],
+            observer: true,
+            observeParents: true,
+            slidesPerView: 5,
+            spaceBetween: 0,
+            autoHeight: true,
+            speed: 800,
+            loop: true,
+            effect: "fade",
+            autoplay: {
+                delay: 2e3,
+                stopOnLastSlide: false,
+                disableOnInteraction: false
+            },
+            pagination: {
+                el: ".testimonials__pagination",
+                clickable: true
+            },
+            navigation: {
+                prevEl: ".swiper-button-prev",
+                nextEl: ".swiper-button-next"
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 0
+                },
+                375: {
+                    slidesPerView: 2,
+                    spaceBetween: 15
+                },
+                572: {
+                    slidesPerView: 3,
+                    spaceBetween: 15
+                },
+                640: {
+                    slidesPerView: 3,
+                    spaceBetween: 20
+                },
+                768: {
+                    slidesPerView: 4,
+                    spaceBetween: 30
+                },
+                992: {
+                    slidesPerView: 5,
+                    spaceBetween: 50
+                },
+                1268: {
+                    slidesPerView: 5,
+                    spaceBetween: 50
+                }
+            },
+            on: {}
+        });
     }
     window.addEventListener("load", (function(e) {
         initSliders();
