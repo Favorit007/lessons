@@ -1,0 +1,28 @@
+{
+    "doctors": [
+        {
+            "id": 1,
+            "name": "Mark Hill",
+            "position": "Lorem ipsum dolor sit amet, conse ctetur.",
+            "media": {
+                "avatar": "doctors/02.jpg",
+                "main": "doctors/01.png",
+                "gallery": [
+                    "doctors/work/01.jpg",
+                    "doctors/work/02.jpg",
+                    "doctors/work/03.jpg",
+                    "doctors/work/04.jpg"
+                ]
+            },
+            "skils": {
+                "Liposuction": 80,
+                "Breast Augmentation": 90
+            },
+            "stat": {
+                "staf": 23,
+                "doctors": 56,
+                "visits": 86
+            }
+        }
+    ]
+}

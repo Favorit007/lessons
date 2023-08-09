@@ -6185,6 +6185,28 @@ PERFORMANCE OF THIS SOFTWARE.
             });
         }));
     }
+    const doctors = document.querySelector(".doctors");
+    if (doctors) loadDoctors();
+    async function loadDoctors() {
+        const response = await fetch("files/data/doctors.json", {
+            method: "GET"
+        });
+        if (response.ok) {
+            const responseResult = await response.json();
+            initDoctors(responseResult);
+        } else alert("Помилка");
+    }
+    function initDoctors(data) {
+        document.querySelector(".card-doctors__items");
+        const doctorsImage = document.querySelector(".card-doctors__image");
+        document.querySelector(".info-doctors__scills");
+        document.querySelector(".info-doctors__counters");
+        document.querySelector(".doctors__gallery");
+        data.doctors.forEach((doctor => {
+            const mainPhoto = doctor.media.main;
+            mainPhoto ? doctorsImage.innerHTML = `<img src="img/${mainPhoto}" alt="Big Image">` : null;
+        }));
+    }
     window["FLS"] = true;
     isWebp();
     menuInit();
