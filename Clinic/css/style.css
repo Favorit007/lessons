@@ -2030,9 +2030,6 @@ summary::marker {
 
 .info-doctors {
   text-align: center;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
 }
 
 .info-doctors__title {
@@ -4609,6 +4606,18 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+
+  .card-doctors__item {
+    padding-left: 1.25rem;
+  }
+
+  .info-doctors__liposuction {
+    padding-left: 1.25rem;
+  }
+
+  .info-doctors__augmentation {
+    padding-left: 1.25rem;
   }
 }
 
