@@ -4625,6 +4625,16 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
         -ms-flex-align: center;
             align-items: center;
   }
+
+  .card-doctors__item {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .info-doctors {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
 }
 
 @media (max-width: 23.375em) {
@@ -4636,7 +4646,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
 
   .percent span {
-    padding: 0rem 0.625rem;
+    padding: 0rem 0.5625rem;
   }
 }
 
@@ -5440,7 +5450,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 }
 }
 
-@media (min-width: 20em) and (max-width: 62em) {
+@media (min-width: 30em) and (max-width: 62em) {
 @supports (padding-left: clamp( 1.25rem , 1.25rem  +  0vw , 1.25rem )) {
     .card-doctors__items {
       padding-left: clamp( 1.25rem , 1.25rem  +  0vw , 1.25rem );
@@ -5449,7 +5459,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
 @supports not (padding-left: clamp( 1.25rem , 1.25rem  +  0vw , 1.25rem )) {
     .card-doctors__items {
-      padding-left: calc(1.25rem + 0 * (100vw - 20rem) / 42);
+      padding-left: calc(1.25rem + 0 * (100vw - 30rem) / 32);
     }
 }
 
@@ -5461,7 +5471,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
 @supports not (padding-right: clamp( 1.25rem , 1.25rem  +  0vw , 1.25rem )) {
     .card-doctors__items {
-      padding-right: calc(1.25rem + 0 * (100vw - 20rem) / 42);
+      padding-right: calc(1.25rem + 0 * (100vw - 30rem) / 32);
     }
 }
 
@@ -5473,7 +5483,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
 @supports not (padding-right: clamp( 1.25rem , 1.25rem  +  0vw , 1.25rem )) {
     .info-doctors {
-      padding-right: calc(1.25rem + 0 * (100vw - 20rem) / 42);
+      padding-right: calc(1.25rem + 0 * (100vw - 30rem) / 32);
     }
 }
 
@@ -5485,7 +5495,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
 @supports not (padding-left: clamp( 1.25rem , 1.25rem  +  0vw , 1.25rem )) {
     .info-doctors {
-      padding-left: calc(1.25rem + 0 * (100vw - 20rem) / 42);
+      padding-left: calc(1.25rem + 0 * (100vw - 30rem) / 32);
     }
 }
 }
