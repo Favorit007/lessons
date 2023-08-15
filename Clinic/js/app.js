@@ -234,6 +234,113 @@
         bodyUnlock();
         document.documentElement.classList.remove("menu-open");
     }
+    function showMore() {
+        window.addEventListener("load", (function(e) {
+            const showMoreBlocks = document.querySelectorAll("[data-showmore]");
+            let showMoreBlocksRegular;
+            let mdQueriesArray;
+            if (showMoreBlocks.length) {
+                showMoreBlocksRegular = Array.from(showMoreBlocks).filter((function(item, index, self) {
+                    return !item.dataset.showmoreMedia;
+                }));
+                showMoreBlocksRegular.length ? initItems(showMoreBlocksRegular) : null;
+                document.addEventListener("click", showMoreActions);
+                window.addEventListener("resize", showMoreActions);
+                mdQueriesArray = dataMediaQueries(showMoreBlocks, "showmoreMedia");
+                if (mdQueriesArray && mdQueriesArray.length) {
+                    mdQueriesArray.forEach((mdQueriesItem => {
+                        mdQueriesItem.matchMedia.addEventListener("change", (function() {
+                            initItems(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
+                        }));
+                    }));
+                    initItemsMedia(mdQueriesArray);
+                }
+            }
+            function initItemsMedia(mdQueriesArray) {
+                mdQueriesArray.forEach((mdQueriesItem => {
+                    initItems(mdQueriesItem.itemsArray, mdQueriesItem.matchMedia);
+                }));
+            }
+            function initItems(showMoreBlocks, matchMedia) {
+                showMoreBlocks.forEach((showMoreBlock => {
+                    initItem(showMoreBlock, matchMedia);
+                }));
+            }
+            function initItem(showMoreBlock, matchMedia = false) {
+                showMoreBlock = matchMedia ? showMoreBlock.item : showMoreBlock;
+                let showMoreContent = showMoreBlock.querySelectorAll("[data-showmore-content]");
+                let showMoreButton = showMoreBlock.querySelectorAll("[data-showmore-button]");
+                showMoreContent = Array.from(showMoreContent).filter((item => item.closest("[data-showmore]") === showMoreBlock))[0];
+                showMoreButton = Array.from(showMoreButton).filter((item => item.closest("[data-showmore]") === showMoreBlock))[0];
+                const hiddenHeight = getHeight(showMoreBlock, showMoreContent);
+                if (matchMedia.matches || !matchMedia) if (hiddenHeight < getOriginalHeight(showMoreContent)) {
+                    _slideUp(showMoreContent, 0, showMoreBlock.classList.contains("_showmore-active") ? getOriginalHeight(showMoreContent) : hiddenHeight);
+                    showMoreButton.hidden = false;
+                } else {
+                    _slideDown(showMoreContent, 0, hiddenHeight);
+                    showMoreButton.hidden = true;
+                } else {
+                    _slideDown(showMoreContent, 0, hiddenHeight);
+                    showMoreButton.hidden = true;
+                }
+            }
+            function getHeight(showMoreBlock, showMoreContent) {
+                let hiddenHeight = 0;
+                const showMoreType = showMoreBlock.dataset.showmore ? showMoreBlock.dataset.showmore : "size";
+                const rowGap = parseFloat(getComputedStyle(showMoreContent).rowGap) ? parseFloat(getComputedStyle(showMoreContent).rowGap) : 0;
+                if (showMoreType === "items") {
+                    const showMoreTypeValue = showMoreContent.dataset.showmoreContent ? showMoreContent.dataset.showmoreContent : 3;
+                    const showMoreItems = showMoreContent.children;
+                    for (let index = 1; index < showMoreItems.length; index++) {
+                        const showMoreItem = showMoreItems[index - 1];
+                        const marginTop = parseFloat(getComputedStyle(showMoreItem).marginTop) ? parseFloat(getComputedStyle(showMoreItem).marginTop) : 0;
+                        const marginBottom = parseFloat(getComputedStyle(showMoreItem).marginBottom) ? parseFloat(getComputedStyle(showMoreItem).marginBottom) : 0;
+                        hiddenHeight += showMoreItem.offsetHeight + marginTop;
+                        if (index == showMoreTypeValue) break;
+                        hiddenHeight += marginBottom;
+                    }
+                    rowGap ? hiddenHeight += (showMoreTypeValue - 1) * rowGap : null;
+                } else {
+                    const showMoreTypeValue = showMoreContent.dataset.showmoreContent ? showMoreContent.dataset.showmoreContent : 150;
+                    hiddenHeight = showMoreTypeValue;
+                }
+                return hiddenHeight;
+            }
+            function getOriginalHeight(showMoreContent) {
+                let parentHidden;
+                let hiddenHeight = showMoreContent.offsetHeight;
+                showMoreContent.style.removeProperty("height");
+                if (showMoreContent.closest(`[hidden]`)) {
+                    parentHidden = showMoreContent.closest(`[hidden]`);
+                    parentHidden.hidden = false;
+                }
+                let originalHeight = showMoreContent.offsetHeight;
+                parentHidden ? parentHidden.hidden = true : null;
+                showMoreContent.style.height = `${hiddenHeight}px`;
+                return originalHeight;
+            }
+            function showMoreActions(e) {
+                const targetEvent = e.target;
+                const targetType = e.type;
+                if (targetType === "click") {
+                    if (targetEvent.closest("[data-showmore-button]")) {
+                        const showMoreButton = targetEvent.closest("[data-showmore-button]");
+                        const showMoreBlock = showMoreButton.closest("[data-showmore]");
+                        const showMoreContent = showMoreBlock.querySelector("[data-showmore-content]");
+                        const showMoreSpeed = showMoreBlock.dataset.showmoreButton ? showMoreBlock.dataset.showmoreButton : "500";
+                        const hiddenHeight = getHeight(showMoreBlock, showMoreContent);
+                        if (!showMoreContent.classList.contains("_slide")) {
+                            showMoreBlock.classList.contains("_showmore-active") ? _slideUp(showMoreContent, showMoreSpeed, hiddenHeight) : _slideDown(showMoreContent, showMoreSpeed, hiddenHeight);
+                            showMoreBlock.classList.toggle("_showmore-active");
+                        }
+                    }
+                } else if (targetType === "resize") {
+                    showMoreBlocksRegular && showMoreBlocksRegular.length ? initItems(showMoreBlocksRegular) : null;
+                    mdQueriesArray && mdQueriesArray.length ? initItemsMedia(mdQueriesArray) : null;
+                }
+            }
+        }));
+    }
     function FLS(message) {
         setTimeout((() => {
             if (window.FLS) console.log(message);
@@ -6196,21 +6303,61 @@ PERFORMANCE OF THIS SOFTWARE.
             initDoctors(responseResult);
         } else alert("Помилка");
     }
+    const doctorsItems = document.querySelector(".card-doctors__items");
+    const doctorsImage = document.querySelector(".card-doctors__image");
+    const doctorsSkils = document.querySelector(".info-doctors__scils");
+    const doctorsCounters = document.querySelector(".counters");
+    const doctorsGallery = document.querySelector(".doctors__gallery");
+    const doctorsListActiveElement = `_active`;
     function initDoctors(data) {
-        document.querySelector(".card-doctors__items");
-        const doctorsImage = document.querySelector(".card-doctors__image");
-        document.querySelector(".info-doctors__scills");
-        document.querySelector(".info-doctors__counters");
-        document.querySelector(".doctors__gallery");
+        let doctorsItemsElements = ``;
         data.doctors.forEach((doctor => {
-            const mainPhoto = doctor.media.main;
-            mainPhoto ? doctorsImage.innerHTML = `<img src="img/${mainPhoto}" alt="Big Image">` : null;
+            const isActive = doctor.isActive;
+            if (isActive) buildDoctor(doctor);
+            doctorsItemsElements += `\n                <a data-id="${doctor.id}" href="#" class="card-doctors__item item-doctors ${isActive ? doctorsListActiveElement : null}">\n                    <div class="item-doctors__image-ibg">\n                        <img src="img/${doctor.media.avatar}" alt="image">\n                    </div>\n                    <div class="item-doctors__inner">\n                        <div class="item-doctors__title">${doctor.name}</div>\n                        <div class="item-doctors__text">\n                            ${doctor.position}\n                        </div>\n                    </div>\n                </a>\n            `;
         }));
+        doctorsItems.innerHTML = doctorsItemsElements;
+        document.addEventListener("click", doctorsItemsActions);
+        function doctorsItemsActions(e) {
+            const targetElement = e.target;
+            if (targetElement.closest(".item-doctors")) {
+                const currentItem = targetElement.closest(".item-doctors");
+                const doctorId = +currentItem.dataset.id;
+                const activeListItem = document.querySelector(".item-doctors._active");
+                activeListItem.classList.remove("_active");
+                currentItem.classList.add("_active");
+                const activeDoctorArray = data.doctors.filter((item => item.id === doctorId));
+                const activeDoctor = activeDoctorArray[0];
+                buildDoctor(activeDoctor);
+                e.preventDefault();
+            }
+        }
+    }
+    function buildDoctor(activeDoctor) {
+        let skilItems = ``;
+        let statItems = ``;
+        let galleryItem = ``;
+        const mainPhoto = activeDoctor.media.main;
+        const gallerySmallItems = activeDoctor.media.gallery.small;
+        const galleryBiglItems = activeDoctor.media.gallery.big;
+        const skils = activeDoctor.skils;
+        const counters = activeDoctor.counters;
+        mainPhoto ? doctorsImage.innerHTML = `<img src="img/${mainPhoto}" alt="Big Image">` : null;
+        for (const item in skils) skilItems += `<div class="skils-item">\n\t\t\t\t\t\t<div style="min-width: ${skils[item]}%;" class="skils-item__info">\n\t\t\t\t\t\t\t<div class="skils-item__label">${item}</div>\n\t\t\t\t\t\t\t<div class="skils-item__value">${skils[item]}%</div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div style="width: ${skils[item]}%;" class="skils-item__line"></div>\n\t\t\t\t\t</div>`;
+        doctorsSkils.innerHTML = skilItems;
+        for (const item in counters) statItems += `<div class="counters__count">\n\t\t\t\t\t\t\t\t\t<div class="counters__item">${counters[item]}</div>\n\t\t\t\t\t\t\t\t\t<div class="counters__title">${item}</div>\n\t\t\t\t\t\t\t\t</div>`;
+        doctorsCounters.innerHTML = statItems;
+        gallerySmallItems.forEach(((gallerySmallItem, index) => {
+            galleryItem += `<a href="img/${gallerySmallItem}" class="gallery-doctors__image-ibg">\n                                    <img src="img/${galleryBiglItems[index]}" alt="image">\n                            </a>`;
+        }));
+        doctorsGallery.innerHTML = galleryItem;
+        modules_flsModules.gallery[0].galleryClass.refresh();
     }
     window["FLS"] = true;
     isWebp();
     menuInit();
     spollers();
+    showMore();
     formFieldsInit({
         viewPass: false,
         autoHeight: false

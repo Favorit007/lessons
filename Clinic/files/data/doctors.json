@@ -2,26 +2,99 @@
     "doctors": [
         {
             "id": 1,
+            "isActive": true,
             "name": "Mark Hill",
-            "position": "Lorem ipsum dolor sit amet, conse ctetur.",
+            "position": "<p>Lorem ipsum dolor sit amet, conse ctetur.</p>",
             "media": {
-                "avatar": "doctors/02.jpg",
+                "avatar": "doctors/01.jpg",
                 "main": "doctors/01.png",
-                "gallery": [
-                    "doctors/work/01.jpg",
-                    "doctors/work/02.jpg",
-                    "doctors/work/03.jpg",
-                    "doctors/work/04.jpg"
-                ]
+                "gallery": {
+                    "small": [
+                        "doctors/work/01.jpg",
+                        "doctors/work/02.jpg",
+                        "doctors/work/03.jpg",
+                        "doctors/work/04.jpg"
+                    ],
+                    "big": [
+                        "doctors/work/01.jpg",
+                        "doctors/work/02.jpg",
+                        "doctors/work/03.jpg",
+                        "doctors/work/04.jpg"
+                    ]
+                }
             },
             "skils": {
                 "Liposuction": 80,
                 "Breast Augmentation": 90
             },
-            "stat": {
+            "counters": {
                 "staf": 23,
                 "doctors": 56,
                 "visits": 86
+            }
+        },
+        {
+            "id": 2,
+            "isActive": false,
+            "name": "Jane Cullen",
+            "position": "<p>Lorem ipsum dolor sit amet, conse.</p>",
+            "media": {
+                "avatar": "doctors/02.jpg",
+                "main": "doctors/02.png",
+                "gallery": {
+                    "small": [
+                        "doctors/work/01.jpg",
+                        "doctors/work/02.jpg",
+                        "doctors/work/03.jpg"
+                    ],
+                    "big": [
+                        "doctors/work/01.jpg",
+                        "doctors/work/02.jpg",
+                        "doctors/work/03.jpg"
+                    ]
+                }
+            },
+            "skils": {
+                "Liposuction": 50,
+                "Breast Augmentation": 40
+            },
+            "counters": {
+                "staf": 14,
+                "doctors": 26,
+                "visits": 46
+            }
+        },
+        {
+            "id": 3,
+            "isActive": false,
+            "name": "Annah Gaiver",
+            "position": "<p>Lorem ipsum dolor sit amet, conse ctetur, dolor sit.</p>",
+            "media": {
+                "avatar": "doctors/03.jpg",
+                "main": "doctors/03.png",
+                "gallery": {
+                    "small": [
+                        "doctors/work/01.jpg",
+                        "doctors/work/02.jpg",
+                        "doctors/work/03.jpg",
+                        "doctors/work/04.jpg"
+                    ],
+                    "big": [
+                        "doctors/work/01.jpg",
+                        "doctors/work/02.jpg",
+                        "doctors/work/03.jpg",
+                        "doctors/work/04.jpg"
+                    ]
+                }
+            },
+            "skils": {
+                "Liposuction": 40,
+                "Breast Augmentation": 60
+            },
+            "counters": {
+                "staf": 28,
+                "doctors": 76,
+                "visits": 96
             }
         }
     ]
