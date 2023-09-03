@@ -43,14 +43,14 @@
                 "main": "doctors/02.png",
                 "gallery": {
                     "small": [
-                        "doctors/work/01.jpg",
+                        "doctors/work/03.jpg",
                         "doctors/work/02.jpg",
-                        "doctors/work/03.jpg"
+                        "doctors/work/01.jpg"
                     ],
                     "big": [
-                        "doctors/work/01.jpg",
+                        "doctors/work/03.jpg",
                         "doctors/work/02.jpg",
-                        "doctors/work/03.jpg"
+                        "doctors/work/01.jpg"
                     ]
                 }
             },
@@ -74,16 +74,16 @@
                 "main": "doctors/03.png",
                 "gallery": {
                     "small": [
-                        "doctors/work/01.jpg",
-                        "doctors/work/02.jpg",
+                        "doctors/work/04.jpg",
                         "doctors/work/03.jpg",
-                        "doctors/work/04.jpg"
+                        "doctors/work/02.jpg",
+                        "doctors/work/01.jpg"
                     ],
                     "big": [
-                        "doctors/work/01.jpg",
-                        "doctors/work/02.jpg",
+                        "doctors/work/04.jpg",
                         "doctors/work/03.jpg",
-                        "doctors/work/04.jpg"
+                        "doctors/work/02.jpg",
+                        "doctors/work/01.jpg"
                     ]
                 }
             },

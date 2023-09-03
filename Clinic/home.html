@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230815173229">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230903214324">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -339,9 +339,9 @@
 			</div>
 			<section class="page__section doctors">
 				<div class="doctors__container">
-					<div class="doctors__header header-doctors">
-						<div class="header-doctors__label label-blue">CERTIFICATES</div>
-						<h3 class="header-doctors__title title-blue">Our Main Doctors</h3>
+					<div class="doctors__header header-doctor">
+						<div class="header-doctor__label">CERTIFICATES</div>
+						<h3 class="header-doctor__title">Our Main Doctors</h3>
 					</div>
 					<div class="doctors__card card-doctors">
 						<div class="card-doctors__items">
@@ -430,51 +430,271 @@
 					</div>
 				</div>
 			</section>
+			<section class="page__section timing">
+				<div class="timing__container">
+					<div class="timing__body">
+						<div class="timing__header header-doctors">
+							<div class="header-doctors__label label-blue">book an appointment</div>
+							<h3 class="header-doctors__title title-blue">Our Timing</h3>
+							<div class="header-doctors__text text">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non nunc <a href="#">erosuspe ndisse scelerisque felis ante</a>, et mattis felis scelerisque
+									sodales.</p>
+							</div>
+						</div>
+						<div class="timing__schedule info-timing">
+							<div class="info-timing__content">
+								<div class="info-timing__image">
+									<picture><source srcset="img/timing/01.webp" type="image/webp"><img src="img/timing/01.png" alt="doctor"></picture>
+								</div>
+								<ul class="info-timing__list">
+									<li class="info-timing__item">
+										<span class="info-timing__label">MONDAY</span>
+										<span class="info-timing__value">9 TO 18</span>
+									</li>
+									<li class="info-timing__item">
+										<span class="info-timing__label">TUESDAY</span>
+										<span class="info-timing__value">10 TO 15</span>
+									</li>
+									<li class="info-timing__item">
+										<span class="info-timing__label">Wednesday</span>
+										<span class="info-timing__value">9 TO 18</span>
+									</li>
+									<li class="info-timing__item">
+										<span class="info-timing__label">Thursday</span>
+										<span class="info-timing__value">10 TO 15</span>
+									</li>
+								</ul>
+							</div>
+							<a href="tel:+15618426141" class="info-timing__phone">+1 561 842 6141</a>
+						</div>
+					</div>
+					<div class="timing__calendar calendar">
+						<div class="calendar-header">
+							<button class="calendar__button _icon-arrow-calendar" id="prevMonth"></button>
+							<h4 class="calendar__title" id="currentMonth"></h4>
+							<button class="calendar__button _icon-arrow-calendar" id="nextMonth"></button>
+						</div>
+						<div class="calendar__weekdays">
+							<div class="calendar__item">Mon</div>
+							<div class="calendar__item">Tue</div>
+							<div class="calendar__item">Wed</div>
+							<div class="calendar__item">Thu</div>
+							<div class="calendar__item">Fri</div>
+							<div class="calendar__item">Sat</div>
+							<div class="calendar__item">Sun</div>
+						</div>
+						<div class="calendar-days" id="calendarDays"></div>
+					</div>
+				</div>
+			</section>
 			<section class="page__section products">
 				<div class="products__container">
-					<div class="products__header header-doctors">
-						<div class="header-doctors__label label-blue">SHOP NOW</div>
-						<h3 class="header-doctors__title title-blue">Find your Products</h3>
+					<div class="products__header header-doctor">
+						<div class="header-doctor__label">SHOP NOW</div>
+						<h3 class="header-doctor__title">Find your Products</h3>
 					</div>
-					<!-- <div data-showmore="items" class="products__items block">
-						<div data-showmore-content="1" class="block__content">
-							<a href="#" class="block__link">
-								<div class="block__labels labels">
-									<div class="block__label label block__label--new">$19</div>
+					<div data-showmore="items" class="products__inner">
+						<div data-showmore-content="1" class="products__items">
+							<div class="products__item item-product">
+								<div class="item-product__body">
+									<div class="item-product__labels labels">
+										<div class="item-product__label label item-product__label--new">$19</div>
+									</div>
+									<div class="item-product__image-ibg-contain">
+										<picture><source srcset="img/products/01.webp" type="image/webp"><img src="img/products/01.jpg" alt="image"></picture>
+									</div>
+									<a href="#" class="item-product__name">Soap</a>
 								</div>
-
-								<div class="block__image-ibg">
-									<picture><source srcset="img/products/01.webp" type="image/webp"><img src="img/products/01.jpg" alt="image"></picture>
+								<div class="item-product__info info-product">
+									<div class="info-product__title">SHOP INFO</div>
+									<ul class="info-product__list">
+										<li class="info-product__item">
+											<a href="#" class="info-product__link">Terms and Conditions</a>
+										</li>
+										<li class="info-product__item">
+											<a href="#" class="info-product__link">Services and Returns</a>
+										</li>
+										<li class="info-product__item">
+											<a href="#" class="info-product__link">Solidarity Gifts</a>
+										</li>
+									</ul>
 								</div>
-								<div class="block__name">Soap</div>
-							</a>
-							<a href="#" class="block__link">
-								<div class="block__labels labels">
-									<div class="block__label label block__label--new">$19</div>
+							</div>
+							<div class="products__item item-product">
+								<div class="item-product__body">
+									<div class="item-product__labels labels">
+										<div class="item-product__label label item-product__label--best">$50</div>
+									</div>
+									<div class="item-product__image-ibg-contain">
+										<picture><source srcset="img/products/02.webp" type="image/webp"><img src="img/products/02.jpg" alt="image"></picture>
+									</div>
+									<a href="#" class="item-product__name">Serum</a>
 								</div>
-
-								<div class="block__image-ibg">
-									<picture><source srcset="img/products/02.webp" type="image/webp"><img src="img/products/02.jpg" alt="image"></picture>
+								<div class="item-product__info info-product">
+									<div class="info-product__title">SHOP INFO</div>
+									<ul class="info-product__list">
+										<li class="info-product__item">
+											<a href="#" class="info-product__link">Terms and Conditions</a>
+										</li>
+										<li class="info-product__item">
+											<a href="#" class="info-product__link">Services and Returns</a>
+										</li>
+										<li class="info-product__item">
+											<a href="#" class="info-product__link">Solidarity Gifts</a>
+										</li>
+									</ul>
 								</div>
-								<div class="block__name">Soap</div>
-							</a>
-							<a href="#" class="block__link">
-								<div class="block__labels labels">
-									<div class="block__label label block__label--new">$19</div>
+							</div>
+							<div class="products__item item-product">
+								<div class="item-product__body">
+									<div class="item-product__labels labels">
+										<div class="item-product__label label item-product__label--new">$99</div>
+									</div>
+									<div class="item-product__image-ibg-contain">
+										<picture><source srcset="img/products/04.webp" type="image/webp"><img src="img/products/04.jpg" alt="image"></picture>
+									</div>
+									<a href="#" class="item-product__name">Cream</a>
 								</div>
-
-								<div class="block__image-ibg">
-									<picture><source srcset="img/products/04.webp" type="image/webp"><img src="img/products/04.jpg" alt="image"></picture>
+								<div class="item-product__info info-product">
+									<div class="info-product__title">SHOP INFO</div>
+									<ul class="info-product__list">
+										<li class="info-product__item">
+											<a href="#" class="info-product__link">Terms and Conditions</a>
+										</li>
+										<li class="info-product__item">
+											<a href="#" class="info-product__link">Services and Returns</a>
+										</li>
+										<li class="info-product__item">
+											<a href="#" class="info-product__link">Solidarity Gifts</a>
+										</li>
+									</ul>
 								</div>
-								<div class="block__name">Soap</div>
-							</a>
-
+							</div>
+							<div class="products__item item-product">
+								<div class="item-product__body">
+									<div class="item-product__labels labels">
+										<div class="item-product__label label item-product__label--best">$150</div>
+									</div>
+									<div class="item-product__image-ibg-contain">
+										<picture><source srcset="img/products/05.webp" type="image/webp"><img src="img/products/05.jpg" alt="image"></picture>
+									</div>
+									<a href="#" class="item-product__name">Detergent</a>
+								</div>
+								<div class="item-product__info info-product">
+									<div class="info-product__title">SHOP INFO</div>
+									<ul class="info-product__list">
+										<li class="info-product__item">
+											<a href="#" class="info-product__link">Terms and Conditions</a>
+										</li>
+										<li class="info-product__item">
+											<a href="#" class="info-product__link">Services and Returns</a>
+										</li>
+										<li class="info-product__item">
+											<a href="#" class="info-product__link">Solidarity Gifts</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div data-showmore-content="1" class="products__item item-product">
+								<div class="item-product__body">
+									<div class="item-product__labels labels">
+										<div class="item-product__label label item-product__label--new">$75</div>
+									</div>
+									<div class="item-product__image-ibg-contain">
+										<picture><source srcset="img/products/06.webp" type="image/webp"><img src="img/products/06.jpg" alt="image"></picture>
+									</div>
+									<a href="#" class="item-product__name">Filler</a>
+								</div>
+								<div class="item-product__info info-product">
+									<div class="info-product__title">SHOP INFO</div>
+									<ul class="info-product__list">
+										<li class="info-product__item">
+											<a href="#" class="info-product__link">Terms and Conditions</a>
+										</li>
+										<li class="info-product__item">
+											<a href="#" class="info-product__link">Services and Returns</a>
+										</li>
+										<li class="info-product__item">
+											<a href="#" class="info-product__link">Solidarity Gifts</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="products__item item-product">
+								<div class="item-product__body">
+									<div class="item-product__labels labels">
+										<div class="item-product__label label item-product__label--best">$19</div>
+									</div>
+									<div class="item-product__image-ibg-contain">
+										<picture><source srcset="img/products/01.webp" type="image/webp"><img src="img/products/01.jpg" alt="image"></picture>
+									</div>
+									<a href="#" class="item-product__name">Soap</a>
+								</div>
+								<div class="item-product__info info-product">
+									<div class="info-product__title">SHOP INFO</div>
+									<ul class="info-product__list">
+										<li class="info-product__item">
+											<a href="#" class="info-product__link">Terms and Conditions</a>
+										</li>
+										<li class="info-product__item">
+											<a href="#" class="info-product__link">Services and Returns</a>
+										</li>
+										<li class="info-product__item">
+											<a href="#" class="info-product__link">Solidarity Gifts</a>
+										</li>
+									</ul>
+								</div>
+							</div>
 						</div>
-						<button hidden data-showmore-button class="block__more" type="button">
-							<span>Показати ще</span>
-							<span>Приховати</span>
+						<button hidden data-showmore-button class="products__more" type="button">
+							<span>Show more...</span>
+							<span>Back</span>
 						</button>
-					</div> -->
+					</div>
+				</div>
+			</section>
+			<section class="page__section promotions">
+				<div class="promotions__container">
+					<div class="promotions__content">
+						<div class="promotions__header header-doctors">
+							<div class="header-doctors__label label-blue">DON'T LOSE</div>
+							<h3 class="header-doctors__title title-blue">All Promotions !</h3>
+							<div class="header-doctors__text text">
+								<p>Suspendisse commodo bibendum purus at hendrerit. Vivamus aliquam bibendum fringilla.
+									Praesent cursus felis nunc, quis vulputate sapien posuere vitae. Aliquam erat
+									volutpat. Cras egestas porta massa eget pulvinar cras non enim et dui pharetra
+									hendrerit mattis.</p>
+							</div>
+						</div>
+						<div class="promotions__payment payment">
+							<div class="payment__title">Payment Options :</div>
+							<ul class="payment__list">
+								<li class="payment__item">
+									<a href="#" class="payment__link _icon-visa"></a>
+								</li>
+								<li class="payment__item">
+									<a href="#" class="payment__link _icon-paypal"></a>
+								</li>
+								<li class="payment__item">
+									<a href="#" class="payment__link _icon-master"></a>
+								</li>
+								<li class="payment__item">
+									<a href="#" class="payment__link _icon-stripe"></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="promotions__info info-promotions">
+						<div class="info-promotions__box">
+							<div class="info-promotions__title">UP TO</div>
+							<div class="info-promotions__percent">50%</div>
+							<h4 class="info-promotions__subtitle">ON SELECTED ITEMS</h4>
+						</div>
+						<div class="info-promotions__image">
+							<picture><source srcset="img/promotions/01.webp" type="image/webp"><img src="img/promotions/01.png" alt="image"></picture>
+						</div>
+					</div>
+
 				</div>
 			</section>
 		</main>
@@ -565,7 +785,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20230815173229"></script>
+	<script src="js/app.min.js?_v=20230903214324"></script>
 </body>
 
 </html>

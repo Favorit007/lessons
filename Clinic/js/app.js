@@ -14,6 +14,29 @@
             document.documentElement.classList.add(className);
         }));
     }
+    let isMobile = {
+        Android: function() {
+            return navigator.userAgent.match(/Android/i);
+        },
+        BlackBerry: function() {
+            return navigator.userAgent.match(/BlackBerry/i);
+        },
+        iOS: function() {
+            return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+        },
+        Opera: function() {
+            return navigator.userAgent.match(/Opera Mini/i);
+        },
+        Windows: function() {
+            return navigator.userAgent.match(/IEMobile/i);
+        },
+        any: function() {
+            return isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows();
+        }
+    };
+    function addTouchClass() {
+        if (isMobile.any()) document.documentElement.classList.add("touch");
+    }
     let _slideUp = (target, duration = 500, showmore = 0) => {
         if (!target.classList.contains("_slide")) {
             target.classList.add("_slide");
@@ -6353,8 +6376,53 @@ PERFORMANCE OF THIS SOFTWARE.
         doctorsGallery.innerHTML = galleryItem;
         modules_flsModules.gallery[0].galleryClass.refresh();
     }
+    const prevMonthButton = document.getElementById("prevMonth");
+    const nextMonthButton = document.getElementById("nextMonth");
+    const currentMonthLabel = document.getElementById("currentMonth");
+    const calendarDays = document.getElementById("calendarDays");
+    let currentDate = new Date;
+    let currentYear = currentDate.getFullYear();
+    let currentMonth = currentDate.getMonth();
+    function updateCalendar() {
+        const firstDay = new Date(currentYear, currentMonth, 1).getDay();
+        const lastDay = new Date(currentYear, currentMonth + 1, 0).getDate();
+        currentMonthLabel.textContent = new Date(currentYear, currentMonth).toLocaleDateString("en-US", {
+            month: "long",
+            year: "numeric"
+        });
+        calendarDays.innerHTML = "";
+        for (let i = 0; i < firstDay; i++) {
+            const emptyDay = document.createElement("div");
+            emptyDay.classList.add("calendar-day", "empty");
+            calendarDays.appendChild(emptyDay);
+        }
+        for (let i = 1; i <= lastDay; i++) {
+            const day = document.createElement("div");
+            day.classList.add("calendar-day");
+            day.textContent = i;
+            calendarDays.appendChild(day);
+        }
+    }
+    prevMonthButton.addEventListener("click", (() => {
+        currentMonth--;
+        if (currentMonth < 0) {
+            currentMonth = 11;
+            currentYear--;
+        }
+        updateCalendar();
+    }));
+    nextMonthButton.addEventListener("click", (() => {
+        currentMonth++;
+        if (currentMonth > 11) {
+            currentMonth = 0;
+            currentYear++;
+        }
+        updateCalendar();
+    }));
+    updateCalendar();
     window["FLS"] = true;
     isWebp();
+    addTouchClass();
     menuInit();
     spollers();
     showMore();
