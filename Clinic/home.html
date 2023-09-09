@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230906183844">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230909194620">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,12 +31,12 @@
 					<div class="header__menu menu">
 						<nav class="menu__body">
 							<ul class="menu__list">
-								<li class="menu__item"><a href="#" class="menu__link">HOME</a></li>
-								<li class="menu__item"><a href="#" class="menu__link">ABOUT US</a></li>
-								<li class="menu__item"><a href="#" class="menu__link">SHOP</a></li>
-								<li class="menu__item"><a href="#" class="menu__link">PAGES</a></li>
-								<li class="menu__item"><a href="#" class="menu__link">BLOG</a></li>
-								<li class="menu__item"><a href="#" class="menu__link">CONTACT</a></li>
+								<li class="menu__item"><a href="home.html" class="menu__link active">HOME</a></li>
+								<li class="menu__item"><a href="about.html" class="menu__link ">ABOUT US</a></li>
+								<li class="menu__item"><a href="#" class="menu__link ">SHOP</a></li>
+								<li class="menu__item"><a href="#" class="menu__link ">PAGES</a></li>
+								<li class="menu__item"><a href="#" class="menu__link ">BLOG</a></li>
+								<li class="menu__item"><a href="#" class="menu__link ">CONTACT</a></li>
 							</ul>
 						</nav>
 					</div>
@@ -198,7 +198,7 @@
 			<section class="page__section procedure-section">
 				<div class="procedure-section__container">
 					<div class="procedure-section__items">
-						<a href="#" class="procedure-section__item item-procedure">
+						<a href="#" data-watch data-watch-threshold="0.15" class="procedure-section__item item-procedure">
 							<div class="item-procedure__labels labels">
 								<div class="item-procedure__label label item-procedure__label--new">new</div>
 							</div>
@@ -208,14 +208,14 @@
 							<h5 class="item-procedure__title">Breast Augmentation</h5>
 							<div class="item-procedure__price">FROM 1299 $</div>
 						</a>
-						<a href="#" class="procedure-section__item item-procedure">
+						<a href="#" data-watch data-watch-threshold="0.15" class="procedure-section__item item-procedure">
 							<div class="item-procedure__image-ibg">
 								<picture><source srcset="img/footer/02.webp" type="image/webp"><img src="img/footer/02.jpg" alt="image"></picture>
 							</div>
 							<h5 class="item-procedure__title">Phinoplasty</h5>
 							<div class="item-procedure__price">FROM 350 $</div>
 						</a>
-						<a href="#" class="procedure-section__item item-procedure">
+						<a href="#" data-watch data-watch-threshold="0.15" class="procedure-section__item item-procedure">
 							<div class="item-procedure__labels labels">
 								<div class="item-procedure__label label item-procedure__label--best">best</div>
 							</div>
@@ -225,7 +225,7 @@
 							<h5 class="item-procedure__title">Tummy Tuck Liposuction</h5>
 							<div class="item-procedure__price">FROM 2000 $</div>
 						</a>
-						<a href="#" class="procedure-section__item item-procedure">
+						<a href="#" data-watch data-watch-threshold="0.15" class="procedure-section__item item-procedure">
 							<div class="item-procedure__image-ibg">
 								<picture><source srcset="img/footer/03.webp" type="image/webp"><img src="img/footer/03.jpg" alt="image"></picture>
 							</div>
@@ -237,7 +237,7 @@
 			</section>
 			<section class="page__section transformations">
 				<div class="transformations__container">
-					<div class="transformations__before-after before-after">
+					<div data-watch data-watch-once class="transformations__before-after before-after">
 						<div class="before-after__image before-after__image--before">
 							<picture><source srcset="img/transformations/before.webp" type="image/webp"><img src="img/transformations/before.jpg" alt="before"></picture>
 						</div>
@@ -246,9 +246,11 @@
 						</div>
 						<div class="before-after__arrow"></div>
 					</div>
-					<div class="transformations__body">
-						<div class="transformations__label label-blue">BEFORE / AFTER</div>
-						<h3 class="transformations__title title-blue">Transformations</h3>
+					<div data-watch data-watch-once class="transformations__body">
+						<div class="transformations__label label-blue">BEFORE /
+							AFTER</div>
+						<h3 class="transformations__title title-blue">
+							Transformations</h3>
 						<div class="transformations__items">
 							<a href="#" class="transformations__item item-transformations">
 								<div class="item-transformations__image-ibg">
@@ -308,7 +310,7 @@
 					</div>
 				</div>
 			</section>
-			<div class="page__main clients">
+			<div data-watch data-watch-threshold="0.15" class="page__main clients">
 				<!-- Оболонка слайдера -->
 				<div class="clients__slider swiper">
 					<!-- Частина слайдера, що рухається -->
@@ -339,7 +341,7 @@
 			</div>
 			<section class="page__section doctors">
 				<div class="doctors__container">
-					<div class="doctors__header header-doctor">
+					<div data-watch data-watch-threshold="0.15" class="doctors__header header-doctor">
 						<div class="header-doctor__label">CERTIFICATES</div>
 						<h3 class="header-doctor__title">Our Main Doctors</h3>
 					</div>
@@ -431,7 +433,7 @@
 				</div>
 			</section>
 			<section class="page__section timing">
-				<div class="timing__container">
+				<div data-watch data-watch-once data-watch-threshold="0.15" class="timing__container">
 					<div class="timing__body">
 						<div class="timing__header header-doctors">
 							<div class="header-doctors__label label-blue">book an appointment</div>
@@ -489,13 +491,13 @@
 			</section>
 			<section class="page__section products">
 				<div class="products__container">
-					<div class="products__header header-doctor">
+					<div data-watch data-watch-threshold="0.15" class="products__header header-doctor">
 						<div class="header-doctor__label">SHOP NOW</div>
 						<h3 class="header-doctor__title">Find your Products</h3>
 					</div>
 					<div data-showmore="items" class="products__inner">
 						<div data-showmore-content="1" class="products__items">
-							<div class="products__item item-product">
+							<div data-watch data-watch-threshold="0.15" class="products__item item-product">
 								<div class="item-product__body">
 									<div class="item-product__labels labels">
 										<div class="item-product__label label item-product__label--new">$19</div>
@@ -520,7 +522,7 @@
 									</ul>
 								</div>
 							</div>
-							<div class="products__item item-product">
+							<div data-watch data-watch-threshold="0.15" class="products__item item-product">
 								<div class="item-product__body">
 									<div class="item-product__labels labels">
 										<div class="item-product__label label item-product__label--best">$50</div>
@@ -545,7 +547,7 @@
 									</ul>
 								</div>
 							</div>
-							<div class="products__item item-product">
+							<div data-watch data-watch-threshold="0.15" class="products__item item-product">
 								<div class="item-product__body">
 									<div class="item-product__labels labels">
 										<div class="item-product__label label item-product__label--new">$99</div>
@@ -570,7 +572,7 @@
 									</ul>
 								</div>
 							</div>
-							<div class="products__item item-product">
+							<div data-watch data-watch-threshold="0.15" class="products__item item-product">
 								<div class="item-product__body">
 									<div class="item-product__labels labels">
 										<div class="item-product__label label item-product__label--best">$150</div>
@@ -595,7 +597,7 @@
 									</ul>
 								</div>
 							</div>
-							<div data-showmore-content="1" class="products__item item-product">
+							<div data-watch data-watch-threshold="0.15" class="products__item item-product">
 								<div class="item-product__body">
 									<div class="item-product__labels labels">
 										<div class="item-product__label label item-product__label--new">$75</div>
@@ -620,7 +622,7 @@
 									</ul>
 								</div>
 							</div>
-							<div class="products__item item-product">
+							<div data-watch data-watch-threshold="0.15" class="products__item item-product">
 								<div class="item-product__body">
 									<div class="item-product__labels labels">
 										<div class="item-product__label label item-product__label--best">$19</div>
@@ -655,7 +657,7 @@
 			</section>
 			<section class="page__section promotions">
 				<div class="promotions__container">
-					<div class="promotions__content">
+					<div data-watch data-watch-threshold="0.15" class="promotions__content">
 						<div class="promotions__header header-doctors">
 							<div class="header-doctors__label label-blue">DON'T LOSE</div>
 							<h3 class="header-doctors__title title-blue">All Promotions !</h3>
@@ -698,12 +700,12 @@
 			</section>
 			<section class="page__section news">
 				<div class="news__container">
-					<div class="news__header header-doctor">
+					<div data-watch data-watch-threshold="0.15" class="news__header header-doctor">
 						<div class="header-doctor__label">THE BLOG</div>
 						<h3 class="header-doctor__title">Check Our News</h3>
 					</div>
 					<div class="news__items">
-						<article class="news__item item-news">
+						<article data-watch data-watch-threshold="0.15" class="news__item item-news">
 							<div class="item-news__image-ibg">
 								<picture><source srcset="img/news/01.webp" type="image/webp"><img src="img/news/01.jpg" alt="image"></picture>
 							</div>
@@ -717,7 +719,7 @@
 								<a href="#" class="item-news__link button">READ MORE</a>
 							</div>
 						</article>
-						<article class="news__item item-news">
+						<article data-watch data-watch-threshold="0.15" class="news__item item-news">
 							<div class="item-news__image-ibg">
 								<picture><source srcset="img/news/02.webp" type="image/webp"><img src="img/news/02.jpg" alt="image"></picture>
 							</div>
@@ -731,7 +733,7 @@
 								<a href="#" class="item-news__link button">READ MORE</a>
 							</div>
 						</article>
-						<article class="news__item item-news">
+						<article data-watch data-watch-threshold="0.15" class="news__item item-news">
 							<div class="item-news__image-ibg">
 								<picture><source srcset="img/news/03.webp" type="image/webp"><img src="img/news/03.jpg" alt="image"></picture>
 							</div>
@@ -745,7 +747,7 @@
 								<a href="#" class="item-news__link button">READ MORE</a>
 							</div>
 						</article>
-						<article class="news__item item-news">
+						<article data-watch data-watch-threshold="0.15" class="news__item item-news">
 							<div class="item-news__image-ibg">
 								<picture><source srcset="img/news/04.webp" type="image/webp"><img src="img/news/04.jpg" alt="image"></picture>
 							</div>
@@ -850,7 +852,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20230906183844"></script>
+	<script src="js/app.min.js?_v=20230909194620"></script>
 </body>
 
 </html>

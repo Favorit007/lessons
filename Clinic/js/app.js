@@ -4416,37 +4416,6 @@
             scrollDirection = scrollTop <= 0 ? 0 : scrollTop;
         }));
     }
-    function digitsCounter() {
-        if (document.querySelectorAll("[data-digits-counter]").length) document.querySelectorAll("[data-digits-counter]").forEach((element => {
-            element.dataset.digitsCounter = element.innerHTML;
-            element.innerHTML = `0`;
-        }));
-        function digitsCountersInit(digitsCountersItems) {
-            let digitsCounters = digitsCountersItems ? digitsCountersItems : document.querySelectorAll("[data-digits-counter]");
-            if (digitsCounters.length) digitsCounters.forEach((digitsCounter => {
-                digitsCountersAnimate(digitsCounter);
-            }));
-        }
-        function digitsCountersAnimate(digitsCounter) {
-            let startTimestamp = null;
-            const duration = parseInt(digitsCounter.dataset.digitsCounterSpeed) ? parseInt(digitsCounter.dataset.digitsCounterSpeed) : 1e3;
-            const startValue = parseInt(digitsCounter.dataset.digitsCounter);
-            const startPosition = 0;
-            const step = timestamp => {
-                if (!startTimestamp) startTimestamp = timestamp;
-                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
-                digitsCounter.innerHTML = Math.floor(progress * (startPosition + startValue));
-                if (progress < 1) window.requestAnimationFrame(step);
-            };
-            window.requestAnimationFrame(step);
-        }
-        function digitsCounterAction(e) {
-            const entry = e.detail.entry;
-            const targetElement = entry.target;
-            if (targetElement.querySelectorAll("[data-digits-counter]").length) digitsCountersInit(targetElement.querySelectorAll("[data-digits-counter]"));
-        }
-        document.addEventListener("watcherCallback", digitsCounterAction);
-    }
     setTimeout((() => {
         if (addWindowScrollEvent) {
             let windowScroll = new Event("windowScroll");
@@ -6376,50 +6345,52 @@ PERFORMANCE OF THIS SOFTWARE.
         doctorsGallery.innerHTML = galleryItem;
         modules_flsModules.gallery[0].galleryClass.refresh();
     }
-    const prevMonthButton = document.getElementById("prevMonth");
-    const nextMonthButton = document.getElementById("nextMonth");
-    const currentMonthLabel = document.getElementById("currentMonth");
-    const calendarDays = document.getElementById("calendarDays");
-    let currentDate = new Date;
-    let currentYear = currentDate.getFullYear();
-    let currentMonth = currentDate.getMonth();
-    function updateCalendar() {
-        const firstDay = new Date(currentYear, currentMonth, 1).getDay();
-        const lastDay = new Date(currentYear, currentMonth + 1, 0).getDate();
-        currentMonthLabel.textContent = new Date(currentYear, currentMonth).toLocaleDateString("en-US", {
-            month: "long",
-            year: "numeric"
-        });
-        calendarDays.innerHTML = "";
-        for (let i = 0; i < firstDay; i++) {
-            const emptyDay = document.createElement("div");
-            emptyDay.classList.add("calendar-day", "empty");
-            calendarDays.appendChild(emptyDay);
+    document.addEventListener("DOMContentLoaded", (function() {
+        const prevMonthButton = document.getElementById("prevMonth");
+        const nextMonthButton = document.getElementById("nextMonth");
+        const currentMonthLabel = document.getElementById("currentMonth");
+        const calendarDays = document.getElementById("calendarDays");
+        let currentDate = new Date;
+        let currentYear = currentDate.getFullYear();
+        let currentMonth = currentDate.getMonth();
+        function updateCalendar() {
+            const firstDay = new Date(currentYear, currentMonth, 1).getDay();
+            const lastDay = new Date(currentYear, currentMonth + 1, 0).getDate();
+            currentMonthLabel.textContent = new Date(currentYear, currentMonth).toLocaleDateString("en-US", {
+                month: "long",
+                year: "numeric"
+            });
+            calendarDays.innerHTML = "";
+            for (let i = 0; i < firstDay; i++) {
+                const emptyDay = document.createElement("div");
+                emptyDay.classList.add("calendar-day", "empty");
+                calendarDays.appendChild(emptyDay);
+            }
+            for (let i = 1; i <= lastDay; i++) {
+                const day = document.createElement("div");
+                day.classList.add("calendar-day");
+                day.textContent = i;
+                calendarDays.appendChild(day);
+            }
         }
-        for (let i = 1; i <= lastDay; i++) {
-            const day = document.createElement("div");
-            day.classList.add("calendar-day");
-            day.textContent = i;
-            calendarDays.appendChild(day);
-        }
-    }
-    prevMonthButton.addEventListener("click", (() => {
-        currentMonth--;
-        if (currentMonth < 0) {
-            currentMonth = 11;
-            currentYear--;
-        }
+        prevMonthButton.addEventListener("click", (() => {
+            currentMonth--;
+            if (currentMonth < 0) {
+                currentMonth = 11;
+                currentYear--;
+            }
+            updateCalendar();
+        }));
+        nextMonthButton.addEventListener("click", (() => {
+            currentMonth++;
+            if (currentMonth > 11) {
+                currentMonth = 0;
+                currentYear++;
+            }
+            updateCalendar();
+        }));
         updateCalendar();
     }));
-    nextMonthButton.addEventListener("click", (() => {
-        currentMonth++;
-        if (currentMonth > 11) {
-            currentMonth = 0;
-            currentYear++;
-        }
-        updateCalendar();
-    }));
-    updateCalendar();
     window["FLS"] = true;
     isWebp();
     addTouchClass();
@@ -6432,5 +6403,4 @@ PERFORMANCE OF THIS SOFTWARE.
     });
     formSubmit();
     headerScroll();
-    digitsCounter();
 })();
