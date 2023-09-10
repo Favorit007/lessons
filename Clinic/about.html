@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230909223118">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230910211057">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -59,32 +59,20 @@
 			</section>
 			<section class="page-about__history history">
 				<div class="history__container">
-					<div class="history__images images-about-us">
-						<div class="images-about-us__image-ibg">
+					<div data-watch data-watch-once class="history__body body-history">
+						<div class="body-history__image-ibg">
 							<picture><source srcset="img/02_page-about-us/02_history/01.webp" type="image/webp"><img src="img/02_page-about-us/02_history/01.jpg" alt="image"></picture>
 						</div>
-						<div class="images-about-us__inner">
-							<div class="images-about-us__icon">
+						<div class="body-history__inner">
+							<div class="body-history__icon">
 								<picture><source srcset="img/02_page-about-us/02_history/icon.webp" type="image/webp"><img src="img/02_page-about-us/02_history/icon.png" alt="image"></picture>
 							</div>
-							<span class="images-about-us__number">+76</span>
-							<div class="images-about-us__item">YEARS ON MARKET</div>
+							<span class="body-history__number">+76</span>
+							<div class="body-history__item">YEARS ON MARKET</div>
 						</div>
 					</div>
-					<!-- <div class="history__body body-history">
-                        <div class="body-history__image-ibg">
-                            <picture><source srcset="img/02_page-about-us/02_history/01.webp" type="image/webp"><img src="img/02_page-about-us/02_history/01.jpg" alt="image"></picture>
-                        </div>
-                        <div class="body-history__inner">
-                            <div class="body-history__icon">
-                                <picture><source srcset="img/02_page-about-us/02_history/icon.webp" type="image/webp"><img src="img/02_page-about-us/02_history/icon.png" alt="image"></picture>
-                            </div>
-                            <div class="body-history__number">+76</div>
-                            <div class="body-history__item">YEARS ON MARKET</div>
-                        </div>
-                    </div> -->
 					<div class="history__content content">
-						<div class="content__header header-doctors">
+						<div data-watch data-watch-threshold="0.15" class="content__header header-doctors">
 							<div class="header-doctors__label label-blue">HOUR HISTORY</div>
 							<h3 class="header-doctors__title title-blue blue">From the Start</h3>
 						</div>
@@ -116,13 +104,114 @@
 									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus et metus
 										augue. Mauris ut libero eget.</p>
 								</div>
-								<div class="item-content__footer spollers footer-about-us">
+								<div data-da=".item-content__footer, 700,1" class="item-content__footer spollers footer-about-us">
 									<div class="footer-about-us__signature">
 										<picture><source srcset="img/about-us/04.webp" type="image/webp"><img src="img/about-us/04.png" alt="signature"></picture>
 									</div>
 								</div>
 							</div>
 						</div>
+					</div>
+				</div>
+			</section>
+			<section class="page-about__steps steps">
+				<div class="steps__container">
+					<div data-watch data-watch-threshold="0.15" class="steps__header header-doctor">
+						<div class="header-doctor__label">THE STEPS</div>
+						<h3 class="header-doctor__title">Our Commitment</h3>
+					</div>
+					<div class="steps__items">
+						<div data-watch data-watch-threshold="0.15" class="steps__item item-steps">
+							<h3 class="item-steps__number">1</h3>
+							<div data-spollers="600,max" class="steps__spollers spollers">
+								<details class="spollers__item item-spollers">
+									<summary class="item-spollers__title" data-spoller-close>The Beginning
+									</summary>
+									<div class="item-spollers__body">
+										<div class="item-spollers__text">
+											<p>Quisque eu euismod arcu. Morbi dapibus diam, sed interdum velit. Proin
+												tempor nun.</p>
+										</div>
+										<ul class="item-spollers__list">
+											<li class="item-spollers__value _icon-check">In sit amet augue non dui</li>
+											<li class="item-spollers__value _icon-check">Proin quis elit lacinia arcu
+											</li>
+										</ul>
+									</div>
+								</details>
+							</div>
+						</div>
+						<div data-watch data-watch-threshold="0.15" class="steps__item item-steps">
+							<div class="item-steps__number">2</div>
+							<div data-spollers="600,max" class="steps__spollers spollers">
+								<details class="spollers__item item-spollers">
+									<summary class="item-spollers__title" data-spoller-close>Settling</summary>
+									<div class="item-spollers__body">
+										<div class="item-spollers__text">
+											<p>Mauris vel quam vel felis maximus bibendum vel quis erat. Duis accumsan
+												posuere.</p>
+										</div>
+										<ul class="item-spollers__list">
+											<li class="item-spollers__value _icon-check">In sit amet augue non dui</li>
+											<li class="item-spollers__value _icon-check">Proin quis elit lacinia arcu
+											</li>
+										</ul>
+									</div>
+								</details>
+							</div>
+						</div>
+						<div data-watch data-watch-threshold="0.15" class="steps__item item-steps">
+							<div class="item-steps__number">3</div>
+							<div data-spollers="600,max" class="steps__spollers spollers">
+								<details class="spollers__item item-spollers">
+									<summary class="item-spollers__title" data-spoller-close>Production</summary>
+									<div class="item-spollers__body">
+										<div class="item-spollers__text">
+											<p>Phasellus mattis arcu ut ante hendrerit faucibus. Sed tristique justo sed
+												nunc sagittis, nec.</p>
+										</div>
+										<ul class="item-spollers__list">
+											<li class="item-spollers__value _icon-check">In sit amet augue non dui</li>
+											<li class="item-spollers__value _icon-check">Proin quis elit lacinia arcu
+											</li>
+										</ul>
+									</div>
+								</details>
+							</div>
+						</div>
+						<div data-watch data-watch-threshold="0.15" class="steps__item item-steps">
+							<div class="item-steps__number">4</div>
+							<div data-spollers="600,max" class="steps__spollers spollers">
+								<details class="spollers__item item-spollers">
+									<summary class="item-spollers__title" data-spoller-close>Today</summary>
+									<div class="item-spollers__body">
+										<div class="item-spollers__text">
+											<p>Vivamus quis interdum neque. Aenean convallis urna at sapien dignissim,
+												quis fringilla ipsum.</p>
+										</div>
+										<ul class="item-spollers__list">
+											<li class="item-spollers__value _icon-check">In sit amet augue non dui</li>
+											<li class="item-spollers__value _icon-check">Proin quis elit lacinia arcu
+											</li>
+										</ul>
+									</div>
+								</details>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="page-about__promotions promotion">
+				<div class="promotion__container">
+					<div class="promotion__body">
+						<h2 data-watch data-watch-threshold="0.15" class="promotion__item">Daily Promotions</h2>
+						<div data-watch data-watch-threshold="0.15" class="promotion__text">
+							<p>Mauris vel quam vel felis maximus bibendum vel quis erat. Duis accumsan posuere est quis
+								egestas. Donec nec odio non tellus convallis mattis a nec purus. Duis quis tortor elit.
+							</p>
+						</div>
+						<a data-watch data-watch-threshold="0.15" href="#" class="promotion__button button">CONTACT
+							US</a>
 					</div>
 				</div>
 			</section>
@@ -214,7 +303,7 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20230909223118"></script>
+	<script src="js/app.min.js?_v=20230910211057"></script>
 </body>
 
 </html>
