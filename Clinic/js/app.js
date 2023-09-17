@@ -4291,6 +4291,582 @@
             },
             on: {}
         });
+        //!slider #3 about gallery
+                if (document.querySelector(".gallery__slider")) {
+            new swiper_core_Swiper(".gallery__slider", {
+                modules: [ Navigation, Autoplay ],
+                observer: true,
+                observeParents: true,
+                slidesPerView: 1.75,
+                spaceBetween: 20,
+                speed: 800,
+                loop: true,
+                effect: "fade",
+                autoplay: {
+                    delay: 1900,
+                    disableOnInteraction: false
+                },
+                breakpoints: {
+                    320: {
+                        slidesPerView: .88,
+                        spaceBetween: 0
+                    },
+                    368: {
+                        slidesPerView: .97,
+                        spaceBetween: 5
+                    },
+                    408: {
+                        slidesPerView: 1.04,
+                        spaceBetween: 5
+                    },
+                    448: {
+                        slidesPerView: .93,
+                        spaceBetween: 5
+                    },
+                    488: {
+                        slidesPerView: 1,
+                        spaceBetween: 5
+                    },
+                    528: {
+                        slidesPerView: 1.02,
+                        spaceBetween: 10
+                    },
+                    568: {
+                        slidesPerView: 1.09,
+                        spaceBetween: 10
+                    },
+                    608: {
+                        slidesPerView: 1.17,
+                        spaceBetween: 10
+                    },
+                    648: {
+                        slidesPerView: 1.24,
+                        spaceBetween: 10
+                    },
+                    688: {
+                        slidesPerView: 1.32,
+                        spaceBetween: 10
+                    },
+                    728: {
+                        slidesPerView: 1.44,
+                        spaceBetween: 10
+                    },
+                    768: {
+                        slidesPerView: 1.22,
+                        spaceBetween: 10
+                    },
+                    788: {
+                        slidesPerView: 1.25,
+                        spaceBetween: 10
+                    },
+                    808: {
+                        slidesPerView: 1.28,
+                        spaceBetween: 10
+                    },
+                    828: {
+                        slidesPerView: 1.01,
+                        spaceBetween: 10
+                    },
+                    848: {
+                        slidesPerView: 1.03,
+                        spaceBetween: 10
+                    },
+                    868: {
+                        slidesPerView: 1.06,
+                        spaceBetween: 10
+                    },
+                    888: {
+                        slidesPerView: 1.1,
+                        spaceBetween: 20
+                    },
+                    908: {
+                        slidesPerView: 1.12,
+                        spaceBetween: 20
+                    },
+                    928: {
+                        slidesPerView: 1.14,
+                        spaceBetween: 20
+                    },
+                    948: {
+                        slidesPerView: 1.16,
+                        spaceBetween: 20
+                    },
+                    968: {
+                        slidesPerView: 1.18,
+                        spaceBetween: 20
+                    },
+                    988: {
+                        slidesPerView: 1.2,
+                        spaceBetween: 20
+                    },
+                    1008: {
+                        slidesPerView: 1.24,
+                        spaceBetween: 20
+                    },
+                    1028: {
+                        slidesPerView: 1.26,
+                        spaceBetween: 20
+                    },
+                    1048: {
+                        slidesPerView: 1.28,
+                        spaceBetween: 20
+                    },
+                    1068: {
+                        slidesPerView: 1.3,
+                        spaceBetween: 20
+                    },
+                    1088: {
+                        slidesPerView: 1.32,
+                        spaceBetween: 20
+                    },
+                    1108: {
+                        slidesPerView: 1.34,
+                        spaceBetween: 20
+                    },
+                    1128: {
+                        slidesPerView: 1.36,
+                        spaceBetween: 20
+                    },
+                    1148: {
+                        slidesPerView: 1.38,
+                        spaceBetween: 20
+                    },
+                    1168: {
+                        slidesPerView: 1.41,
+                        spaceBetween: 20
+                    },
+                    1188: {
+                        slidesPerView: 1.45,
+                        spaceBetween: 20
+                    },
+                    1208: {
+                        slidesPerView: 1.48,
+                        spaceBetween: 20
+                    },
+                    1228: {
+                        slidesPerView: 1.51,
+                        spaceBetween: 20
+                    },
+                    1248: {
+                        slidesPerView: 1.52,
+                        spaceBetween: 20
+                    },
+                    1268: {
+                        slidesPerView: 1.55,
+                        spaceBetween: 20
+                    },
+                    1288: {
+                        slidesPerView: 1.57,
+                        spaceBetween: 20
+                    },
+                    1308: {
+                        slidesPerView: 1.59,
+                        spaceBetween: 20
+                    },
+                    1328: {
+                        slidesPerView: 1.61,
+                        spaceBetween: 20
+                    },
+                    1348: {
+                        slidesPerView: 1.63,
+                        spaceBetween: 20
+                    },
+                    1368: {
+                        slidesPerView: 1.66,
+                        spaceBetween: 20
+                    },
+                    1388: {
+                        slidesPerView: 1.69,
+                        spaceBetween: 20
+                    },
+                    1400: {
+                        slidesPerView: 1.7,
+                        spaceBetween: 20
+                    },
+                    1408: {
+                        slidesPerView: 1.71,
+                        spaceBetween: 20
+                    },
+                    1428: {
+                        slidesPerView: 1.72,
+                        spaceBetween: 20
+                    },
+                    1441: {
+                        slidesPerView: 1.76,
+                        spaceBetween: 20
+                    },
+                    1480: {
+                        slidesPerView: 1.81,
+                        spaceBetween: 20
+                    },
+                    1530: {
+                        slidesPerView: 1.86,
+                        spaceBetween: 20
+                    },
+                    1580: {
+                        slidesPerView: 1.93,
+                        spaceBetween: 20
+                    },
+                    1600: {
+                        slidesPerView: 1.955,
+                        spaceBetween: 20
+                    },
+                    1650: {
+                        slidesPerView: 2,
+                        spaceBetween: 20
+                    },
+                    1690: {
+                        slidesPerView: 2.05,
+                        spaceBetween: 20
+                    },
+                    1733: {
+                        slidesPerView: 2.1,
+                        spaceBetween: 20
+                    },
+                    1781: {
+                        slidesPerView: 2.15,
+                        spaceBetween: 20
+                    },
+                    1829: {
+                        slidesPerView: 2.22,
+                        spaceBetween: 20
+                    },
+                    1881: {
+                        slidesPerView: 2.28,
+                        spaceBetween: 20
+                    },
+                    1941: {
+                        slidesPerView: 2.35,
+                        spaceBetween: 20
+                    },
+                    2001: {
+                        slidesPerView: 2.42,
+                        spaceBetween: 20
+                    },
+                    2065: {
+                        slidesPerView: 2.5,
+                        spaceBetween: 20
+                    },
+                    2125: {
+                        slidesPerView: 2.57,
+                        spaceBetween: 20
+                    },
+                    2193: {
+                        slidesPerView: 2.65,
+                        spaceBetween: 20
+                    },
+                    2265: {
+                        slidesPerView: 2.74,
+                        spaceBetween: 20
+                    },
+                    2345: {
+                        slidesPerView: 2.83,
+                        spaceBetween: 20
+                    },
+                    2409: {
+                        slidesPerView: 2.92,
+                        spaceBetween: 20
+                    },
+                    2481: {
+                        slidesPerView: 3,
+                        spaceBetween: 20
+                    },
+                    2517: {
+                        slidesPerView: 3.05,
+                        spaceBetween: 20
+                    }
+                },
+                on: {}
+            });
+        }
+        //!slider #4 about gallery#2
+                if (document.querySelector(".gallery__slider2")) {
+            new swiper_core_Swiper(".gallery__slider2", {
+                modules: [ Navigation, Autoplay ],
+                observer: true,
+                observeParents: true,
+                slidesPerView: 1.75,
+                spaceBetween: 20,
+                speed: 800,
+                loop: true,
+                effect: "fade",
+                autoplay: {
+                    delay: 1600,
+                    disableOnInteraction: false
+                },
+                breakpoints: {
+                    320: {
+                        slidesPerView: .88,
+                        spaceBetween: 0
+                    },
+                    368: {
+                        slidesPerView: .97,
+                        spaceBetween: 5
+                    },
+                    408: {
+                        slidesPerView: 1.04,
+                        spaceBetween: 5
+                    },
+                    448: {
+                        slidesPerView: .93,
+                        spaceBetween: 5
+                    },
+                    488: {
+                        slidesPerView: 1,
+                        spaceBetween: 5
+                    },
+                    528: {
+                        slidesPerView: 1.02,
+                        spaceBetween: 10
+                    },
+                    568: {
+                        slidesPerView: 1.09,
+                        spaceBetween: 10
+                    },
+                    608: {
+                        slidesPerView: 1.17,
+                        spaceBetween: 10
+                    },
+                    648: {
+                        slidesPerView: 1.24,
+                        spaceBetween: 10
+                    },
+                    688: {
+                        slidesPerView: 1.32,
+                        spaceBetween: 10
+                    },
+                    728: {
+                        slidesPerView: 1.44,
+                        spaceBetween: 10
+                    },
+                    768: {
+                        slidesPerView: 1.22,
+                        spaceBetween: 10
+                    },
+                    788: {
+                        slidesPerView: 1.25,
+                        spaceBetween: 10
+                    },
+                    808: {
+                        slidesPerView: 1.28,
+                        spaceBetween: 10
+                    },
+                    828: {
+                        slidesPerView: 1.01,
+                        spaceBetween: 10
+                    },
+                    848: {
+                        slidesPerView: 1.03,
+                        spaceBetween: 10
+                    },
+                    868: {
+                        slidesPerView: 1.06,
+                        spaceBetween: 10
+                    },
+                    888: {
+                        slidesPerView: 1.1,
+                        spaceBetween: 20
+                    },
+                    908: {
+                        slidesPerView: 1.12,
+                        spaceBetween: 20
+                    },
+                    928: {
+                        slidesPerView: 1.14,
+                        spaceBetween: 20
+                    },
+                    948: {
+                        slidesPerView: 1.16,
+                        spaceBetween: 20
+                    },
+                    968: {
+                        slidesPerView: 1.18,
+                        spaceBetween: 20
+                    },
+                    988: {
+                        slidesPerView: 1.2,
+                        spaceBetween: 20
+                    },
+                    1008: {
+                        slidesPerView: 1.24,
+                        spaceBetween: 20
+                    },
+                    1028: {
+                        slidesPerView: 1.26,
+                        spaceBetween: 20
+                    },
+                    1048: {
+                        slidesPerView: 1.28,
+                        spaceBetween: 20
+                    },
+                    1068: {
+                        slidesPerView: 1.3,
+                        spaceBetween: 20
+                    },
+                    1088: {
+                        slidesPerView: 1.32,
+                        spaceBetween: 20
+                    },
+                    1108: {
+                        slidesPerView: 1.34,
+                        spaceBetween: 20
+                    },
+                    1128: {
+                        slidesPerView: 1.36,
+                        spaceBetween: 20
+                    },
+                    1148: {
+                        slidesPerView: 1.38,
+                        spaceBetween: 20
+                    },
+                    1168: {
+                        slidesPerView: 1.41,
+                        spaceBetween: 20
+                    },
+                    1188: {
+                        slidesPerView: 1.45,
+                        spaceBetween: 20
+                    },
+                    1208: {
+                        slidesPerView: 1.48,
+                        spaceBetween: 20
+                    },
+                    1228: {
+                        slidesPerView: 1.51,
+                        spaceBetween: 20
+                    },
+                    1248: {
+                        slidesPerView: 1.52,
+                        spaceBetween: 20
+                    },
+                    1268: {
+                        slidesPerView: 1.55,
+                        spaceBetween: 20
+                    },
+                    1288: {
+                        slidesPerView: 1.57,
+                        spaceBetween: 20
+                    },
+                    1308: {
+                        slidesPerView: 1.59,
+                        spaceBetween: 20
+                    },
+                    1328: {
+                        slidesPerView: 1.61,
+                        spaceBetween: 20
+                    },
+                    1348: {
+                        slidesPerView: 1.63,
+                        spaceBetween: 20
+                    },
+                    1368: {
+                        slidesPerView: 1.66,
+                        spaceBetween: 20
+                    },
+                    1388: {
+                        slidesPerView: 1.69,
+                        spaceBetween: 20
+                    },
+                    1400: {
+                        slidesPerView: 1.7,
+                        spaceBetween: 20
+                    },
+                    1408: {
+                        slidesPerView: 1.71,
+                        spaceBetween: 20
+                    },
+                    1428: {
+                        slidesPerView: 1.72,
+                        spaceBetween: 20
+                    },
+                    1441: {
+                        slidesPerView: 1.76,
+                        spaceBetween: 20
+                    },
+                    1480: {
+                        slidesPerView: 1.81,
+                        spaceBetween: 20
+                    },
+                    1530: {
+                        slidesPerView: 1.86,
+                        spaceBetween: 20
+                    },
+                    1580: {
+                        slidesPerView: 1.93,
+                        spaceBetween: 20
+                    },
+                    1600: {
+                        slidesPerView: 1.955,
+                        spaceBetween: 20
+                    },
+                    1650: {
+                        slidesPerView: 2,
+                        spaceBetween: 20
+                    },
+                    1690: {
+                        slidesPerView: 2.05,
+                        spaceBetween: 20
+                    },
+                    1733: {
+                        slidesPerView: 2.1,
+                        spaceBetween: 20
+                    },
+                    1781: {
+                        slidesPerView: 2.15,
+                        spaceBetween: 20
+                    },
+                    1829: {
+                        slidesPerView: 2.22,
+                        spaceBetween: 20
+                    },
+                    1881: {
+                        slidesPerView: 2.28,
+                        spaceBetween: 20
+                    },
+                    1941: {
+                        slidesPerView: 2.35,
+                        spaceBetween: 20
+                    },
+                    2001: {
+                        slidesPerView: 2.42,
+                        spaceBetween: 20
+                    },
+                    2065: {
+                        slidesPerView: 2.5,
+                        spaceBetween: 20
+                    },
+                    2125: {
+                        slidesPerView: 2.57,
+                        spaceBetween: 20
+                    },
+                    2193: {
+                        slidesPerView: 2.65,
+                        spaceBetween: 20
+                    },
+                    2265: {
+                        slidesPerView: 2.74,
+                        spaceBetween: 20
+                    },
+                    2345: {
+                        slidesPerView: 2.83,
+                        spaceBetween: 20
+                    },
+                    2409: {
+                        slidesPerView: 2.92,
+                        spaceBetween: 20
+                    },
+                    2481: {
+                        slidesPerView: 3,
+                        spaceBetween: 20
+                    },
+                    2517: {
+                        slidesPerView: 3.05,
+                        spaceBetween: 20
+                    }
+                },
+                on: {}
+            });
+        }
     }
     window.addEventListener("load", (function(e) {
         initSliders();
