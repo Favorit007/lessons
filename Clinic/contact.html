@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230920211055">
+	<link rel="stylesheet" href="css/style.min.css?_v=20231002193329">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -57,6 +57,102 @@
 				</div>
 				<div class="hero__image-ibg">
 					<picture><source srcset="img/timing/bg.webp" type="image/webp"><img src="img/timing/bg.jpg" alt="image"></picture>
+				</div>
+			</section>
+			<section class="contact-page__contact contact">
+				<div class="contact__container">
+					<div class="contact__header header-contact">
+						<div class="header-contact__items">
+							<a href="#" class="header-contact__card card-spoller header-contact__card--contact">
+								<div class="card-spoller__foto card-spoller__foto--contact">
+									<picture><source srcset="img/gallery/01.webp" type="image/webp"><img src="img/gallery/01.jpg" alt="doctor"></picture>
+								</div>
+								<div class="card-spoller__inner card-spoller__inner--contact">
+									<div class="card-spoller__name card-spoller__name--contact">Close to the Client
+									</div>
+									<div class="card-spoller__proffession card-spoller__proffession--contact">
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
+											luctus
+											nec ullamcorper mattis, pulvinar dapibus leo.</p>
+									</div>
+								</div>
+							</a>
+							<a href="#" class="header-contact__card card-spoller header-contact__card--contact">
+								<div class="card-spoller__foto card-spoller__foto--contact">
+									<picture><source srcset="img/gallery/02.webp" type="image/webp"><img src="img/gallery/02.jpg" alt="doctor"></picture>
+								</div>
+								<div class="card-spoller__inner card-spoller__inner--contact">
+									<div class="card-spoller__name card-spoller__name--contact">Attention to Detail
+									</div>
+									<div class="card-spoller__proffession card-spoller__proffession--contact">
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
+											luctus
+											nec ullamcorper mattis, pulvinar dapibus leo.</p>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+					<div class="contact__block about-us contact__block--contact">
+						<div class="about-us__conten content-about-us about-us__conten--contact">
+							<div data-watch data-watch-threshold="0.15" class="content-about-us__label label-blue">
+								CONTACT US</div>
+							<h3 data-watch data-watch-threshold="0.15" class="content-about-us__title title-blue">
+								Get In Touch</h3>
+							<div class="content-about-us__text text">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis porttitor tellus vel
+									mauris scelerisque accumsan. Maecenas quis nunc sed sapien dignissim pulvinar. Se d
+									at gravida.</p>
+							</div>
+							<a href="#" class="content-about-us__button">VIEW PRICES</a>
+						</div>
+						<form data-watch data-watch-threshold="0.15" action="#" class="contact__details details contact__details--contact">
+							<div class="details__items details__items--contact">
+								<div class="details__list details__list--contact">
+									<input class="details__input details__input--contact" type="text" data-required name="form[]" data-error="Error" placeholder="Name" autocomplete="off">
+								</div>
+								<div class="details__list details__list--contact">
+									<input class="details__input details__input--contact" type="email" data-required="email" data-error="Error" placeholder="Email" autocomplete="off">
+								</div>
+								<textarea class="details__textarea details__textarea--contact" name="subject"></textarea>
+							</div>
+							<button type="button" class="details__button button details__button--contact">SEND</button>
+						</form>
+					</div>
+				</div>
+			</section>
+			<div class="contact-page__map map">
+				<!-- карта -->
+				<div id="map" class="map__body"></div>
+				<!-- кнопки та поле з інформацією -->
+				<div id="selectedPlace" class="map__actions">
+					<button id="openGoogleMapsButton" class="map__button button-redirect buttona"><span>Перейти на
+							Google
+							Карти</span></button>
+					<p id="selectedAddress" class="map__info"></p>
+					<button id="routeButton" class="map__button buttona" type="button"><span>Побудувати
+							маршрут</span></button>
+				</div>
+			</div>
+			<section class="contact-page__contact block-contact">
+				<div class="block-contact__container">
+					<div class="block-contact__inner">
+						<h3 class="block-contact__title">Contacts</h3>
+						<ul class="block-contact__list">
+							<li class="block-contact__link">
+								<a href="#" class="contact-header__location _icon-location">111 8th Ave, New York
+									U.S.A.</a>
+							</li>
+							<li class="block-contact__link">
+								<a href="tel:+12025550153" class="contact-header__phone _icon-phone">Ph
+									+1-202-555-0153</a>
+							</li>
+							<li class="block-contact__link">
+								<a href="email" class="spollers__link _icon-mail">info@site.com</a>
+							</li>
+						</ul>
+						<a href="#" class="block-contact__button">ABOUT US</a>
+					</div>
 				</div>
 			</section>
 		</main>
@@ -147,7 +243,258 @@
 			</div>
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20230920211055"></script>
+	<script>
+		let selectedPlace = null;
+		let directionsRenderer = null;
+
+
+		function initMap() {
+			// координати потрібного місця
+			const baceCoords = {
+				lat: 50.435892,
+				lng: 30.591805
+			};
+
+			// стилі для карти
+			const mapStyles = [{
+					"elementType": "geometry",
+					"stylers": [{
+						"color": "#f5f5f5"
+					}]
+				},
+				{
+					"elementType": "labels.icon",
+					"stylers": [{
+						"visibility": "off"
+					}]
+				},
+				{
+					"elementType": "labels.text.fill",
+					"stylers": [{
+						"color": "#009999"
+					}]
+				},
+				{
+					"featureType": "administrative.land_parcel",
+					"elementType": "labels.text.fill",
+					"stylers": [{
+						"color": "#bdbdbd"
+					}]
+				},
+				{
+					"featureType": "poi",
+					"elementType": "geometry",
+					"stylers": [{
+						"color": "#eeeeee"
+					}]
+				},
+				{
+					"featureType": "poi",
+					"elementType": "labels.text.fill",
+					"stylers": [{
+						"color": "#009999"
+					}]
+				},
+				{
+					"featureType": "poi.park",
+					"elementType": "geometry",
+					"stylers": [{
+						"color": "#e5e5e5"
+					}]
+				},
+				{
+					"featureType": "poi.park",
+					"elementType": "labels.text.fill",
+					"stylers": [{
+						"color": "#009999"
+					}]
+				},
+				{
+					"featureType": "road",
+					"elementType": "geometry",
+					"stylers": [{
+						"color": "#ffffff"
+					}]
+				},
+				{
+					"featureType": "road.arterial",
+					"elementType": "labels.text.fill",
+					"stylers": [{
+						"color": "#009999"
+					}]
+				},
+				{
+					"featureType": "road.highway",
+					"elementType": "geometry",
+					"stylers": [{
+						"color": "#dadada"
+					}]
+				},
+				{
+					"featureType": "road.highway",
+					"elementType": "labels.text.fill",
+					"stylers": [{
+						"color": "#009999"
+					}]
+				},
+				{
+					"featureType": "road.local",
+					"elementType": "labels.text.fill",
+					"stylers": [{
+						"color": "#009999"
+					}]
+				},
+				{
+					"featureType": "transit.line",
+					"elementType": "geometry",
+					"stylers": [{
+						"color": "#e5e5e5"
+					}]
+				},
+				{
+					"featureType": "transit.station",
+					"elementType": "geometry",
+					"stylers": [{
+						"color": "#eeeeee"
+					}]
+				},
+				{
+					"featureType": "water",
+					"elementType": "geometry",
+					"stylers": [{
+						"color": "#c9c9c9"
+					}]
+				},
+				{
+					"featureType": "water",
+					"elementType": "labels.text.fill",
+					"stylers": [{
+						"color": "#009999"
+					}]
+				}
+			];
+
+			const map = new google.maps.Map(document.getElementById("map"), {
+				center: baceCoords,
+				zoom: 12,
+				// підключення стилів до карти
+				styles: mapStyles,
+			});
+
+			// Створення маркера
+			const bacePlaceMarker = new google.maps.Marker({
+				position: baceCoords,
+				map: map,
+				title: "",
+				// підключення власної іконки
+				icon: {
+					url: "img/02_page-about-us/06_experience/icon/02.png",
+					scaledSize: new google.maps.Size(20, 20), // Розмір зображення маркера
+				},
+			});
+
+			let infoWindow = new google.maps.InfoWindow();
+			// Обробка кліку на маркер bacePlaceMarker
+			// при кліку на маркер зявляється адреса маркеру
+			bacePlaceMarker.addListener("click", () => {
+				const geocoder = new google.maps.Geocoder();
+				geocoder.geocode({
+					location: bacePlaceMarker.getPosition()
+				}, (results, status) => {
+					if (status === "OK" && results[0]) {
+						const markerAddress = results[0].formatted_address;
+						infoWindow.setContent(`Adressen: ${markerAddress}`);
+						infoWindow.open(map, bacePlaceMarker); // Відкрити інфовікно над маркером
+					}
+				});
+			});
+
+
+			map.addListener("click", (event) => {
+				if (selectedPlace) {
+					selectedPlace.setMap(null);
+				}
+
+				// новий маркер вибраний користувачем
+				selectedPlace = new google.maps.Marker({
+					position: event.latLng,
+					map: map,
+					title: "Вибране місце",
+				});
+				// Отримання адреси вибраного місця
+				const geocoder = new google.maps.Geocoder();
+				geocoder.geocode({
+					location: event.latLng
+				}, (results, status) => {
+					if (status === "OK" && results[0]) {
+						const selectedAddress = results[0].formatted_address;
+						document.getElementById("selectedAddress").textContent = selectedAddress;
+						document.getElementById("selectedPlace").style.display = "flex";
+					}
+				});
+			});
+
+			// прослуховування події кліку на кнопку побудувати маршрут
+			document.getElementById("routeButton").addEventListener("click", buildRoute);
+
+			// функція для побудови маршруту
+			function buildRoute() {
+				if (!selectedPlace) {
+					// повідомлення якщо точку не вказано
+					alert("Не вказано цільову точку.");
+					return;
+				}
+
+				if (directionsRenderer) {
+					directionsRenderer.setMap(null);
+				}
+
+				let destination = selectedPlace.getPosition();
+
+				let directionsService = new google.maps.DirectionsService();
+				directionsRenderer = new google.maps.DirectionsRenderer({
+					map: map,
+					panel: document.getElementById("routeInfo"), // Додаємо панель для відображення інформації
+				});
+
+				let request = {
+					origin: destination,
+					destination: bacePlaceMarker.getPosition(),
+					travelMode: google.maps.TravelMode.DRIVING,
+				};
+
+				directionsService.route(request, function(response, status) {
+					if (status == google.maps.DirectionsStatus.OK) {
+						directionsRenderer.setDirections(response);
+					}
+				});
+				// Показати кнопку для переходу на Google Карти вона зявляється після створення маршруту
+				document.getElementById("openGoogleMapsButton").style.display = "block";
+			}
+
+			const openGoogleMapsButton = document.getElementById("openGoogleMapsButton");
+			openGoogleMapsButton.addEventListener("click", openGoogleMaps);
+
+			function openGoogleMaps() {
+				if (!selectedPlace) {
+					alert("Не вказано цільову точку.");
+					return;
+				}
+
+				let destination = selectedPlace.getPosition();
+
+				const originCoords = encodeURIComponent(`${bacePlaceMarker.getPosition().lat()},${bacePlaceMarker.getPosition().lng()}`);
+				const destinationCoords = encodeURIComponent(`${destination.lat()},${destination.lng()}`);
+
+				const googleMapsLink = `https://www.google.com/maps/dir/?api=1&origin=${originCoords}&destination=${destinationCoords}&travelmode=driving`;
+
+				window.open(googleMapsLink);
+			}
+		}
+	</script>
+	<!-- це скрипт для підключення карт гугл щоб підключити карту вам потрібно створити профіль на сайті https://console.cloud.google.com/ після реєстрації вампотрібно створити ключ API для підключення власної карти -->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAklC9wAt0xoVcf8TlgTEqbHyDRh9BXh4g&libraries=places,geometry&callback=initMap&_v=20231002193329" async defer></script>
+	<script src="js/app.min.js?_v=20231002193329"></script>
 </body>
 
 </html>
