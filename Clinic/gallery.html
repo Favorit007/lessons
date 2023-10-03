@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20231002193329">
+	<link rel="stylesheet" href="css/style.min.css?_v=20231003154633">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +16,7 @@
 	<div class="wrapper">
 		<header class="header" data-scroll-show data-lp>
 			<div class="header__container">
-				<div data-da=".menu__body, 767.98" class="header__contact contact-header">
+				<div data-da=".menu__body, 767.98,1" class="header__contact contact-header">
 					<a href="#" class="contact-header__location _icon-location">ST. LAMBOR, NEW YORK ( US )</a>
 					<div class="contact-header__inner news-inner">
 						<a data-da=".contact-header,767.98,0" href="#" class="news-inner__link">NEWS</a>
@@ -40,6 +40,12 @@
 								<li class="menu__item"><a href="contact.html" class="menu__link ">CONTACT</a>
 								</li>
 							</ul>
+							<div class="menu__social social-left menu__social--header">
+								<a href="#" class="social-left__logo _icon-facebook"></a>
+								<a href="#" class="social-left__logo _icon-tw"></a>
+								<a href="#" class="social-left__logo _icon-yt"></a>
+								<a href="#" class="social-left__logo _icon-v"></a>
+							</div>
 						</nav>
 					</div>
 					<a href="#" class="header__button button">BOOK NOW</a>
@@ -319,6 +325,263 @@
 			</div>
 		</footer>
 	</div>
+	Стилі для body -->
+	<style>
+		.lock body {
+			overflow: hidden;
+			touch-action: none;
+			overscroll-behavior: none;
+		}
+
+		.loading body {
+			opacity: 0;
+			visibility: hidden;
+		}
+
+		.loaded body {
+			transition: opacity 0.5s ease 0s;
+			opacity: 1;
+			visibility: visible;
+		}
+	</style>
+	<div id="fls-preloader">
+		<!-- Документація: https://template.fls.guru/template-docs/modul-preloader.html -->
+		<!-- Стилі для прелоадера -->
+		<style>
+			* {
+				padding: 0px;
+				margin: 0px;
+				border: 0px;
+			}
+
+			*,
+			*:before,
+			*:after {
+				box-sizing: border-box;
+			}
+
+			html {
+				overflow: hidden;
+				touch-action: none;
+				overscroll-behavior: none;
+			}
+
+			/* Головний блок */
+			.fls-preloader {
+				pointer-events: none;
+				z-index: -1;
+				position: fixed;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+
+			/* Блок з елементами */
+			.fls-preloader__body {
+				padding: 0.93rem;
+				max-width: 31.25rem;
+				display: flex;
+				flex-direction: column;
+			}
+
+			/* Блок з лічильником */
+			.fls-preloader__counter {
+				font-size: 10rem;
+			}
+
+			/* Прогресбар */
+			.fls-preloader__line {}
+
+			/* Лінія прогресбару */
+			.fls-preloader__line span {
+				display: inline-block;
+				transition: width 0.2s ease;
+				height: 0.8rem;
+				background-color: #7A956B;
+			}
+		</style>
+		<!-- Скріпт прелоадера -->
+		<script>
+			function preloader() {
+				const preloaderImages = document.querySelector('[data-preloader]') ? document.querySelectorAll('[data-preloader] img') : document.querySelectorAll('img');
+				const preloaderContainer = document.querySelector('#fls-preloader');
+				if (preloaderImages.length) {
+					const preloaderTemplate = `
+					<div class="fls-preloader">
+						<div class="fls-preloader__body">
+							<div class="fls-preloader__counter">0%</div>
+							<div class="fls-preloader__line"><span></span></div>
+						</div>
+					</div>`;
+					document.querySelector('html').insertAdjacentHTML("beforeend", preloaderTemplate);
+
+					const
+						preloader = document.querySelector('.fls-preloader'),
+						showPecentLoad = document.querySelector('.fls-preloader__counter'),
+						showLineLoad = document.querySelector('.fls-preloader__line span'),
+						htmlDocument = document.documentElement;
+
+					let imagesLoadedCount = counter = progress = 0;
+
+					htmlDocument.classList.add('loading');
+					htmlDocument.classList.add('lock');
+
+					preloaderImages.forEach(preloaderImage => {
+						const imgClone = document.createElement('img');
+						if (imgClone) {
+							imgClone.onload = imageLoaded;
+							imgClone.onerror = imageLoaded;
+							preloaderImage.dataset.src ? imgClone.src = preloaderImage.dataset.src : imgClone.src = preloaderImage.src;
+						}
+					});
+
+					function setValueProgress(progress) {
+						showPecentLoad ? showPecentLoad.innerText = `${progress}%` : null;
+						showLineLoad ? showLineLoad.style.width = `${progress}%` : null;
+					}
+					showPecentLoad ? setValueProgress(progress) : null;
+
+					function imageLoaded() {
+						imagesLoadedCount++;
+						progress = Math.round((100 / preloaderImages.length) * imagesLoadedCount);
+						const intervalId = setInterval(() => {
+							counter >= progress ? clearInterval(intervalId) : setValueProgress(++counter);
+							counter >= 100 ? addLoadedClass() : null;
+						}, 10);
+					}
+
+					function addLoadedClass() {
+						htmlDocument.classList.add('loaded');
+						htmlDocument.classList.remove('lock');
+						htmlDocument.classList.remove('loading');
+						setInterval(() => {
+							preloader.remove();
+							preloaderContainer.remove();
+						}, 500);
+					}
+				} else {
+					preloaderContainer.remove();
+				}
+			}
+			preloader();
+		</script>
+	</div>
+
+
+
+
+
+
+
+	<!-- ======================================================================================================================================================== -->
+	<script>
+		function addLoadedClass() {
+			document.documentElement.classList.add('loading');
+			document.documentElement.classList.add('lock');
+			window.addEventListener("load", function() {
+				document.documentElement.classList.remove('loading');
+				document.documentElement.classList.remove('lock');
+				document.documentElement.classList.add('loaded');
+			});
+		}
+		addLoadedClass()
+	</script>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		.loader {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100vw;
+			height: 100vh;
+			z-index: 900;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			display: grid;
+			place-items: center;
+			background: #000334;
+			transition: all 0.5s ease;
+		}
+
+		.loaded .loader {
+			pointer-events: none;
+			opacity: 0;
+		}
+
+		.loader__wrapper {
+			position: relative;
+			width: 125px;
+			height: 125px;
+			z-index: 200;
+		}
+
+		.loader span {
+			position: absolute;
+			display: block;
+			width: 40%;
+			height: 40%;
+			border-radius: 50%;
+			animation: speed 2s infinite ease-in-out;
+		}
+
+
+		.loader__one {
+			background: linear-gradient(261.97deg, #00E0FF -9.99%, #0035BE 113.06%);
+			animation-delay: 1.5s;
+		}
+
+
+		.loader__two {
+			background: linear-gradient(261.97deg, #0035BE -9.99%, #00E0FF 113.06%);
+			animation-delay: 1s;
+		}
+
+
+		.loader__three {
+			background: linear-gradient(261.97deg, #00E0FF -9.99%, #0035BE 113.06%);
+			animation-delay: 0.5s;
+		}
+
+
+		.loader__four {
+			background: linear-gradient(261.97deg, #0035BE -9.99%, #00E0FF 113.06%);
+		}
+
+		@keyframes speed {
+			0% {
+				transform: translate(0%);
+				border-radius: 50%;
+			}
+
+			25% {
+				transform: translate(150%) scale(0.5);
+				border-radius: 0%;
+			}
+
+			50% {
+				transform: translate(150%, 150%);
+				border-radius: 50%;
+			}
+
+			75% {
+				transform: translate(0, 150%) scale(0.5);
+				border-radius: 0%;
+			}
+		}
+	</style>
+	<!-- ======================================================================================================================================================== -->
+
+	<!-- ======================================================================================================================================================== -->
 	<script>
 		let selectedPlace = null;
 		let directionsRenderer = null;
@@ -327,8 +590,8 @@
 		function initMap() {
 			// координати потрібного місця
 			const baceCoords = {
-				lat: 50.435892,
-				lng: 30.591805
+				lat: 40.741380068199945,
+				lng: -74.00336980819704
 			};
 
 			// стилі для карти
@@ -569,8 +832,8 @@
 		}
 	</script>
 	<!-- це скрипт для підключення карт гугл щоб підключити карту вам потрібно створити профіль на сайті https://console.cloud.google.com/ після реєстрації вампотрібно створити ключ API для підключення власної карти -->
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAklC9wAt0xoVcf8TlgTEqbHyDRh9BXh4g&libraries=places,geometry&callback=initMap&_v=20231002193329" async defer></script>
-	<script src="js/app.min.js?_v=20231002193329"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAklC9wAt0xoVcf8TlgTEqbHyDRh9BXh4g&libraries=places,geometry&callback=initMap&_v=20231003154633" async defer></script>
+	<script src="js/app.min.js?_v=20231003154633"></script>
 </body>
 
 </html>

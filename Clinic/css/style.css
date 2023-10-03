@@ -655,6 +655,13 @@ summary::marker {
   border-bottom: 0.125rem solid #fff;
 }
 
+.menu__social--header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.5625rem;
+}
+
 .icon-menu {
   display: none;
 }
@@ -4798,6 +4805,12 @@ summary::marker {
 
 .contact__details--contact {
   position: relative;
+  opacity: 0;
+  -webkit-transform: translateY(20%);
+      -ms-transform: translateY(20%);
+          transform: translateY(20%);
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
 }
 
 .header-contact__items {
@@ -4891,14 +4904,7 @@ summary::marker {
 }
 
 .details .form__error {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  font-size: 0.875rem;
   color: red;
-  -webkit-transform: translate(70%, 130%);
-      -ms-transform: translate(70%, 130%);
-          transform: translate(70%, 130%);
 }
 
 .details__textarea--contact {
@@ -4949,8 +4955,55 @@ summary::marker {
   transition: all 1.3s;
 }
 
+.content-about-us__text {
+  position: relative;
+  opacity: 0;
+  -webkit-transform: translateY(20%);
+      -ms-transform: translateY(20%);
+          transform: translateY(20%);
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+}
+
+.content-about-us__button {
+  position: relative;
+  opacity: 0;
+  -webkit-transform: translateY(20%);
+      -ms-transform: translateY(20%);
+          transform: translateY(20%);
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+}
+
+._watcher-view.contact__details--contact {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+._watcher-view.content-about-us__text {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+._watcher-view.content-about-us__button {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
 .map {
   position: relative;
+  opacity: 0;
+  -webkit-transform: translateY(20%);
+      -ms-transform: translateY(20%);
+          transform: translateY(20%);
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
 }
 
 .map__body {
@@ -5017,6 +5070,13 @@ summary::marker {
           transform: rotate(20deg);
 }
 
+._watcher-view.map {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
 .button-redirect {
   display: none;
 }
@@ -5050,6 +5110,16 @@ summary::marker {
 .no-webp .block-contact{
   background: url("../img/about-us/bcgr.jpg") center/cover no-repeat; }
 
+.block-contact {
+  position: relative;
+  opacity: 0;
+  -webkit-transform: translateY(20%);
+      -ms-transform: translateY(20%);
+          transform: translateY(20%);
+  -webkit-transition: all 0.6s;
+  transition: all 0.6s;
+}
+
 .no-webp .block-contact__inner{
   background: url("../img/contuct/01.jpg") center/contain no-repeat; }
 
@@ -5078,6 +5148,8 @@ summary::marker {
   gap: 1.25rem;
   position: relative;
   z-index: 2;
+  -ms-grid-column-align: start;
+      justify-self: start;
 }
 
 .block-contact__link {
@@ -5116,6 +5188,13 @@ summary::marker {
   left: 110%;
   -webkit-transition: all 1.3s;
   transition: all 1.3s;
+}
+
+._watcher-view.block-contact {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
 }
 
 .swiper {
@@ -6710,6 +6789,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     display: grid;
     -ms-grid-columns: auto 1fr auto;
     grid-template-columns: auto 1fr auto;
+  }
+
+  .menu__social--header {
+    display: none;
   }
 
   .map__body {
@@ -8599,6 +8682,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     display: none;
   }
 
+  .contact-header:not(:last-child) {
+    margin-bottom: 1.25rem;
+  }
+
   .news-inner {
     -webkit-box-ordinal-group: 4;
         -ms-flex-order: 3;
@@ -8639,7 +8726,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
             flex-direction: column;
     text-align: center;
     font-size: 1.875rem;
-    padding-bottom: 2.5rem;
+    padding-bottom: 1.875rem;
     row-gap: 1.875rem;
   }
 
