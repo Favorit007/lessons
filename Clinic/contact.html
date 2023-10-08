@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20231003192816">
+	<link rel="stylesheet" href="css/style.min.css?_v=20231008215149">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,7 +31,7 @@
 					<div class="header__menu menu">
 						<nav class="menu__body">
 							<ul class="menu__list">
-								<li class="menu__item"><a href="home.html" class="menu__link ">HOME</a></li>
+								<li class="menu__item"><a href="index.html" class="menu__link ">HOME</a></li>
 								<li class="menu__item"><a href="about.html" class="menu__link ">ABOUT US</a></li>
 								<li class="menu__item"><a href="shop.html" class="menu__link ">SHOP</a></li>
 								<li class="menu__item"><a href="gallery.html" class="menu__link ">GALLERY</a>
@@ -99,7 +99,7 @@
 							</a>
 						</div>
 					</div>
-					<div class="contact__block about-us contact__block--contact">
+					<div class="contact__block  contact__block--contact">
 						<div class="about-us__conten content-about-us about-us__conten--contact">
 							<div data-watch data-watch-threshold="0.15" class="content-about-us__label label-blue">
 								CONTACT US</div>
@@ -116,12 +116,12 @@
 						<form data-watch data-watch-threshold="0.15" action="#" class="contact__details details contact__details--contact">
 							<div class="details__items details__items--contact">
 								<div class="details__list details__list--contact">
-									<input class="details__input details__input--contact" type="text" data-required name="form[]" data-error="Error" placeholder="Name" s>
+									<input class="details__input details__input--contact" type="text" data-required name="name" data-error="Error" placeholder="Name">
 								</div>
 								<div class="details__list details__list--contact">
-									<input class="details__input details__input--contact" type="email" data-required="email" data-error="Error" placeholder="Email" autocomplete="off">
+									<input class="details__input details__input--contact" type="email" data-required name="email" data-error="Error" placeholder="Email">
 								</div>
-								<textarea class="details__textarea details__textarea--contact" name="subject"></textarea>
+								<textarea class="details__textarea details__textarea--contact" name="text"></textarea>
 							</div>
 							<button type="submit" class="details__button button details__button--contact">SEND</button>
 						</form>
@@ -251,153 +251,154 @@
 			</div>
 		</footer>
 	</div>
-	Стилі для body -->
-	<style>
-		.lock body {
+	<!--Стилі для body -->
+	<!-- <style>
+	.lock body {
+		overflow: hidden;
+		touch-action: none;
+		overscroll-behavior: none;
+		background: linear-gradient(90deg, #65BDC2 0%, #0E3055 100%);
+	}
+
+	.loading body {
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	.loaded body {
+		transition: opacity 0.5s ease 0s;
+		opacity: 1;
+		visibility: visible;
+	}
+</style> -->
+	<!-- <div id="fls-preloader"> -->
+	<!-- Документація: https://template.fls.guru/template-docs/modul-preloader.html -->
+	<!-- Стилі для прелоадера -->
+	<!-- <style>
+		* {
+			padding: 0px;
+			margin: 0px;
+			border: 0px;
+		}
+
+		*,
+		*:before,
+		*:after {
+			box-sizing: border-box;
+		}
+
+		html {
 			overflow: hidden;
+			overflow-y: scroll;
 			touch-action: none;
 			overscroll-behavior: none;
 		}
 
-		.loading body {
-			opacity: 0;
-			visibility: hidden;
+		/* Головний блок */
+		.fls-preloader {
+			pointer-events: none;
+			z-index: -1;
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 		}
 
-		.loaded body {
-			transition: opacity 0.5s ease 0s;
-			opacity: 1;
-			visibility: visible;
+		/* Блок з елементами */
+		.fls-preloader__body {
+			padding: 0.93rem;
+			max-width: 31.25rem;
+			display: flex;
+			flex-direction: column;
 		}
-	</style>
-	<div id="fls-preloader">
-		<!-- Документація: https://template.fls.guru/template-docs/modul-preloader.html -->
-		<!-- Стилі для прелоадера -->
-		<style>
-			* {
-				padding: 0px;
-				margin: 0px;
-				border: 0px;
-			}
 
-			*,
-			*:before,
-			*:after {
-				box-sizing: border-box;
-			}
+		/* Блок з лічильником */
+		.fls-preloader__counter {
+			font-size: 10rem;
+			color: #fff;
+		}
 
-			html {
-				overflow: hidden;
-				touch-action: none;
-				overscroll-behavior: none;
-			}
+		/* Прогресбар */
+		.fls-preloader__line {}
 
-			/* Головний блок */
-			.fls-preloader {
-				pointer-events: none;
-				z-index: -1;
-				position: fixed;
-				width: 100%;
-				height: 100%;
-				top: 0;
-				left: 0;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-			}
-
-			/* Блок з елементами */
-			.fls-preloader__body {
-				padding: 0.93rem;
-				max-width: 31.25rem;
-				display: flex;
-				flex-direction: column;
-			}
-
-			/* Блок з лічильником */
-			.fls-preloader__counter {
-				font-size: 10rem;
-			}
-
-			/* Прогресбар */
-			.fls-preloader__line {}
-
-			/* Лінія прогресбару */
-			.fls-preloader__line span {
-				display: inline-block;
-				transition: width 0.2s ease;
-				height: 0.8rem;
-				background-color: #7A956B;
-			}
-		</style>
-		<!-- Скріпт прелоадера -->
-		<script>
-			function preloader() {
-				const preloaderImages = document.querySelector('[data-preloader]') ? document.querySelectorAll('[data-preloader] img') : document.querySelectorAll('img');
-				const preloaderContainer = document.querySelector('#fls-preloader');
-				if (preloaderImages.length) {
-					const preloaderTemplate = `
+		/* Лінія прогресбару */
+		.fls-preloader__line span {
+			display: inline-block;
+			transition: width 0.2s ease;
+			height: 0.8rem;
+			background-color: #65BDC2;
+		} -->
+	<!-- </style> -->
+	<!-- Скріпт прелоадера -->
+	<!-- <script>
+		function preloader() {
+			const preloaderImages = document.querySelector('[data-preloader]') ? document.querySelectorAll('[data-preloader] img') : document.querySelectorAll('img');
+			const preloaderContainer = document.querySelector('#fls-preloader');
+			if (preloaderImages.length) {
+				const preloaderTemplate = `
 					<div class="fls-preloader">
 						<div class="fls-preloader__body">
 							<div class="fls-preloader__counter">0%</div>
 							<div class="fls-preloader__line"><span></span></div>
 						</div>
 					</div>`;
-					document.querySelector('html').insertAdjacentHTML("beforeend", preloaderTemplate);
+				document.querySelector('html').insertAdjacentHTML("beforeend", preloaderTemplate);
 
-					const
-						preloader = document.querySelector('.fls-preloader'),
-						showPecentLoad = document.querySelector('.fls-preloader__counter'),
-						showLineLoad = document.querySelector('.fls-preloader__line span'),
-						htmlDocument = document.documentElement;
+				const
+					preloader = document.querySelector('.fls-preloader'),
+					showPecentLoad = document.querySelector('.fls-preloader__counter'),
+					showLineLoad = document.querySelector('.fls-preloader__line span'),
+					htmlDocument = document.documentElement;
 
-					let imagesLoadedCount = counter = progress = 0;
+				let imagesLoadedCount = counter = progress = 0;
 
-					htmlDocument.classList.add('loading');
-					htmlDocument.classList.add('lock');
+				htmlDocument.classList.add('loading');
+				htmlDocument.classList.add('lock');
 
-					preloaderImages.forEach(preloaderImage => {
-						const imgClone = document.createElement('img');
-						if (imgClone) {
-							imgClone.onload = imageLoaded;
-							imgClone.onerror = imageLoaded;
-							preloaderImage.dataset.src ? imgClone.src = preloaderImage.dataset.src : imgClone.src = preloaderImage.src;
-						}
-					});
-
-					function setValueProgress(progress) {
-						showPecentLoad ? showPecentLoad.innerText = `${progress}%` : null;
-						showLineLoad ? showLineLoad.style.width = `${progress}%` : null;
+				preloaderImages.forEach(preloaderImage => {
+					const imgClone = document.createElement('img');
+					if (imgClone) {
+						imgClone.onload = imageLoaded;
+						imgClone.onerror = imageLoaded;
+						preloaderImage.dataset.src ? imgClone.src = preloaderImage.dataset.src : imgClone.src = preloaderImage.src;
 					}
-					showPecentLoad ? setValueProgress(progress) : null;
-
-					function imageLoaded() {
-						imagesLoadedCount++;
-						progress = Math.round((100 / preloaderImages.length) * imagesLoadedCount);
-						const intervalId = setInterval(() => {
-							counter >= progress ? clearInterval(intervalId) : setValueProgress(++counter);
-							counter >= 100 ? addLoadedClass() : null;
-						}, 10);
-					}
-
-					function addLoadedClass() {
-						htmlDocument.classList.add('loaded');
-						htmlDocument.classList.remove('lock');
-						htmlDocument.classList.remove('loading');
-						setInterval(() => {
-							preloader.remove();
-							preloaderContainer.remove();
-						}, 500);
-					}
-				} else {
-					preloaderContainer.remove();
+				});
+				function setValueProgress(progress) {
+					showPecentLoad ? showPecentLoad.innerText = `${progress}%` : null;
+					showLineLoad ? showLineLoad.style.width = `${progress}%` : null;
 				}
+				showPecentLoad ? setValueProgress(progress) : null;
+
+				function imageLoaded() {
+					imagesLoadedCount++;
+					progress = Math.round((100 / preloaderImages.length) * imagesLoadedCount);
+					const intervalId = setInterval(() => {
+						counter >= progress ? clearInterval(intervalId) : setValueProgress(++counter);
+						counter >= 100 ? addLoadedClass() : null;
+					}, 10);
+				}
+				function addLoadedClass() {
+					htmlDocument.classList.add('loaded');
+					htmlDocument.classList.remove('lock');
+					htmlDocument.classList.remove('loading');
+					setInterval(() => {
+						preloader.remove();
+						preloaderContainer.remove();
+					}, 500);
+				}
+			
+			} else {
+				preloaderContainer.remove();
 			}
-			preloader();
-		</script>
-	</div>
-
-
+		}
+		preloader();
+	</script>
+</div>
+ -->
 
 
 
@@ -435,7 +436,7 @@
 			justify-content: center;
 			display: grid;
 			place-items: center;
-			background: #000334;
+			background: linear-gradient(90deg, #65BDC2 0%, #0E3055 100%);
 			transition: all 0.5s ease;
 		}
 
@@ -505,8 +506,15 @@
 			}
 		}
 	</style>
-	<!-- ======================================================================================================================================================== -->
-
+	<!----======================================================================================================================================================== -->
+	<div class="loader">
+		<div class="loader__wrapper">
+			<span style="animation-delay: 1.5s;" class="loader__one"></span>
+			<span style="animation-delay: 1s;" class="loader__two"></span>
+			<span style="animation-delay: 0.5s;" class="loader__three"></span>
+			<span style="" class="loader__four"></span>
+		</div>
+	</div>
 	<!-- ======================================================================================================================================================== -->
 	<script>
 		let selectedPlace = null;
@@ -758,8 +766,32 @@
 		}
 	</script>
 	<!-- це скрипт для підключення карт гугл щоб підключити карту вам потрібно створити профіль на сайті https://console.cloud.google.com/ після реєстрації вампотрібно створити ключ API для підключення власної карти -->
-	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAklC9wAt0xoVcf8TlgTEqbHyDRh9BXh4g&libraries=places,geometry&callback=initMap&_v=20231003192816" async defer></script>
-	<script src="js/app.min.js?_v=20231003192816"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAklC9wAt0xoVcf8TlgTEqbHyDRh9BXh4g&libraries=places,geometry&callback=initMap&_v=20231008215149" async defer></script>
+	<script src="js/app.min.js?_v=20231008215149"></script>
+	<script>
+		const form = document.querySelector('.details');
+		form.addEventListener('submit', function(e) {
+			e.preventDefault();
+			sendMessage(form);
+		})
+
+		async function sendMessage(form) {
+			const formData = new FormData(form);
+			if (formData) {
+				const url = 'sendmessage.php';
+				const response = await fetch(url, {
+					method: "POST",
+					body: formData
+				});
+				if (response.ok) {
+					form.reset();
+					alert('Form sent!');
+				} else {
+					alert('Error');
+				}
+			}
+		}
+	</script>
 </body>
 
 </html>

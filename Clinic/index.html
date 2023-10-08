@@ -1,183 +1,1384 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+	<title>HomePage</title>
 	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20231008215149">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Верстка «Clinic»</title>
 </head>
 
 <body>
-	<div class="rootpage">
-		<h1>Верстка «Clinic»</h1>
-		<div class="rootpage__info">
-			Опис проєкту
-		</div>
-		<h2>Готові сторінки:</h2>
-		<ol class="rootpage__list">
-			<li><a target="_blank" href="home.html">Home Page</a></li>
-			<li><a target="_blank" href="about.html">About Us</a></li>
-			<li><a target="_blank" href="shop.html">Shop</a></li>
-			<li><a target="_blank" href="gallery.html">Gallery</a></li>
-			<li><a target="_blank" href="contact.html">Contact</a></li>
-		</ol>
-		<h2>Попапи:</h2>
-		<ol class="rootpage__list">
-			<li><a target="_blank" href="home.html#"></a></li>
-		</ol>
-		<div class="rootpage__tnx">
-			<h2>Дякую за замовлення!</h2>
-			<p>Буду радий (да) гарному відгуку.</p>
-			<p>Звертайтесь ще!</p>
-		</div>
-		<div class="rootpage__contacts">
-			<h2>Мої контакти:</h2>
-			<p>Пошта: <a href="mailto:email@gmail.com">email@gmail.com</a></p>
-			<p>Телефон: <a href="tel:8800800800">8 800 800 800</a></p>
-			<p>Соц. мережі: <a href="">посилання</a></p>
+	<div class="wrapper">
+		<header class="header" data-scroll-show data-lp>
+			<div class="header__container">
+				<div data-da=".menu__body, 767.98,1" class="header__contact contact-header">
+					<a href="#" class="contact-header__location location _icon-location">ST. LAMBOR, NEW YORK ( US )</a>
+					<div class="contact-header__inner news-inner">
+						<a data-da=".contact-header,767.98,0" href="#" class="news-inner__link">NEWS</a>
+						<div class="news-inner__title">This is the latest News !</div>
+					</div>
+					<a href="tel:+312349334972" class="contact-header__phone phone _icon-phone">CLINIC : + 31 2349334972</a>
+				</div>
+				<div class="header__body">
+					<div class="header__logo">
+						<picture><source srcset="img/header/logo.webp" type="image/webp"><img src="img/header/logo.jpg" alt="Logo"></picture>
+					</div>
+					<div class="header__menu menu">
+						<nav class="menu__body">
+							<ul class="menu__list">
+								<li class="menu__item"><a href="index.html" class="menu__link active">HOME</a></li>
+								<li class="menu__item"><a href="about.html" class="menu__link ">ABOUT US</a></li>
+								<li class="menu__item"><a href="shop.html" class="menu__link ">SHOP</a></li>
+								<li class="menu__item"><a href="gallery.html" class="menu__link undefined">GALLERY</a>
+								</li>
+								<li class="menu__item"><a href="#" class="menu__link ">BLOG</a></li>
+								<li class="menu__item"><a href="contact.html" class="menu__link ">CONTACT</a>
+								</li>
+							</ul>
+							<div class="menu__social social-left menu__social--header">
+								<a href="#" class="social-left__logo _icon-facebook"></a>
+								<a href="#" class="social-left__logo _icon-tw"></a>
+								<a href="#" class="social-left__logo _icon-yt"></a>
+								<a href="#" class="social-left__logo _icon-v"></a>
+							</div>
+						</nav>
+					</div>
+					<a href="#" class="header__button button">BOOK NOW</a>
+					<button type="button" class="header__icon icon-menu"><span></span></button>
+				</div>
+
+			</div>
+		</header>
+		<main class="page">
+			<section class="page__section section-main">
+				<!-- Оболонка слайдера -->
+				<div class="section-main__slider swiper">
+					<!-- Частина слайдера, що рухається -->
+					<div class="section-main__wrapper swiper-wrapper">
+						<!-- Слайд1 -->
+						<div class="section-main__slide swiper-slide">
+							<div class="section-main__container">
+								<div class="section-main__header header-section">
+									<div class="header-section__label">PLASTIC SURGERY</div>
+									<div class="header-section__title">This is the</div>
+									<h2 class="header-section__subtitle">Best Clinic</h2>
+								</div>
+								<div class="section-main__inner inner-section">
+									<a href="#" class="inner-section__button">Shop Now</a>
+									<div class="inner-section__text">
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+											tempor incididunt ut labore et dolore magna aliqua, nulla consequat risus ac
+											lectus imperdiet</p>
+									</div>
+								</div>
+							</div>
+							<div class="section-main__image-ibg">
+								<picture><source srcset="img/main/slaid_1.webp" type="image/webp"><img src="img/main/slaid_1.jpg" alt="background"></picture>
+							</div>
+						</div>
+						<!-- Слайд2 -->
+						<div class="section-main__slide swiper-slide">
+							<div class="section-main__container">
+								<div class="section-main__header header-section">
+									<div class="header-section__label">skin therapy</div>
+									<div class="header-section__title">This is the</div>
+									<h2 class="header-section__subtitle">Best Clinic</h2>
+								</div>
+								<div class="section-main__inner inner-section">
+									<a href="#" class="inner-section__button">Shop Now</a>
+									<div class="inner-section__text">
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+											tempor incididunt ut labore et dolore magna aliqua, nulla consequat risus ac
+											lectus imperdiet</p>
+									</div>
+								</div>
+							</div>
+							<div class="section-main__image-ibg">
+								<picture><source srcset="img/main/slaid_2.webp" type="image/webp"><img src="img/main/slaid_2.jpg" alt="background"></picture>
+							</div>
+						</div>
+						<!-- Слайд3 -->
+						<div class="section-main__slide swiper-slide">
+							<div class="section-main__container">
+								<div class="section-main__header header-section">
+									<div class="header-section__label">pregnancy management</div>
+									<div class="header-section__title">This is the</div>
+									<h2 class="header-section__subtitle">Best Clinic</h2>
+								</div>
+								<div class="section-main__inner inner-section">
+									<a href="#" class="inner-section__button">Shop Now</a>
+									<div class="inner-section__text">
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+											tempor incididunt ut labore et dolore magna aliqua, nulla consequat risus ac
+											lectus imperdiet</p>
+									</div>
+								</div>
+							</div>
+							<div class="section-main__image-ibg">
+								<picture><source srcset="img/main/slaid_3.webp" type="image/webp"><img src="img/main/slaid_3.jpg" alt="background"></picture>
+							</div>
+						</div>
+					</div>
+					<!-- Якщо потрібна пагінація -->
+					<div class="section-main__control control-main">
+						<div class="control-main__body"></div>
+					</div>
+				</div>
+			</section>
+			<div class="page__get-in-touch-about-us">
+				<section class="page__section get-in-touch">
+					<div class="get-in-touch__container">
+						<div class="get-in-touch__inner">
+							<div class="get-in-touch__body left-side">
+								<a href="#" class="left-side__contacts"></a>
+								<h2 class="left-side__title">Get in Touch</h2>
+								<div class="left-side__text text">
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non nunc eros. <a href="#">Suspendisse scelerisque felis.</a> </p>
+								</div>
+							</div>
+							<form action="#" class="get-in-touch__form">
+								<input class="get-in-touch__input" autocomplete="off" type="text" data-required name="form[]" data-error="Error" placeholder="Name">
+								<input class="get-in-touch__input" autocomplete="off" type="email" data-required="email" name="form[]" data-error="Error" placeholder="Email">
+								<input class="get-in-touch__input" autocomplete="off" type="text" data-required name="form[]" data-error="Error" placeholder="Message">
+								<button type="submit" class="get-in-touch__button">CONTACT</button>
+							</form>
+						</div>
+					</div>
+				</section>
+				<section class="page__section about-us">
+					<div class="about-us__container">
+						<div data-watch data-watch-once class="about-us__images images-about-us">
+							<div class="images-about-us__image-ibg">
+								<picture><source srcset="img/about-us/01.webp" type="image/webp"><img src="img/about-us/01.jpg" alt="image"></picture>
+							</div>
+							<div class="images-about-us__image-ibg">
+								<picture><source srcset="img/about-us/02.webp" type="image/webp"><img src="img/about-us/02.jpg" alt="image"></picture>
+							</div>
+						</div>
+						<div class="about-us__content content-about-us">
+							<div data-watch data-watch-threshold="0.15" class="content-about-us__label label-blue">ABOUT
+								US</div>
+							<h3 data-watch data-watch-threshold="0.15" class="content-about-us__title title-blue">
+								Plastic Surgery</h3>
+							<div class="content-about-us__text text">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non nunc eros.
+									Suspendisse
+									scelerisque felis ante, et mattis felis scelerisque sodales. Aenean id imperdiet
+									lectus.
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit nulla.</p>
+							</div>
+							<div class="content-about-us__box box-about-us">
+								<div class="box-about-us__image">
+									<picture><source srcset="img/about-us/03.webp" type="image/webp"><img src="img/about-us/03.jpg" alt="image"></picture>
+								</div>
+								<div class="box-about-us__text text">
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, <a href="#">luctus nec ullamcorper mattis lorem</a> ipsum dolor</p>
+								</div>
+							</div>
+							<div class="content-about-us__subtext text">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non nunc eros.
+									Suspendisse
+									scelerisque felis ante, et mattis felis scelerisque sodales. Aenean id imperdiet
+									lectus.
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit nulla.</p>
+							</div>
+							<div class="content-about-us__footer spollers footer-about-us">
+								<a href="#" class="spollers__card card-spoller">
+									<div class="card-spoller__foto">
+										<picture><source srcset="img/footer/john.webp" type="image/webp"><img src="img/footer/john.png" alt="stephen"></picture>
+									</div>
+									<div class="card-spoller__inner">
+										<div class="card-spoller__name about-us-name">Stephen Mcmiller</div>
+										<div class="card-spoller__proffession about-us-proffession">MAIN DOCTOR</div>
+									</div>
+								</a>
+								<div class="footer-about-us__signature">
+									<picture><source srcset="img/about-us/04.webp" type="image/webp"><img src="img/about-us/04.png" alt="signature"></picture>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+			<section class="page__section procedure-section">
+				<div class="procedure-section__container">
+					<div class="procedure-section__items">
+						<a href="#" data-watch data-watch-threshold="0.15" class="procedure-section__item item-procedure">
+							<div class="item-procedure__labels labels">
+								<div class="item-procedure__label label item-procedure__label--new">new</div>
+							</div>
+							<div class="item-procedure__image-ibg">
+								<picture><source srcset="img/doctors/work/04.webp" type="image/webp"><img src="img/doctors/work/04.jpg" alt="image"></picture>
+							</div>
+							<h5 class="item-procedure__title">Breast Augmentation</h5>
+							<div class="item-procedure__price">FROM 1299 $</div>
+						</a>
+						<a href="#" data-watch data-watch-threshold="0.15" class="procedure-section__item item-procedure">
+							<div class="item-procedure__image-ibg">
+								<picture><source srcset="img/footer/02.webp" type="image/webp"><img src="img/footer/02.jpg" alt="image"></picture>
+							</div>
+							<h5 class="item-procedure__title">Phinoplasty</h5>
+							<div class="item-procedure__price">FROM 350 $</div>
+						</a>
+						<a href="#" data-watch data-watch-threshold="0.15" class="procedure-section__item item-procedure">
+							<div class="item-procedure__labels labels">
+								<div class="item-procedure__label label item-procedure__label--best">best</div>
+							</div>
+							<div class="item-procedure__image-ibg">
+								<picture><source srcset="img/footer/04.webp" type="image/webp"><img src="img/footer/04.jpg" alt="image"></picture>
+							</div>
+							<h5 class="item-procedure__title">Tummy Tuck Liposuction</h5>
+							<div class="item-procedure__price">FROM 2000 $</div>
+						</a>
+						<a href="#" data-watch data-watch-threshold="0.15" class="procedure-section__item item-procedure">
+							<div class="item-procedure__image-ibg">
+								<picture><source srcset="img/footer/03.webp" type="image/webp"><img src="img/footer/03.jpg" alt="image"></picture>
+							</div>
+							<h5 class="item-procedure__title">Otoplasty Brow</h5>
+							<div class="item-procedure__price">FROM 150 $</div>
+						</a>
+					</div>
+				</div>
+			</section>
+			<section class="page__section transformations">
+				<div class="transformations__container">
+					<div data-watch data-watch-once class="transformations__before-after before-after">
+						<div class="before-after__image before-after__image--before">
+							<picture><source srcset="img/transformations/before.webp" type="image/webp"><img src="img/transformations/before.jpg" alt="before"></picture>
+						</div>
+						<div class="before-after__image before-after__image--after">
+							<picture><source srcset="img/transformations/after.webp" type="image/webp"><img src="img/transformations/after.jpg" alt="after"></picture>
+						</div>
+						<div class="before-after__arrow"></div>
+					</div>
+					<div data-watch data-watch-once class="transformations__body">
+						<div class="transformations__label label-blue">BEFORE /
+							AFTER</div>
+						<h3 class="transformations__title title-blue">
+							Transformations</h3>
+						<div class="transformations__items">
+							<a href="#" class="transformations__item item-transformations">
+								<div class="item-transformations__image-ibg">
+									<picture><source srcset="img/transformations/02.webp" type="image/webp"><img src="img/transformations/02.jpg" alt="image"></picture>
+								</div>
+								<div class="item-transformations__content">
+									<h4 class="item-transformations__title">Liposuction</h4>
+									<div class="item-transformations__text">Lorem ipsum dolor sit amet, cons ectetur
+										adipiscing elit quisque.</div>
+								</div>
+								<div class="item-transformations__right">
+									<div class="item-transformations__price"><span>$</span>1200</div>
+									<div class="item-transformations__labels labels">
+										<div class="item-transformations__label label item-transformations__label--new">
+											new
+										</div>
+									</div>
+								</div>
+							</a>
+							<a href="#" class="transformations__item item-transformations">
+								<div class="item-transformations__image-ibg">
+									<picture><source srcset="img/transformations/03.webp" type="image/webp"><img src="img/transformations/03.jpg" alt="image"></picture>
+								</div>
+								<div class="item-transformations__content">
+									<h4 class="item-transformations__title">Breast Reduction</h4>
+									<div class="item-transformations__text">Vivamus non lacus vel tellus molestie
+										dictum. Morbi malesuada nibh vel.</div>
+								</div>
+								<div class="item-transformations__right">
+									<div class="item-transformations__price"><span>$</span>1999</div>
+									<div class="item-transformations__labels labels">
+										<div class="item-transformations__label label item-transformations__label--new">
+											new
+										</div>
+									</div>
+								</div>
+							</a>
+							<a href="#" class="transformations__item item-transformations">
+								<div class="item-transformations__image-ibg">
+									<picture><source srcset="img/transformations/04.webp" type="image/webp"><img src="img/transformations/04.jpg" alt="image"></picture>
+								</div>
+								<div class="item-transformations__content">
+									<h4 class="item-transformations__title">Injections Fillers</h4>
+									<div class="item-transformations__text">Curabitur scelerisque odio elementu maauris
+										varius dictum maecenas facil.</div>
+								</div>
+								<div class="item-transformations__right">
+									<div class="item-transformations__price"><span>$</span>99</div>
+									<div class="item-transformations__labels labels">
+										<div class="item-transformations__label label item-transformations__label--new">
+											new
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div data-watch data-watch-threshold="0.15" class="page__main clients">
+				<!-- Оболонка слайдера -->
+				<div class="clients__slider swiper">
+					<!-- Частина слайдера, що рухається -->
+					<div class="clients__wrapper swiper-wrapper">
+						<!-- Слайд1 -->
+						<a href="#" class="clients__slide swiper-slide">
+							<picture><source srcset="img/clients/01.webp" type="image/webp"><img src="img/clients/01.png" alt="image"></picture>
+						</a>
+						<!-- Слайд2 -->
+						<a href="#" class="clients__slide swiper-slide">
+							<picture><source srcset="img/clients/02.webp" type="image/webp"><img src="img/clients/02.png" alt="image"></picture>
+						</a>
+						<!-- Слайд3 -->
+						<a href="#" class="clients__slide swiper-slide">
+							<picture><source srcset="img/clients/03.webp" type="image/webp"><img src="img/clients/03.png" alt="image"></picture>
+						</a>
+						<!-- Слайд4 -->
+						<a href="#" class="clients__slide swiper-slide">
+							<picture><source srcset="img/clients/04.webp" type="image/webp"><img src="img/clients/04.png" alt="image"></picture>
+						</a>
+						<!-- Слайд5 -->
+						<a href="#" class="clients__slide swiper-slide">
+							<picture><source srcset="img/clients/05.webp" type="image/webp"><img src="img/clients/05.png" alt="image"></picture>
+						</a>
+					</div>
+				</div>
+
+			</div>
+			<section class="page__section doctors">
+				<div class="doctors__container">
+					<div data-watch data-watch-threshold="0.15" class="doctors__header header-doctor">
+						<div class="header-doctor__label">CERTIFICATES</div>
+						<h3 class="header-doctor__title">Our Main Doctors</h3>
+					</div>
+					<div class="doctors__card card-doctors">
+						<div class="card-doctors__items">
+							<a href="#" class="card-doctors__item item-doctors _active">
+								<div class="item-doctors__image-ibg">
+									<picture><source srcset="img/doctors/01.webp" type="image/webp"><img src="img/doctors/01.jpg" alt="image"></picture>
+								</div>
+								<div class="item-doctors__inner">
+									<h4 class="item-doctors__title">Mark Hill</h4>
+									<div class="item-doctors__text">Lorem ipsum dolor sit amet, conse ctetur.</div>
+								</div>
+							</a>
+							<a href="#" class="card-doctors__item item-doctors">
+								<div class="item-doctors__image-ibg">
+									<picture><source srcset="img/doctors/02.webp" type="image/webp"><img src="img/doctors/02.jpg" alt="image"></picture>
+								</div>
+								<div class="item-doctors__inner">
+									<h4 class="item-doctors__title">Jane Cullen</h4>
+									<div class="item-doctors__text">Lorem ipsum dolor sit amet, conse ctetur.</div>
+								</div>
+							</a>
+							<a href="#" class="card-doctors__item item-doctors">
+								<div class="item-doctors__image-ibg">
+									<picture><source srcset="img/doctors/03.webp" type="image/webp"><img src="img/doctors/03.jpg" alt="image"></picture>
+								</div>
+								<div class="item-doctors__inner">
+									<h4 class="item-doctors__title">Annah Gaiver</h4>
+									<div class="item-doctors__text">Lorem ipsum dolor sit amet, conse ctetur.</div>
+								</div>
+							</a>
+						</div>
+						<div class="card-doctors__image">
+							<picture><source srcset="img/doctors/01.webp" type="image/webp"><img src="img/doctors/01.png" alt="image"></picture>
+						</div>
+						<div class="card-doctors__info info-doctors">
+							<div class="info-doctors__header">
+								<div class="info-doctors__title">At Your Service</div>
+								<div class="info-doctors__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit
+									quisque.</div>
+							</div>
+							<div class="info-doctors__scils">
+								<div class="skils-item">
+									<div style="min-width: 80%;" class="skils-item__info">
+										<div class="skils-item__label">Liposuction</div>
+										<div class="skils-item__value">80%</div>
+									</div>
+									<div style="width: 80%;" class="skils-item__line skils-item__line--green"></div>
+								</div>
+								<div class="skils-item">
+									<div style="min-width: 90%;" class="skils-item__info">
+										<div class="skils-item__label">Breast Augmentation</div>
+										<div class="skils-item__value">90%</div>
+									</div>
+									<div style="width: 90%;" class="skils-item__line skils-item__line--blue"></div>
+								</div>
+							</div>
+							<div data-watch class="info-doctors__counters counters">
+								<div class="counters__count">
+									<div data-digits-counter class="counters__item">23</div>
+									<div class="counters__title">STAFF</div>
+								</div>
+								<div class="counters__count">
+									<div data-digits-counter class="counters__item">56</div>
+									<div class="counters__title">DOCTORS</div>
+								</div>
+								<div class="counters__count">
+									<div data-digits-counter class="counters__item">86</div>
+									<div class="counters__title">VISITS</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div data-gallery class="doctors__gallery gallery-doctors">
+						<a href="img/doctors/work/01.jpg" class="gallery-doctors__image-ibg">
+							<picture><source srcset="img/doctors/work/01.webp" type="image/webp"><img src="img/doctors/work/01.jpg" alt="image"></picture>
+						</a>
+						<a href="img/doctors/work/02.jpg" class="gallery-doctors__image-ibg">
+							<picture><source srcset="img/doctors/work/02.webp" type="image/webp"><img src="img/doctors/work/02.jpg" alt="image"></picture>
+						</a>
+						<a href="img/doctors/work/03.jpg" class="gallery-doctors__image-ibg">
+							<picture><source srcset="img/doctors/work/03.webp" type="image/webp"><img src="img/doctors/work/03.jpg" alt="image"></picture>
+						</a>
+						<a href="img/doctors/work/04.jpg" class="gallery-doctors__image-ibg">
+							<picture><source srcset="img/doctors/work/04.webp" type="image/webp"><img src="img/doctors/work/04.jpg" alt="image"></picture>
+						</a>
+					</div>
+				</div>
+			</section>
+			<section class="page__section timing">
+				<div class="timing__container">
+					<div class="timing__body">
+						<div data-watch data-watch-once data-watch-threshold="0.15" class="timing__header header-doctors">
+							<div class="header-doctors__label label-blue">book an appointment</div>
+							<h3 class="header-doctors__title title-blue">Our Timing</h3>
+							<div class="header-doctors__text text">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non nunc <a href="#">erosuspe ndisse scelerisque felis ante</a>, et mattis felis scelerisque
+									sodales.</p>
+							</div>
+						</div>
+						<div class="timing__schedule info-timing">
+							<div class="info-timing__content">
+								<div class="info-timing__image">
+									<picture><source srcset="img/timing/01.webp" type="image/webp"><img src="img/timing/01.png" alt="doctor"></picture>
+								</div>
+								<ul class="info-timing__list">
+									<li class="info-timing__item">
+										<span class="info-timing__label">MONDAY</span>
+										<span class="info-timing__value">9 TO 18</span>
+									</li>
+									<li class="info-timing__item">
+										<span class="info-timing__label">TUESDAY</span>
+										<span class="info-timing__value">10 TO 15</span>
+									</li>
+									<li class="info-timing__item">
+										<span class="info-timing__label">Wednesday</span>
+										<span class="info-timing__value">9 TO 18</span>
+									</li>
+									<li class="info-timing__item">
+										<span class="info-timing__label">Thursday</span>
+										<span class="info-timing__value">10 TO 15</span>
+									</li>
+								</ul>
+							</div>
+							<a href="tel:+15618426141" class="info-timing__phone">+1 561 842 6141</a>
+						</div>
+					</div>
+					<div class="timing__calendar calendar">
+						<div class="calendar-header">
+							<button class="calendar__button _icon-arrow-calendar" id="prevMonth"></button>
+							<h4 class="calendar__title" id="currentMonth"></h4>
+							<button class="calendar__button _icon-arrow-calendar" id="nextMonth"></button>
+						</div>
+						<div class="calendar__weekdays">
+							<div class="calendar__item">Mon</div>
+							<div class="calendar__item">Tue</div>
+							<div class="calendar__item">Wed</div>
+							<div class="calendar__item">Thu</div>
+							<div class="calendar__item">Fri</div>
+							<div class="calendar__item">Sat</div>
+							<div class="calendar__item">Sun</div>
+						</div>
+						<div class="calendar-days" id="calendarDays"></div>
+					</div>
+				</div>
+			</section>
+			<section class="page__section products">
+				<div class="products__container">
+					<div data-watch data-watch-threshold="0.15" class="products__header header-doctor">
+						<div class="header-doctor__label">SHOP NOW</div>
+						<h3 class="header-doctor__title">Find your Products</h3>
+					</div>
+					<div data-showmore="items" class="products__inner">
+						<div data-showmore-content="1" class="products__items">
+							<div data-watch data-watch-threshold="0.15" class="products__item item-product">
+								<div class="item-product__body">
+									<div class="item-product__labels labels">
+										<div class="item-product__label label item-product__label--new">$19</div>
+									</div>
+									<div class="item-product__image-ibg-contain">
+										<picture><source srcset="img/products/01.webp" type="image/webp"><img src="img/products/01.jpg" alt="image"></picture>
+									</div>
+									<a href="#" class="item-product__name">Soap</a>
+								</div>
+								<div class="item-product__info info-product">
+									<div class="info-product__title">SHOP INFO</div>
+									<ul class="info-product__list">
+										<li class="info-product__item">
+											<a href="#" class="info-product__link">Terms and Conditions</a>
+										</li>
+										<li class="info-product__item">
+											<a href="#" class="info-product__link">Services and Returns</a>
+										</li>
+										<li class="info-product__item">
+											<a href="#" class="info-product__link">Solidarity Gifts</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div data-watch data-watch-threshold="0.15" class="products__item item-product">
+								<div class="item-product__body">
+									<div class="item-product__labels labels">
+										<div class="item-product__label label item-product__label--best">$50</div>
+									</div>
+									<div class="item-product__image-ibg-contain">
+										<picture><source srcset="img/products/02.webp" type="image/webp"><img src="img/products/02.jpg" alt="image"></picture>
+									</div>
+									<a href="#" class="item-product__name">Serum</a>
+								</div>
+								<div class="item-product__info info-product">
+									<div class="info-product__title">SHOP INFO</div>
+									<ul class="info-product__list">
+										<li class="info-product__item">
+											<a href="#" class="info-product__link">Terms and Conditions</a>
+										</li>
+										<li class="info-product__item">
+											<a href="#" class="info-product__link">Services and Returns</a>
+										</li>
+										<li class="info-product__item">
+											<a href="#" class="info-product__link">Solidarity Gifts</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div data-watch data-watch-threshold="0.15" class="products__item item-product">
+								<div class="item-product__body">
+									<div class="item-product__labels labels">
+										<div class="item-product__label label item-product__label--new">$99</div>
+									</div>
+									<div class="item-product__image-ibg-contain">
+										<picture><source srcset="img/products/04.webp" type="image/webp"><img src="img/products/04.jpg" alt="image"></picture>
+									</div>
+									<a href="#" class="item-product__name">Cream</a>
+								</div>
+								<div class="item-product__info info-product">
+									<div class="info-product__title">SHOP INFO</div>
+									<ul class="info-product__list">
+										<li class="info-product__item">
+											<a href="#" class="info-product__link">Terms and Conditions</a>
+										</li>
+										<li class="info-product__item">
+											<a href="#" class="info-product__link">Services and Returns</a>
+										</li>
+										<li class="info-product__item">
+											<a href="#" class="info-product__link">Solidarity Gifts</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div data-watch data-watch-threshold="0.15" class="products__item item-product">
+								<div class="item-product__body">
+									<div class="item-product__labels labels">
+										<div class="item-product__label label item-product__label--best">$150</div>
+									</div>
+									<div class="item-product__image-ibg-contain">
+										<picture><source srcset="img/products/05.webp" type="image/webp"><img src="img/products/05.jpg" alt="image"></picture>
+									</div>
+									<a href="#" class="item-product__name">Detergent</a>
+								</div>
+								<div class="item-product__info info-product">
+									<div class="info-product__title">SHOP INFO</div>
+									<ul class="info-product__list">
+										<li class="info-product__item">
+											<a href="#" class="info-product__link">Terms and Conditions</a>
+										</li>
+										<li class="info-product__item">
+											<a href="#" class="info-product__link">Services and Returns</a>
+										</li>
+										<li class="info-product__item">
+											<a href="#" class="info-product__link">Solidarity Gifts</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div data-watch data-watch-threshold="0.15" class="products__item item-product">
+								<div class="item-product__body">
+									<div class="item-product__labels labels">
+										<div class="item-product__label label item-product__label--new">$75</div>
+									</div>
+									<div class="item-product__image-ibg-contain">
+										<picture><source srcset="img/products/06.webp" type="image/webp"><img src="img/products/06.jpg" alt="image"></picture>
+									</div>
+									<a href="#" class="item-product__name">Filler</a>
+								</div>
+								<div class="item-product__info info-product">
+									<div class="info-product__title">SHOP INFO</div>
+									<ul class="info-product__list">
+										<li class="info-product__item">
+											<a href="#" class="info-product__link">Terms and Conditions</a>
+										</li>
+										<li class="info-product__item">
+											<a href="#" class="info-product__link">Services and Returns</a>
+										</li>
+										<li class="info-product__item">
+											<a href="#" class="info-product__link">Solidarity Gifts</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div data-watch data-watch-threshold="0.15" class="products__item item-product">
+								<div class="item-product__body">
+									<div class="item-product__labels labels">
+										<div class="item-product__label label item-product__label--best">$19</div>
+									</div>
+									<div class="item-product__image-ibg-contain">
+										<picture><source srcset="img/products/01.webp" type="image/webp"><img src="img/products/01.jpg" alt="image"></picture>
+									</div>
+									<a href="#" class="item-product__name">Soap</a>
+								</div>
+								<div class="item-product__info info-product">
+									<div class="info-product__title">SHOP INFO</div>
+									<ul class="info-product__list">
+										<li class="info-product__item">
+											<a href="#" class="info-product__link">Terms and Conditions</a>
+										</li>
+										<li class="info-product__item">
+											<a href="#" class="info-product__link">Services and Returns</a>
+										</li>
+										<li class="info-product__item">
+											<a href="#" class="info-product__link">Solidarity Gifts</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<button hidden data-showmore-button class="products__more" type="button">
+							<span>Show more...</span>
+							<span>Back</span>
+						</button>
+					</div>
+				</div>
+			</section>
+			<section class="page__section promotions">
+				<div class="promotions__container">
+					<div data-watch data-watch-threshold="0.15" class="promotions__content">
+						<div class="promotions__header header-doctors">
+							<div class="header-doctors__label label-blue">DON'T LOSE</div>
+							<h3 class="header-doctors__title title-blue">All Promotions !</h3>
+							<div class="header-doctors__text text">
+								<p>Suspendisse commodo bibendum purus at hendrerit. Vivamus aliquam bibendum fringilla.
+									Praesent cursus felis nunc, quis vulputate sapien posuere vitae. Aliquam erat
+									volutpat. Cras egestas porta massa eget pulvinar cras non enim et dui pharetra
+									hendrerit mattis.</p>
+							</div>
+						</div>
+						<div class="promotions__payment payment">
+							<div class="payment__title">Payment Options :</div>
+							<ul class="payment__list">
+								<li class="payment__item">
+									<a href="#" class="payment__link _icon-visa"></a>
+								</li>
+								<li class="payment__item">
+									<a href="#" class="payment__link _icon-paypal"></a>
+								</li>
+								<li class="payment__item">
+									<a href="#" class="payment__link _icon-master"></a>
+								</li>
+								<li class="payment__item">
+									<a href="#" class="payment__link _icon-stripe"></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="promotions__info info-promotions">
+						<div class="info-promotions__box">
+							<div class="info-promotions__title">UP TO</div>
+							<div class="info-promotions__percent">50%</div>
+							<h4 class="info-promotions__subtitle">ON SELECTED ITEMS</h4>
+						</div>
+						<div class="info-promotions__image">
+							<picture><source srcset="img/promotions/01.webp" type="image/webp"><img src="img/promotions/01.png" alt="image"></picture>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="page__section news">
+				<div class="news__container">
+					<div data-watch data-watch-threshold="0.15" class="news__header header-doctor">
+						<div class="header-doctor__label">THE BLOG</div>
+						<h3 class="header-doctor__title">Check Our News</h3>
+					</div>
+					<div class="news__items">
+						<article data-watch data-watch-threshold="0.15" class="news__item item-news">
+							<div class="item-news__image-ibg">
+								<picture><source srcset="img/news/01.webp" type="image/webp"><img src="img/news/01.jpg" alt="image"></picture>
+							</div>
+							<div class="item-news__content">
+								<div class="item-news__subtitle">8 Sep - Standard</div>
+								<h4 class="item-news__title">New Services</h4>
+								<div class="item-news__text">
+									<p>Phasellus enim librobland vel sapien vitae, condime ntum ul tricies magnaetq
+										uisque eu ismod orci.</p>
+								</div>
+								<a href="#" class="item-news__link button">READ MORE</a>
+							</div>
+						</article>
+						<article data-watch data-watch-threshold="0.15" class="news__item item-news">
+							<div class="item-news__image-ibg">
+								<picture><source srcset="img/news/02.webp" type="image/webp"><img src="img/news/02.jpg" alt="image"></picture>
+							</div>
+							<div class="item-news__content">
+								<div class="item-news__subtitle">8 Sep - Standard</div>
+								<h4 class="item-news__title">Our Reviews</h4>
+								<div class="item-news__text">
+									<p>Phasellus enim librobland vel sapien vitae, condime ntum ul tricies magnaetq
+										uisque eu ismod orci.</p>
+								</div>
+								<a href="#" class="item-news__link button">READ MORE</a>
+							</div>
+						</article>
+						<article data-watch data-watch-threshold="0.15" class="news__item item-news">
+							<div class="item-news__image-ibg">
+								<picture><source srcset="img/news/03.webp" type="image/webp"><img src="img/news/03.jpg" alt="image"></picture>
+							</div>
+							<div class="item-news__content">
+								<div class="item-news__subtitle">8 Sep - Standard</div>
+								<h4 class="item-news__title">Latest Event</h4>
+								<div class="item-news__text">
+									<p>Phasellus enim librobland vel sapien vitae, condime ntum ul tricies magnaetq
+										uisque eu ismod orci.</p>
+								</div>
+								<a href="#" class="item-news__link button">READ MORE</a>
+							</div>
+						</article>
+						<article data-watch data-watch-threshold="0.15" class="news__item item-news">
+							<div class="item-news__image-ibg">
+								<picture><source srcset="img/news/04.webp" type="image/webp"><img src="img/news/04.jpg" alt="image"></picture>
+							</div>
+							<div class="item-news__content">
+								<div class="item-news__subtitle">8 Sep - Standard</div>
+								<h4 class="item-news__title">New Website</h4>
+								<div class="item-news__text">
+									<p>Phasellus enim librobland vel sapien vitae, condime ntum ul tricies magnaetq
+										uisque eu ismod orci.</p>
+								</div>
+								<a href="#" class="item-news__link button">READ MORE</a>
+							</div>
+						</article>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__up up-footer">
+				<div class="up-footer__container">
+					<div class="up-footer__column column-left">
+						<a href="#" class="column-left__logo"><picture><source srcset="img/header/logo.webp" type="image/webp"><img src="img/header/logo.jpg" alt="logo"></picture></a>
+						<div class="column-left__text">Suspendisse commodo bibendum purus at hendrerit. Vivamus aliquam
+							bibendum.</div>
+						<div class="column-left__social social-left">
+							<a href="#" class="social-left__logo _icon-facebook"></a>
+							<a href="#" class="social-left__logo _icon-tw"></a>
+							<a href="#" class="social-left__logo _icon-yt"></a>
+							<a href="#" class="social-left__logo _icon-v"></a>
+						</div>
+					</div>
+					<div data-spollers="767.98,max" class="up-footer__spollers spollers">
+						<details class="spollers__item">
+							<summary class="spollers__title" data-spoller-close>Our Customers</summary>
+							<div class="spollers__body">
+								<div class="spollers__text">Quisque in lorem ut arcu pretium aliquet praesent.</div>
+								<a href="#" class="spollers__card card-spoller">
+									<div class="card-spoller__foto">
+										<picture><source srcset="img/footer/john.webp" type="image/webp"><img src="img/footer/john.png" alt="john"></picture>
+									</div>
+									<div class="card-spoller__inner">
+										<div class="card-spoller__name">John Doe</div>
+										<div class="card-spoller__proffession">Designer</div>
+									</div>
+								</a>
+							</div>
+						</details>
+						<details class="spollers__item">
+							<summary class="spollers__title" data-spoller-close>Quick Contacts</summary>
+							<ul class="spollers__body">
+								<li class="spollers__list">
+									<a href="tel:+364365390" class="spollers__link link _icon-phone">Phone : +36 4365390</a>
+								</li>
+								<li class="spollers__list">
+									<a href="email" class="spollers__link link _icon-mail">Email : clinic@surgery.co</a>
+								</li>
+								<li class="spollers__list">
+									<a href="#" class="spollers__link link _icon-home">Address : Main St, 1234</a>
+								</li>
+								<li class="spollers__list">
+									<a href="#" class="spollers__link link _icon-location">Country : United States</a>
+								</li>
+							</ul>
+						</details>
+						<details data-da=".up-footer__spollers,767.98,0" class="spollers__item">
+							<summary class="spollers__title" data-spoller-close>Our Gallery</summary>
+							<ul class="spollers__box">
+								<li class="spollers__list">
+									<a href="#" class="spollers__link"><picture><source srcset="img/doctors/work/04.webp" type="image/webp"><img src="img/doctors/work/04.jpg" alt="photo"></picture></a>
+								</li>
+								<li class="spollers__list">
+									<a href="#" class="spollers__link"><picture><source srcset="img/footer/02.webp" type="image/webp"><img src="img/footer/02.jpg" alt="photo"></picture></a>
+								</li>
+								<li class="spollers__list">
+									<a href="#" class="spollers__link"><picture><source srcset="img/footer/03.webp" type="image/webp"><img src="img/footer/03.jpg" alt="photo"></picture></a>
+								</li>
+								<li class="spollers__list">
+									<a href="#" class="spollers__link"><picture><source srcset="img/footer/04.webp" type="image/webp"><img src="img/footer/04.jpg" alt="photo"></picture></a>
+								</li>
+								<li class="spollers__list">
+									<a href="#" class="spollers__link"><picture><source srcset="img/doctors/work/01.webp" type="image/webp"><img src="img/doctors/work/01.jpg" alt="photo"></picture></a>
+								</li>
+								<li class="spollers__list">
+									<a href="#" class="spollers__link"><picture><source srcset="img/footer/06.webp" type="image/webp"><img src="img/footer/06.jpg" alt="photo"></picture></a>
+								</li>
+							</ul>
+						</details>
+					</div>
+				</div>
+			</div>
+			<div class="footer__down down-footer">
+				<div class="down-footer__container">
+					<div class="down-footer__copyright _icon-copy">Copyright 2022 Nicdark Themes</div>
+					<a href="#" class="down-footer__author _icon-enveto">Envato Power Elite Author</a>
+					<form action="#" class="down-footer__form">
+						<div class="down-footer__input">
+							<input data-required="email" autocomplete="off" type="text" name="form[]" data-error="Error" placeholder="Email" class="input">
+						</div>
+						<button type="submit" class="down-footer__button">SEND</button>
+					</form>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<!--Стилі для body -->
+	<!-- <style>
+	.lock body {
+		overflow: hidden;
+		touch-action: none;
+		overscroll-behavior: none;
+		background: linear-gradient(90deg, #65BDC2 0%, #0E3055 100%);
+	}
+
+	.loading body {
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	.loaded body {
+		transition: opacity 0.5s ease 0s;
+		opacity: 1;
+		visibility: visible;
+	}
+</style> -->
+	<!-- <div id="fls-preloader"> -->
+	<!-- Документація: https://template.fls.guru/template-docs/modul-preloader.html -->
+	<!-- Стилі для прелоадера -->
+	<!-- <style>
+		* {
+			padding: 0px;
+			margin: 0px;
+			border: 0px;
+		}
+
+		*,
+		*:before,
+		*:after {
+			box-sizing: border-box;
+		}
+
+		html {
+			overflow: hidden;
+			overflow-y: scroll;
+			touch-action: none;
+			overscroll-behavior: none;
+		}
+
+		/* Головний блок */
+		.fls-preloader {
+			pointer-events: none;
+			z-index: -1;
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		/* Блок з елементами */
+		.fls-preloader__body {
+			padding: 0.93rem;
+			max-width: 31.25rem;
+			display: flex;
+			flex-direction: column;
+		}
+
+		/* Блок з лічильником */
+		.fls-preloader__counter {
+			font-size: 10rem;
+			color: #fff;
+		}
+
+		/* Прогресбар */
+		.fls-preloader__line {}
+
+		/* Лінія прогресбару */
+		.fls-preloader__line span {
+			display: inline-block;
+			transition: width 0.2s ease;
+			height: 0.8rem;
+			background-color: #65BDC2;
+		} -->
+	<!-- </style> -->
+	<!-- Скріпт прелоадера -->
+	<!-- <script>
+		function preloader() {
+			const preloaderImages = document.querySelector('[data-preloader]') ? document.querySelectorAll('[data-preloader] img') : document.querySelectorAll('img');
+			const preloaderContainer = document.querySelector('#fls-preloader');
+			if (preloaderImages.length) {
+				const preloaderTemplate = `
+					<div class="fls-preloader">
+						<div class="fls-preloader__body">
+							<div class="fls-preloader__counter">0%</div>
+							<div class="fls-preloader__line"><span></span></div>
+						</div>
+					</div>`;
+				document.querySelector('html').insertAdjacentHTML("beforeend", preloaderTemplate);
+
+				const
+					preloader = document.querySelector('.fls-preloader'),
+					showPecentLoad = document.querySelector('.fls-preloader__counter'),
+					showLineLoad = document.querySelector('.fls-preloader__line span'),
+					htmlDocument = document.documentElement;
+
+				let imagesLoadedCount = counter = progress = 0;
+
+				htmlDocument.classList.add('loading');
+				htmlDocument.classList.add('lock');
+
+				preloaderImages.forEach(preloaderImage => {
+					const imgClone = document.createElement('img');
+					if (imgClone) {
+						imgClone.onload = imageLoaded;
+						imgClone.onerror = imageLoaded;
+						preloaderImage.dataset.src ? imgClone.src = preloaderImage.dataset.src : imgClone.src = preloaderImage.src;
+					}
+				});
+				function setValueProgress(progress) {
+					showPecentLoad ? showPecentLoad.innerText = `${progress}%` : null;
+					showLineLoad ? showLineLoad.style.width = `${progress}%` : null;
+				}
+				showPecentLoad ? setValueProgress(progress) : null;
+
+				function imageLoaded() {
+					imagesLoadedCount++;
+					progress = Math.round((100 / preloaderImages.length) * imagesLoadedCount);
+					const intervalId = setInterval(() => {
+						counter >= progress ? clearInterval(intervalId) : setValueProgress(++counter);
+						counter >= 100 ? addLoadedClass() : null;
+					}, 10);
+				}
+				function addLoadedClass() {
+					htmlDocument.classList.add('loaded');
+					htmlDocument.classList.remove('lock');
+					htmlDocument.classList.remove('loading');
+					setInterval(() => {
+						preloader.remove();
+						preloaderContainer.remove();
+					}, 500);
+				}
+			
+			} else {
+				preloaderContainer.remove();
+			}
+		}
+		preloader();
+	</script>
+</div>
+ -->
+
+
+
+
+
+	<!-- ======================================================================================================================================================== -->
+	<script>
+		function addLoadedClass() {
+			document.documentElement.classList.add('loading');
+			document.documentElement.classList.add('lock');
+			window.addEventListener("load", function() {
+				document.documentElement.classList.remove('loading');
+				document.documentElement.classList.remove('lock');
+				document.documentElement.classList.add('loaded');
+			});
+		}
+		addLoadedClass()
+	</script>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		.loader {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100vw;
+			height: 100vh;
+			z-index: 900;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			display: grid;
+			place-items: center;
+			background: linear-gradient(90deg, #65BDC2 0%, #0E3055 100%);
+			transition: all 0.5s ease;
+		}
+
+		.loaded .loader {
+			pointer-events: none;
+			opacity: 0;
+		}
+
+		.loader__wrapper {
+			position: relative;
+			width: 125px;
+			height: 125px;
+			z-index: 200;
+		}
+
+		.loader span {
+			position: absolute;
+			display: block;
+			width: 40%;
+			height: 40%;
+			border-radius: 50%;
+			animation: speed 2s infinite ease-in-out;
+		}
+
+
+		.loader__one {
+			background: linear-gradient(261.97deg, #00E0FF -9.99%, #0035BE 113.06%);
+			animation-delay: 1.5s;
+		}
+
+
+		.loader__two {
+			background: linear-gradient(261.97deg, #0035BE -9.99%, #00E0FF 113.06%);
+			animation-delay: 1s;
+		}
+
+
+		.loader__three {
+			background: linear-gradient(261.97deg, #00E0FF -9.99%, #0035BE 113.06%);
+			animation-delay: 0.5s;
+		}
+
+
+		.loader__four {
+			background: linear-gradient(261.97deg, #0035BE -9.99%, #00E0FF 113.06%);
+		}
+
+		@keyframes speed {
+			0% {
+				transform: translate(0%);
+				border-radius: 50%;
+			}
+
+			25% {
+				transform: translate(150%) scale(0.5);
+				border-radius: 0%;
+			}
+
+			50% {
+				transform: translate(150%, 150%);
+				border-radius: 50%;
+			}
+
+			75% {
+				transform: translate(0, 150%) scale(0.5);
+				border-radius: 0%;
+			}
+		}
+	</style>
+	<!----======================================================================================================================================================== -->
+	<div class="loader">
+		<div class="loader__wrapper">
+			<span style="animation-delay: 1.5s;" class="loader__one"></span>
+			<span style="animation-delay: 1s;" class="loader__two"></span>
+			<span style="animation-delay: 0.5s;" class="loader__three"></span>
+			<span style="" class="loader__four"></span>
 		</div>
 	</div>
+	<!-- ======================================================================================================================================================== -->
+	<script>
+		let selectedPlace = null;
+		let directionsRenderer = null;
+
+
+		function initMap() {
+			// координати потрібного місця
+			const baceCoords = {
+				lat: 40.741380068199945,
+				lng: -74.00336980819704
+			};
+
+			// стилі для карти
+			const mapStyles = [{
+					"elementType": "geometry",
+					"stylers": [{
+						"color": "#f5f5f5"
+					}]
+				},
+				{
+					"elementType": "labels.icon",
+					"stylers": [{
+						"visibility": "off"
+					}]
+				},
+				{
+					"elementType": "labels.text.fill",
+					"stylers": [{
+						"color": "#009999"
+					}]
+				},
+				{
+					"featureType": "administrative.land_parcel",
+					"elementType": "labels.text.fill",
+					"stylers": [{
+						"color": "#bdbdbd"
+					}]
+				},
+				{
+					"featureType": "poi",
+					"elementType": "geometry",
+					"stylers": [{
+						"color": "#eeeeee"
+					}]
+				},
+				{
+					"featureType": "poi",
+					"elementType": "labels.text.fill",
+					"stylers": [{
+						"color": "#009999"
+					}]
+				},
+				{
+					"featureType": "poi.park",
+					"elementType": "geometry",
+					"stylers": [{
+						"color": "#e5e5e5"
+					}]
+				},
+				{
+					"featureType": "poi.park",
+					"elementType": "labels.text.fill",
+					"stylers": [{
+						"color": "#009999"
+					}]
+				},
+				{
+					"featureType": "road",
+					"elementType": "geometry",
+					"stylers": [{
+						"color": "#ffffff"
+					}]
+				},
+				{
+					"featureType": "road.arterial",
+					"elementType": "labels.text.fill",
+					"stylers": [{
+						"color": "#009999"
+					}]
+				},
+				{
+					"featureType": "road.highway",
+					"elementType": "geometry",
+					"stylers": [{
+						"color": "#dadada"
+					}]
+				},
+				{
+					"featureType": "road.highway",
+					"elementType": "labels.text.fill",
+					"stylers": [{
+						"color": "#009999"
+					}]
+				},
+				{
+					"featureType": "road.local",
+					"elementType": "labels.text.fill",
+					"stylers": [{
+						"color": "#009999"
+					}]
+				},
+				{
+					"featureType": "transit.line",
+					"elementType": "geometry",
+					"stylers": [{
+						"color": "#e5e5e5"
+					}]
+				},
+				{
+					"featureType": "transit.station",
+					"elementType": "geometry",
+					"stylers": [{
+						"color": "#eeeeee"
+					}]
+				},
+				{
+					"featureType": "water",
+					"elementType": "geometry",
+					"stylers": [{
+						"color": "#c9c9c9"
+					}]
+				},
+				{
+					"featureType": "water",
+					"elementType": "labels.text.fill",
+					"stylers": [{
+						"color": "#009999"
+					}]
+				}
+			];
+
+			const map = new google.maps.Map(document.getElementById("map"), {
+				center: baceCoords,
+				zoom: 12,
+				// підключення стилів до карти
+				styles: mapStyles,
+			});
+
+			// Створення маркера
+			const bacePlaceMarker = new google.maps.Marker({
+				position: baceCoords,
+				map: map,
+				title: "",
+				// підключення власної іконки
+				icon: {
+					url: "img/02_page-about-us/06_experience/icon/02.png",
+					scaledSize: new google.maps.Size(20, 20), // Розмір зображення маркера
+				},
+			});
+
+			let infoWindow = new google.maps.InfoWindow();
+			// Обробка кліку на маркер bacePlaceMarker
+			// при кліку на маркер зявляється адреса маркеру
+			bacePlaceMarker.addListener("click", () => {
+				const geocoder = new google.maps.Geocoder();
+				geocoder.geocode({
+					location: bacePlaceMarker.getPosition()
+				}, (results, status) => {
+					if (status === "OK" && results[0]) {
+						const markerAddress = results[0].formatted_address;
+						infoWindow.setContent(`Adressen: ${markerAddress}`);
+						infoWindow.open(map, bacePlaceMarker); // Відкрити інфовікно над маркером
+					}
+				});
+			});
+
+
+			map.addListener("click", (event) => {
+				if (selectedPlace) {
+					selectedPlace.setMap(null);
+				}
+
+				// новий маркер вибраний користувачем
+				selectedPlace = new google.maps.Marker({
+					position: event.latLng,
+					map: map,
+					title: "Вибране місце",
+				});
+				// Отримання адреси вибраного місця
+				const geocoder = new google.maps.Geocoder();
+				geocoder.geocode({
+					location: event.latLng
+				}, (results, status) => {
+					if (status === "OK" && results[0]) {
+						const selectedAddress = results[0].formatted_address;
+						document.getElementById("selectedAddress").textContent = selectedAddress;
+						document.getElementById("selectedPlace").style.display = "flex";
+					}
+				});
+			});
+
+			// прослуховування події кліку на кнопку побудувати маршрут
+			document.getElementById("routeButton").addEventListener("click", buildRoute);
+
+			// функція для побудови маршруту
+			function buildRoute() {
+				if (!selectedPlace) {
+					// повідомлення якщо точку не вказано
+					alert("Не вказано цільову точку.");
+					return;
+				}
+
+				if (directionsRenderer) {
+					directionsRenderer.setMap(null);
+				}
+
+				let destination = selectedPlace.getPosition();
+
+				let directionsService = new google.maps.DirectionsService();
+				directionsRenderer = new google.maps.DirectionsRenderer({
+					map: map,
+					panel: document.getElementById("routeInfo"), // Додаємо панель для відображення інформації
+				});
+
+				let request = {
+					origin: destination,
+					destination: bacePlaceMarker.getPosition(),
+					travelMode: google.maps.TravelMode.DRIVING,
+				};
+
+				directionsService.route(request, function(response, status) {
+					if (status == google.maps.DirectionsStatus.OK) {
+						directionsRenderer.setDirections(response);
+					}
+				});
+				// Показати кнопку для переходу на Google Карти вона зявляється після створення маршруту
+				document.getElementById("openGoogleMapsButton").style.display = "block";
+			}
+
+			const openGoogleMapsButton = document.getElementById("openGoogleMapsButton");
+			openGoogleMapsButton.addEventListener("click", openGoogleMaps);
+
+			function openGoogleMaps() {
+				if (!selectedPlace) {
+					alert("Не вказано цільову точку.");
+					return;
+				}
+
+				let destination = selectedPlace.getPosition();
+
+				const originCoords = encodeURIComponent(`${bacePlaceMarker.getPosition().lat()},${bacePlaceMarker.getPosition().lng()}`);
+				const destinationCoords = encodeURIComponent(`${destination.lat()},${destination.lng()}`);
+
+				const googleMapsLink = `https://www.google.com/maps/dir/?api=1&origin=${originCoords}&destination=${destinationCoords}&travelmode=driving`;
+
+				window.open(googleMapsLink);
+			}
+		}
+	</script>
+	<!-- це скрипт для підключення карт гугл щоб підключити карту вам потрібно створити профіль на сайті https://console.cloud.google.com/ після реєстрації вампотрібно створити ключ API для підключення власної карти -->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAklC9wAt0xoVcf8TlgTEqbHyDRh9BXh4g&libraries=places,geometry&callback=initMap&_v=20231008215149" async defer></script>
+	<script src="js/app.min.js?_v=20231008215149"></script>
 </body>
-<style>
-	@charset "UTF-8";
-	@import url("https://fonts.googleapis.com/css?family=Montserrat:regular,700&display=swap");
-
-	*,
-	*::before,
-	*::after {
-		padding: 0px;
-		margin: 0px;
-		border: 0px;
-		box-sizing: border-box;
-	}
-
-	html,
-	body {
-		height: 100%;
-		margin: 0;
-		padding: 0;
-		min-width: 320px;
-		width: 100%;
-		color: #fff;
-		background-color: #5e5373;
-	}
-
-	body {
-		font-family: Montserrat;
-		font-size: 100%;
-		line-height: 1;
-		font-size: 1rem;
-	}
-
-	a {
-		text-decoration: underline;
-		color: #ebe691
-	}
-
-	a:visited {
-		text-decoration: underline;
-		color: #aaa768;
-	}
-
-	a:hover {
-		text-decoration: none;
-	}
-
-	ul li {
-		list-style: none;
-	}
-
-	img {
-		vertical-align: top;
-	}
-
-	.wrapper {
-		width: 100%;
-		min-height: 100%;
-		overflow: hidden;
-	}
-
-	.rootpage {
-		padding: 30px;
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-	}
-
-	@media (max-width: 767px) {
-		.rootpage {
-			padding: 30px 15px;
-		}
-	}
-
-	h1 {
-		color: #ebe691;
-		font-size: 2.5rem;
-		margin: 0px 0px 1.25rem 0px;
-	}
-
-	@media (max-width: 767px) {
-		h1 {
-			font-size: 1.85rem;
-			margin: 0px 0px 1.25rem 0px;
-		}
-	}
-
-	h2 {
-		color: #ebe691;
-		font-size: 1.25rem;
-		margin: 0px 0px 1rem 0px;
-	}
-
-	@media (max-width: 767px) {
-		h2 {
-			font-size: 1.125rem;
-			margin: 0px 0px 1rem 0px;
-		}
-	}
-
-	.rootpage__info {
-		line-height: 140%;
-		margin: 0px 0px 1.5rem 0px;
-	}
-
-	.rootpage__list {
-		margin: 0px 0px 2.25rem 1.25rem;
-	}
-
-	.rootpage__list li:not(:last-child) {
-		margin: 0px 0px 15px 0px;
-	}
-
-	.rootpage__contacts,
-	.rootpage__tnx {
-		border-radius: 200px;
-		padding: 20px 65px;
-		line-height: 140%;
-	}
-
-	@media (max-width: 767px) {
-
-		.rootpage__contacts,
-		.rootpage__tnx {
-			border-radius: 40px;
-			padding: 20px;
-		}
-	}
-
-	.rootpage__contacts {
-		background: #32b5a4;
-
-	}
-
-	.rootpage__contacts a {
-		color: #ebe691;
-	}
-
-	.rootpage__tnx {
-		background: #c22d63;
-		margin: 0px 0px 1rem 0px;
-	}
-</style>
 
 </html>
